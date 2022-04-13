@@ -2,6 +2,7 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Progress.module.css'
+import Link from 'next/link'
 
 const Progress: NextPage = () => {
     return (
@@ -33,7 +34,8 @@ const Progress: NextPage = () => {
                 </div>
                 <div className={styles.project_progress_container} >
                     <img src='/images/a3_logo.png' height={30} />
-                    <a className={styles.project_progress_link} href='/progress'>https://a3group.co.in/progress</a>
+                    <Link href='/progress'><a className={styles.project_progress_link}>
+                        https://a3group.co.in/progress</a></Link>
                 </div>
             </main>
         </div>
