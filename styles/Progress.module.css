@@ -59,11 +59,24 @@
 
 .project_progress_container {
     margin-left: 20px;
+    margin-top: 50px;
     margin-bottom: 20px;
 }
 
 .project_progress_link  {
     display: block;
     text-decoration: none;
-    color: black;
+    color: rgba(15,80,170,255);
+    padding-bottom: 20px;
+    font-family: "Segoe UI Semibold";
+}
+
+@media not screen and (min-width: 430px) {
+
+    .project_progress_container{
+        justify-content: center;
+        margin-left: 0px;
+        font-size: small;
+        text-align: center;
+    }
 }
