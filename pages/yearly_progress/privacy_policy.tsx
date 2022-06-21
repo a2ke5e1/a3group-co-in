@@ -1,5 +1,7 @@
 import {NextPage} from "next";
 import Link from "next/link";
+import styles from "../../styles/yearly_progress/Privacy.module.css"
+import Image from "next/image";
 
 const Privacy_policy: NextPage = () => {
 
@@ -7,12 +9,13 @@ const Privacy_policy: NextPage = () => {
     const HEADER = (
         <div>
             <p>
-                A3 Inc's App ("us", "we", or "our") operates the A3 Inc's App mobile application (the "Service"). This
-                page informs you of our policies regarding the collection, use, and disclosure of personal data when you
-                use our Service and the choices you have associated with that data. Our Privacy Policy for We use your
-                data to provide and improve the Service. By using the Service, you agree to the collection and use of
-                information in accordance with this policy. Unless otherwise defined in this Privacy Policy, terms used
-                in this Privacy Policy have the same meanings as in our Terms and Conditions.
+                Yearly Progress is a product of A3 Inc's which operates under the A3 Inc's
+                App mobile application (the "Service"). This page informs you of our policies regarding the collection,
+                use, and disclosure of personal data when you use our Service and the choices you have associated with
+                that data. Our Privacy Policy for We use your data to provide and improve the Service. By using the
+                Service, you agree to the collection and use of information in accordance with this policy. Unless
+                otherwise defined in this Privacy Policy, terms used in this Privacy Policy have the same meanings as in
+                our Terms and Conditions.
             </p>
         </div>
     )
@@ -128,7 +131,12 @@ const Privacy_policy: NextPage = () => {
             <head>
                 <title>Yearly Progress - Privacy Policy</title>
             </head>
-            <div>
+            <img
+                src={"https://play-lh.googleusercontent.com/SxZPrpX_9O2WxFiI067oHMRxsRS0Ozz6clBvao5lrH2SA-lG7vXs8rU_Rf7BHz0CZ0YO=w240-h480-rw"}
+                className={styles.shadow}/>
+            <h1>Yearly Progress</h1>
+            <h2>Privacy Policy</h2>
+            <div className={styles.body}>
                 {HEADER}
                 {ICAU}
                 {PD}
