@@ -12,11 +12,6 @@
     width: 80vw;
 }
 
-@media screen and (min-width: 480px) {
-    .body {
-        width: 50vw;
-    }
-}
 
 .title {
     display: grid;
@@ -26,3 +21,29 @@
     column-gap: 1rem;
 }
 
+.sup_title {
+    display: block;
+}
+
+.get_now {
+    width: 10rem;
+}
+
+
+@media screen and (min-width: 480px) {
+    .body {
+        width: 50vw;
+    }
+
+    .get_now {
+        width: 16rem;
+    }
+
+    .sup_title {
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: 1rem;
+    }
+}

@@ -11,13 +11,23 @@ const Privacy_policy: NextPage = () => {
                 <title>Yearly Progress - Privacy Policy</title>
             </Head>
             <div className={styles.body}>
-                <div className={styles.title}>
-                    <img
-                        src={"https://play-lh.googleusercontent.com/SxZPrpX_9O2WxFiI067oHMRxsRS0Ozz6clBvao5lrH2SA-lG7vXs8rU_Rf7BHz0CZ0YO=w240-h480-rw"}
-                        className={styles.shadow}/>
-                    <div>
-                        <h1>Yearly Progress</h1>
-                        <h2>Privacy Policy</h2>
+                <div>
+                    <div className={styles.sup_title}>
+                        <div className={styles.title}>
+                            <img
+                                src={"https://play-lh.googleusercontent.com/SxZPrpX_9O2WxFiI067oHMRxsRS0Ozz6clBvao5lrH2SA-lG7vXs8rU_Rf7BHz0CZ0YO=w240-h480-rw"}
+                                className={styles.shadow}/>
+                            <div>
+                                <h1>Yearly Progress</h1>
+                                <h2>Privacy Policy</h2>
+                            </div>
+                        </div>
+                        <div>
+                            <a href='https://play.google.com/store/apps/details?id=com.a3.yearlyprogess&hl=en&gl=US&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img
+                                alt='Get it on Google Play'
+                                className={styles.get_now}
+                                src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png'/></a>
+                        </div>
                     </div>
                 </div>
                 <div>
