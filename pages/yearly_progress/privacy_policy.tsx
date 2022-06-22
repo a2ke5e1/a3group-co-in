@@ -1,163 +1,148 @@
 import {NextPage} from "next";
-import Link from "next/link";
 import styles from "../../styles/yearly_progress/Privacy.module.css"
-import Image from "next/image";
 import Head from "next/head";
 
 
 const Privacy_policy: NextPage = () => {
-
-
-    const HEADER = (
-        <div>
-            <p>
-                {
-                    "Yearly Progress is a product of A3 Inc's which operates under the A3 Inc's\n" +
-                    "App mobile application (the \"Service\"). This page informs you of our policies regarding the collection,\n" +
-                    "use, and disclosure of personal data when you use our Service and the choices you have associated with\n" +
-                    "that data. Our Privacy Policy for We use your data to provide and improve the Service. By using the\n" +
-                    "Service, you agree to the collection and use of information in accordance with this policy. Unless\n" +
-                    "otherwise defined in this Privacy Policy, terms used in this Privacy Policy have the same meanings as in\n" +
-                    "our Terms and Conditions."
-                }
-            </p>
-        </div>
-    )
-
-    const ICAU = (
-        <div>
-            <h5>
-                Information Collection And Use
-            </h5>
-            <p>
-                {
-                    " We collect don't any type of information. but We use third party service which may collect data for\n" +
-                    "                various purposes to provide and improve ads to you"
-                }
-            </p>
-        </div>
-    )
-
-    const PD = (
-        <div>
-            <h5>
-                Personal Data
-            </h5>
-            <p>
-                {
-                    "While using our Service, we don't collect any data but Admob may ask you to provide us with certain\n" +
-                    "                personally identifiable information that can be used to contact or identify you (\"Personal Data\")."
-                }
-            </p>
-        </div>
-    )
-
-    const SD = (
-        <div>
-            <h5>
-                Security Of Data
-            </h5>
-            <p>
-                {"The security of your data is important to us, So we don't collect data personally"}
-            </p>
-        </div>
-    )
-
-    const AdsP = (
-        <div>
-            <h5>
-                Ads Providers
-            </h5>
-            <p>
-                We employ third party companies ie; Admob to provide ads, to perform Service-related services or to
-                assist
-                us in analyzing how our Service is used. These third parties have access to your Personal Data only to
-                perform these tasks on our behalf and are obligated not to disclose or use it for any other purpose.
-            </p>
-            <p>
-                We recommend you to see <Link href={"https://support.google.com/admob/answer/6128543?hl=en"}>{
-                "Admob's privacy Policy\n"
-            }</Link>.
-            </p>
-        </div>
-    )
-
-    const LOS = (
-        <div>
-            <h5>
-                Links To Other Sites
-            </h5>
-            <p>
-                {
-                    "Our Service may contain links to other sites that are not operated by us. If you click on a third party\n" +
-                    "                link, you will be directed to that third party's site. We strongly advise you to review the Privacy\n" +
-                    "                Policy of every site you visit. We have no control over and assume no responsibility for the content,\n" +
-                    "                privacy policies or practices of any third party sites or services."
-                }
-            </p>
-        </div>
-    )
-
-    const CTPP = (
-        <div>
-            <h5>
-                Changes To This Privacy Policy
-            </h5>
-            <p>
-                We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new
-                Privacy Policy on this page.
-            </p>
-            <p>
-                {
-                    " We will let you know via email and/or a prominent notice on our Service, prior to the change becoming\n" +
-                    "                effective and update the \"effective date\" at the top of this Privacy Policy."
-                }
-            </p>
-            <p>
-                You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy
-                Policy are effective when they are posted on this page.
-            </p>
-        </div>
-    )
-
-    const CU = (
-        <div>
-            <h5>
-                Contact Us
-            </h5>
-            <p>
-                If you have any questions about this Privacy Policy, please contact us:
-                <ul>
-                    <li>
-                        By email: <Link href={"mailto:a3gang03@gmail.com"}>a3gang03@gmail.com</Link>
-                    </li>
-                    <li>
-                        Visit Our Website: <Link href={"https://a3group.co.in"}>A3 | Official</Link>
-                    </li>
-                </ul>
-            </p>
-        </div>
-    )
-
     return (
         <div>
+
             <Head>
                 <title>Yearly Progress - Privacy Policy</title>
             </Head>
-            <img
-                src={"https://play-lh.googleusercontent.com/SxZPrpX_9O2WxFiI067oHMRxsRS0Ozz6clBvao5lrH2SA-lG7vXs8rU_Rf7BHz0CZ0YO=w240-h480-rw"}
-                className={styles.shadow}/>
-            <h1>Yearly Progress</h1>
-            <h2>Privacy Policy</h2>
             <div className={styles.body}>
-                {HEADER}
-                {ICAU}
-                {PD}
-                {SD}
-                {AdsP}
-                {LOS}
-                {CTPP}
-                {CU}
+                <div className={styles.title}>
+                    <img
+                        src={"https://play-lh.googleusercontent.com/SxZPrpX_9O2WxFiI067oHMRxsRS0Ozz6clBvao5lrH2SA-lG7vXs8rU_Rf7BHz0CZ0YO=w240-h480-rw"}
+                        className={styles.shadow}/>
+                    <div>
+                        <h1>Yearly Progress</h1>
+                        <h2>Privacy Policy</h2>
+                    </div>
+                </div>
+                <div>
+                    <p>
+                        A3 Inc. built the Yearly Progress app as
+                        an Ad Supported app. This SERVICE is provided by
+                        A3 Inc. at no cost and is intended for use as
+                        is.
+                    </p>
+                    <p>
+                        This page is used to inform visitors regarding our
+                        policies with the collection, use, and disclosure of Personal
+                        Information if anyone decided to use our Service.
+                    </p>
+                    <p>
+                        If you choose to use our Service, then you agree to
+                        the collection and use of information in relation to this
+                        policy. The Personal Information that we collect is
+                        used for providing and improving the Service. We will not use or share your information with
+                        anyone except as described in this Privacy Policy.
+                    </p>
+                    <p>
+                        The terms used in this Privacy Policy have the same meanings
+                        as in our Terms and Conditions, which are accessible at
+                        Yearly Progress unless otherwise defined in this Privacy Policy.
+                    </p>
+                    <p><h5>Information Collection and Use</h5></p>
+                    <p>
+                        For a better experience, while using our Service, we
+                        may require you to provide us with certain personally
+                        identifiable information. The information that
+                        we request will be retained by us and used as described in this privacy policy.
+                    </p>
+                    <div><p>
+                        The app does use third-party services that may collect
+                        information used to identify you.
+                    </p> <p>
+                        Link to the privacy policy of third-party service providers used
+                        by the app
+                    </p>
+                        <ul>
+                            <li><a href="https://www.google.com/policies/privacy/" target="_blank"
+                                   rel="noopener noreferrer">Google
+                                Play Services</a></li>
+                            <li><a href="https://support.google.com/admob/answer/6128543?hl=en" target="_blank"
+                                   rel="noopener noreferrer">AdMob</a></li>
+                        </ul>
+                    </div>
+                    <p><h5>Log Data</h5></p>
+                    <p>
+                        We want to inform you that whenever you
+                        use our Service, in a case of an error in the app
+                        we collect data and information (through third-party
+                        products) on your phone called Log Data. This Log Data may
+                        include information such as your device Internet Protocol
+                        (“IP”) address, device name, operating system version, the
+                        configuration of the app when utilizing our Service,
+                        the time and date of your use of the Service, and other
+                        statistics.
+                    </p>
+                    <p><h5>Service Providers</h5></p>
+                    <p>
+                        We may employ third-party companies and
+                        individuals due to the following reasons:
+                    </p>
+                    <ul>
+                        <li>To facilitate our Service;</li>
+                        <li>To provide the Service on our behalf;</li>
+                        <li>To perform Service-related services; or</li>
+                        <li>To assist us in analyzing how our Service is used.</li>
+                    </ul>
+                    <p>
+                        We want to inform users of this Service
+                        that these third parties have access to their Personal
+                        Information. The reason is to perform the tasks assigned to
+                        them on our behalf. However, they are obligated not to
+                        disclose or use the information for any other purpose.
+                    </p>
+                    <p><h5>Security</h5></p>
+                    <p>
+                        We value your trust in providing us your
+                        Personal Information, thus we are striving to use commercially
+                        acceptable means of protecting it. But remember that no method
+                        of transmission over the internet, or method of electronic
+                        storage is 100% secure and reliable, and we cannot
+                        guarantee its absolute security.
+                    </p>
+                    <p><h5>Links to Other Sites</h5></p>
+                    <p>
+                        This Service may contain links to other sites. If you click on
+                        a third-party link, you will be directed to that site. Note
+                        that these external sites are not operated by us.
+                        Therefore, we h5ly advise you to review the
+                        Privacy Policy of these websites. We have
+                        no control over and assume no responsibility for the content,
+                        privacy policies, or practices of any third-party sites or
+                        services.
+                    </p>
+                    <p><h5>Children’s Privacy</h5></p>
+                    <div><p>
+                        These Services do not address anyone under the age of 13.
+                        We do not knowingly collect personally
+                        identifiable information from children under 13 years of age. In the case
+                        we discover that a child under 13 has provided
+                        us with personal information, we immediately
+                        delete this from our servers. If you are a parent or guardian
+                        and you are aware that your child has provided us with
+                        personal information, please contact us so that
+                        we will be able to do the necessary actions.
+                    </p></div>
+                    <p><h5>Changes to This Privacy Policy</h5></p>
+                    <p>
+                        We may update our Privacy Policy from
+                        time to time. Thus, you are advised to review this page
+                        periodically for any changes. We will
+                        notify you of any changes by posting the new Privacy Policy on
+                        this page.
+                    </p> <p>This policy is effective as of 2022-06-21</p>
+                    <p><h5>Contact Us</h5></p>
+                    <p>
+                        If you have any questions or suggestions about our
+                        Privacy Policy, do not hesitate to contact us at a3gang03@gmail.com.
+                    </p>
+                </div>
+
             </div>
         </div>
     )
