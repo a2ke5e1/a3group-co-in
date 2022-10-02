@@ -26,7 +26,7 @@ const Home: NextPage = () => {
           <article>
             <h3>About this App</h3>
             <p>
-              A app using Google's material You design system to provide widget for progress of the day, month and year.
+              A app using Google&apos;s material You design system to provide widget for progress of the day, month and year.
             </p>
           </article>
         </section>
