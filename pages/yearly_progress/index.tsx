@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Article from '../../components/Article'
 import styles from '../../styles/yearly_progress/index.module.scss'
 import info from '../../info/yearly_progress.json'
+import Footer from '../../components/Footer'
 
 const Home: NextPage = () => {
   return (
@@ -45,6 +46,7 @@ const Home: NextPage = () => {
         </section>
         <section>
         </section>
+        <Footer />
       </main>
     </>
   )

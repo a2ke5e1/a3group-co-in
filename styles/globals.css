@@ -19,7 +19,7 @@ main {
 
 @media screen and (max-width: 480px) {
     main {
-        max-width: 94vw;
+        max-width: 90vw;
     }
 }
 
