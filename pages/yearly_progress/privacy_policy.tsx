@@ -1,5 +1,5 @@
 import {NextPage} from "next";
-import styles from "../../styles/yearly_progress/Privacy.module.css"
+import styles from "../../styles/yearly_progress/Privacy.module.scss"
 import Head from "next/head";
 
 
