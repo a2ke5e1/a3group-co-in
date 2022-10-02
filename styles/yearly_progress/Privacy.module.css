@@ -5,14 +5,6 @@
     width: 5rem;
 }
 
-.body {
-    font-family: 'Roboto', sans-serif;
-    margin-left: auto;
-    margin-right: auto;
-    width: 80vw;
-}
-
-
 .title {
     display: grid;
     grid-template-columns: auto auto;
@@ -31,10 +23,7 @@
 
 
 @media screen and (min-width: 480px) {
-    .body {
-        width: 50vw;
-    }
-
+    
     .get_now {
         width: 16rem;
     }

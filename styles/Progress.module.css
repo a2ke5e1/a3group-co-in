@@ -2,6 +2,9 @@
     margin-top: 30vh;
 }
 
+.container {
+    max-width: 100vw;
+}
 
 .project {
     display: block;

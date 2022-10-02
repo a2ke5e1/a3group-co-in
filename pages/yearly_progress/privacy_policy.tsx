@@ -10,7 +10,7 @@ const Privacy_policy: NextPage = () => {
             <Head>
                 <title>Yearly Progress - Privacy Policy</title>
             </Head>
-            <div className={styles.body}>
+            <main className={styles.body}>
                 <div>
                     <div className={styles.sup_title}>
                         <div className={styles.title}>
@@ -153,7 +153,7 @@ const Privacy_policy: NextPage = () => {
                     </p>
                 </div>
 
-            </div>
+            </main>
         </div>
     )
 }
