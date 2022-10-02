@@ -43,6 +43,8 @@ const Home: NextPage = () => {
             <img src="/yearly_progress/images/ss/Screenshot_20221002-014123.png" />
           </div>
         </section>
+        <section>
+        </section>
       </main>
     </>
   )

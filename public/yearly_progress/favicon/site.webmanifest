@@ -1,5 +1,6 @@
 {
     "name": "Yearly Progress",
+    "description": "Yearly Progress is an android that provides widgets desgined to show the progress of day, week, month and year.",
     "short_name": "Yearly Progress",
     "icons": [
         {
