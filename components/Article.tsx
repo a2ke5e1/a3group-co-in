@@ -14,11 +14,9 @@ export default function Article(
     return (
         <>
             <section>
-                <article>
+                <article className={styles.article}>
                     <h3 className={styles.title}>{title}</h3>
-                    <p>
-                        {children}
-                    </p>
+                    {children}
                 </article>
             </section>
         </>

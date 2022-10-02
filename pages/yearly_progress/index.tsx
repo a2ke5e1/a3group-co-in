@@ -30,8 +30,19 @@ const Home: NextPage = () => {
           </div>
         </section>
         <Article title={"About this app"}>
-          {info.desc.about}
+          <p>
+            {info.desc.about}
+          </p>
         </Article>
+        <section>
+          <div className={styles.ss_container} >
+            <img src="/yearly_progress/images/ss/Screenshot_20221002_014215.png" />
+            <img src="/yearly_progress/images/ss/Screenshot_20221002_014317.png" />
+            <img src="/yearly_progress/images/ss/Screenshot_20221002_014407.png" />
+            <img src="/yearly_progress/images/ss/Screenshot_20221002_014414.png" />
+            <img src="/yearly_progress/images/ss/Screenshot_20221002-014123.png" />
+          </div>
+        </section>
       </main>
     </>
   )
