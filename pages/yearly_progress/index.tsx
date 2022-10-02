@@ -44,8 +44,17 @@ const Home: NextPage = () => {
             <img src="/yearly_progress/images/ss/Screenshot_20221002-014123.png" />
           </div>
         </section>
-        <section>
-        </section>
+        <Article title={"New Features"}>
+
+          <ul>
+            <li>
+              <a>All In One Widget</a>
+              <p>Now, You can use all in one widget which let to see the information with having add multiple widget to the homescreen of your android device.</p>
+              <img className={styles["widget-img"]} src="/yearly_progress/images/ss/Screenshot_20221002_015212.png" />
+              <p>You can see a preview of the widget above, It contains all the information that one might need such as date, week, month and year with their respective progress.</p>
+            </li>
+          </ul>
+        </Article>
         <Footer />
       </main>
     </>
