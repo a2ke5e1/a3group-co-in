@@ -21,7 +21,7 @@ const Progress: NextPage = () => {
             <Head>
                 <title>A3 Group</title>
             </Head>
-            <main>
+            <main className={styles.container} >
                 <div className={styles.project_container}>
                     <a className={styles.project}>Project</a>
                     <a className={styles.project_title}>mínyma opoudípote</a>

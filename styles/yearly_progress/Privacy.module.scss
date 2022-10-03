@@ -1,0 +1,38 @@
+.shadow {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    width: 5rem;
+}
+
+.title {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: start;
+    align-items: center;
+    column-gap: 1rem;
+}
+
+.sup_title {
+    display: block;
+}
+
+.get_now {
+    width: 10rem;
+}
+
+
+@media screen and (min-width: 480px) {
+    
+    .get_now {
+        width: 16rem;
+    }
+
+    .sup_title {
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: 1rem;
+    }
+}
