@@ -16,12 +16,11 @@ const Home: NextPage = () => {
         <link rel="icon" type="image/png" sizes="16x16" href="/yearly_progress/favicon/favicon-16x16.png" />
         <link rel="manifest" href="/yearly_progress/favicon/site.webmanifest"></link>
       </Head>
-      <main>
-        <section>
+      <section className={styles["head-container"]}>
           <img
             src={"https://play-lh.googleusercontent.com/SxZPrpX_9O2WxFiI067oHMRxsRS0Ozz6clBvao5lrH2SA-lG7vXs8rU_Rf7BHz0CZ0YO=w240-h480-rw"}
             className={styles.logo} />
-          <h1>{info.name}</h1>
+          <h1 className={styles["title"]}>{info.name}</h1>
           <a>A3.</a>
           <div className={styles["btn-container"]}>
             <a className={styles["download-btn-container"]}
@@ -30,10 +29,13 @@ const Home: NextPage = () => {
             </a>
           </div>
         </section>
+      <main className={styles["main"]}>
         <Article title={"About this app"}>
           <p>
             {info.desc.about}
           </p>
+          <a>Updated On</a>
+          <p>October 1, 2022</p>
         </Article>
         <section>
           <div className={styles.ss_container} >
@@ -45,15 +47,10 @@ const Home: NextPage = () => {
           </div>
         </section>
         <Article title={"New Features"}>
-
-          <ul>
-            <li>
-              <a>All In One Widget</a>
-              <p>Now, You can use all in one widget which let to see the information with having add multiple widget to the homescreen of your android device.</p>
-              <img className={styles["widget-img"]} src="/yearly_progress/images/ss/Screenshot_20221002_015212.png" />
-              <p>You can see a preview of the widget above, It contains all the information that one might need such as date, week, month and year with their respective progress.</p>
-            </li>
-          </ul>
+          <a>All In One Widget</a>
+          <p>Now, You can use all in one widget which let to see the information with having add multiple widget to the homescreen of your android device.</p>
+          <img className={styles["widget-img"]} src="/yearly_progress/images/ss/Screenshot_20221002_015212.png" />
+          <p>You can see a preview of the widget above, It contains all the information that one might need such as date, week, month and year with their respective progress.</p>
         </Article>
         <Footer />
       </main>
