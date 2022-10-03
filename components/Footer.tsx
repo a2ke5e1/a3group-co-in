@@ -24,8 +24,8 @@ export default function Footer() {
                     </a>
                 </section>
                 <section className={styles["other-url-containers"]}>
-                    <a href='/yearly_progress/privacy_policy'>Privacy Policy</a>
-                    <a href='/about_us'>About Us</a>
+                    <Link href='/yearly_progress/privacy_policy'>Privacy Policy</Link>
+                    <Link href='/about_us'>About Us</Link>
                 </section>
             </div>
         </footer>
