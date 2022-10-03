@@ -2,8 +2,8 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import Article from '../../components/Article'
-import styles from '../../styles/yearly_progress/index.module.scss'
-import info from '../../info/yearly_progress.json'
+import styles from '../../styles/yearly-progress/index.module.scss'
+import info from '../../info/yearly-progress.json'
 import Footer from '../../components/Footer'
 
 const Home: NextPage = () => {
@@ -11,10 +11,10 @@ const Home: NextPage = () => {
     <>
       <Head>
         <title>{info.name}</title>
-        <link rel="apple-touch-icon" sizes="180x180" href="/yearly_progress/favicon/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/yearly_progress/favicon/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/yearly_progress/favicon/favicon-16x16.png" />
-        <link rel="manifest" href="/yearly_progress/favicon/site.webmanifest"></link>
+        <link rel="apple-touch-icon" sizes="180x180" href="/yearly-progress/favicon/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/yearly-progress/favicon/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/yearly-progress/favicon/favicon-16x16.png" />
+        <link rel="manifest" href="/yearly-progress/favicon/site.webmanifest"></link>
       </Head>
       <section className={styles["head-container"]}>
           <img
@@ -39,17 +39,17 @@ const Home: NextPage = () => {
         </Article>
         <section>
           <div className={styles.ss_container} >
-            <img src="/yearly_progress/images/ss/Screenshot_20221002_014215.png" />
-            <img src="/yearly_progress/images/ss/Screenshot_20221002_014317.png" />
-            <img src="/yearly_progress/images/ss/Screenshot_20221002_014407.png" />
-            <img src="/yearly_progress/images/ss/Screenshot_20221002_014414.png" />
-            <img src="/yearly_progress/images/ss/Screenshot_20221002-014123.png" />
+            <img src="/yearly-progress/images/ss/Screenshot_20221002_014215.png" />
+            <img src="/yearly-progress/images/ss/Screenshot_20221002_014317.png" />
+            <img src="/yearly-progress/images/ss/Screenshot_20221002_014407.png" />
+            <img src="/yearly-progress/images/ss/Screenshot_20221002_014414.png" />
+            <img src="/yearly-progress/images/ss/Screenshot_20221002-014123.png" />
           </div>
         </section>
         <Article title={"New Features"}>
           <a>All In One Widget</a>
           <p>Now, You can use all in one widget which let to see the information with having add multiple widget to the homescreen of your android device.</p>
-          <img className={styles["widget-img"]} src="/yearly_progress/images/ss/Screenshot_20221002_015212.png" />
+          <img className={styles["widget-img"]} src="/yearly-progress/images/ss/Screenshot_20221002_015212.png" />
           <p>You can see a preview of the widget above, It contains all the information that one might need such as date, week, month and year with their respective progress.</p>
         </Article>
         <Footer />

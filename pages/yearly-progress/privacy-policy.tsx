@@ -1,5 +1,5 @@
 import {NextPage} from "next";
-import styles from "../../styles/yearly_progress/Privacy.module.scss"
+import styles from "../../styles/yearly-progress/Privacy.module.scss"
 import Head from "next/head";
 
 
@@ -22,12 +22,7 @@ const Privacy_policy: NextPage = () => {
                                 <h2>Privacy Policy</h2>
                             </div>
                         </div>
-                        <div>
-                            <a href='https://play.google.com/store/apps/details?id=com.a3.yearlyprogess&hl=en&gl=US&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img
-                                alt='Get it on Google Play'
-                                className={styles.get_now}
-                                src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png'/></a>
-                        </div>
+
                     </div>
                 </div>
                 <div>
