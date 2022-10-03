@@ -7,7 +7,7 @@ export default function Footer() {
             <div className={styles.divider}></div>
             <div className={styles["sub-container"]}>
                 <section className={styles["logo-container"]}>
-                    <img src='/images/a3_logo.png' height={20} />
+                    <img src='/images/a3_logo.png' width={"60rem"} />
                     <p>©2022 A3 Group, All right reserved.</p>
                 </section>
                 <section className={styles["follow-container"]}>
