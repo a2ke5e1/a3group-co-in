@@ -11,24 +11,39 @@ const Home: NextPage = () => {
     <>
       <Head>
         <title>{info.name}</title>
+        <meta name="description" content="Yearly Progress is an android app which provides beautiful widgets, which shows the progress of day, week, month and year." />
+
+
+        <meta property="og:url" content="https://www.a3group.co.in/yearly-progress" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Yearly Progress" />
+        <meta property="og:description" content="Yearly Progress is an android app which provides beautiful widgets, which shows the progress of day, week, month and year." />
+        <meta property="og:image" content="https://www.a3group.co.in/yearly-progress/images/ss/Screenshot_20221002_014215.png" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Yearly Progress" />
+        <meta name="twitter:description" content="Yearly Progress is an android app which provides beautiful widgets, which shows the progress of day, week, month and year." />
+        <meta name="twitter:image" content="https://www.a3group.co.in/yearly-progress/images/ss/Screenshot_20221002_014215.png" />
+
+
         <link rel="apple-touch-icon" sizes="180x180" href="/yearly-progress/favicon/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/yearly-progress/favicon/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/yearly-progress/favicon/favicon-16x16.png" />
         <link rel="manifest" href="/yearly-progress/favicon/site.webmanifest"></link>
       </Head>
       <section className={styles["head-container"]}>
-          <img
-            src={"https://play-lh.googleusercontent.com/SxZPrpX_9O2WxFiI067oHMRxsRS0Ozz6clBvao5lrH2SA-lG7vXs8rU_Rf7BHz0CZ0YO=w240-h480-rw"}
-            className={styles.logo} />
-          <h1 className={styles["title"]}>{info.name}</h1>
-          <a>A3.</a>
-          <div className={styles["btn-container"]}>
-            <a className={styles["download-btn-container"]}
-              href='https://play.google.com/store/apps/details?id=com.a3.yearlyprogess&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'>
-              <img alt='Get it on Google Play' className={styles["download-btn"]} src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png' />
-            </a>
-          </div>
-        </section>
+        <img
+          src={"https://play-lh.googleusercontent.com/SxZPrpX_9O2WxFiI067oHMRxsRS0Ozz6clBvao5lrH2SA-lG7vXs8rU_Rf7BHz0CZ0YO=w240-h480-rw"}
+          className={styles.logo} />
+        <h1 className={styles["title"]}>{info.name}</h1>
+        <a>A3.</a>
+        <div className={styles["btn-container"]}>
+          <a className={styles["download-btn-container"]}
+            href='https://play.google.com/store/apps/details?id=com.a3.yearlyprogess&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'>
+            <img alt='Get it on Google Play' className={styles["download-btn"]} src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png' />
+          </a>
+        </div>
+      </section>
       <main className={styles["main"]}>
         <Article title={"About this app"}>
           <p>
