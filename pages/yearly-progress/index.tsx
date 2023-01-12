@@ -50,7 +50,7 @@ const Home: NextPage = () => {
             {info.desc.about}
           </p>
           <a>Updated On</a>
-          <p>October 1, 2022</p>
+          <p>January 11, 2023</p>
         </Article>
         <section>
           <div className={styles.ss_container} >
