@@ -1,6 +1,5 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
 import Article from '../../components/Article'
 import styles from '../../styles/yearly-progress/index.module.scss'
 import info from '../../info/yearly-progress.json'
