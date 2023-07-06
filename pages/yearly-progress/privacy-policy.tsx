@@ -1,4 +1,4 @@
-import {NextPage} from "next";
+import { NextPage } from "next";
 import styles from "../../styles/yearly-progress/Privacy.module.scss"
 import Head from "next/head";
 
@@ -16,7 +16,7 @@ const Privacy_policy: NextPage = () => {
                         <div className={styles.title}>
                             <img
                                 src={"https://play-lh.googleusercontent.com/SxZPrpX_9O2WxFiI067oHMRxsRS0Ozz6clBvao5lrH2SA-lG7vXs8rU_Rf7BHz0CZ0YO=w240-h480-rw"}
-                                className={styles.shadow}/>
+                                className={styles.shadow} />
                             <div>
                                 <h1>Yearly Progress</h1>
                                 <h2>Privacy Policy</h2>
@@ -49,29 +49,31 @@ const Privacy_policy: NextPage = () => {
                         as in our Terms and Conditions, which are accessible at
                         Yearly Progress unless otherwise defined in this Privacy Policy.
                     </p>
-                    <p><h5>Information Collection and Use</h5></p>
+                    <h5>Information Collection and Use</h5>
                     <p>
                         For a better experience, while using our Service, we
                         may require you to provide us with certain personally
                         identifiable information. The information that
                         we request will be retained by us and used as described in this privacy policy.
                     </p>
-                    <div><p>
+                    <div>
+                    <p>
                         The app does use third-party services that may collect
                         information used to identify you.
-                    </p> <p>
+                    </p>
+                    <p>
                         Link to the privacy policy of third-party service providers used
                         by the app
                     </p>
-                        <ul>
-                            <li><a href="https://www.google.com/policies/privacy/" target="_blank"
-                                   rel="noopener noreferrer">Google
-                                Play Services</a></li>
-                            <li><a href="https://support.google.com/admob/answer/6128543?hl=en" target="_blank"
-                                   rel="noopener noreferrer">AdMob</a></li>
-                        </ul>
+                    <ul>
+                        <li><a href="https://www.google.com/policies/privacy/" target="_blank"
+                            rel="noopener noreferrer">Google
+                            Play Services</a></li>
+                        <li><a href="https://support.google.com/admob/answer/6128543?hl=en" target="_blank"
+                            rel="noopener noreferrer">AdMob</a></li>
+                    </ul>
                     </div>
-                    <p><h5>Log Data</h5></p>
+                    <h5>Log Data</h5>
                     <p>
                         We want to inform you that whenever you
                         use our Service, in a case of an error in the app
@@ -83,7 +85,7 @@ const Privacy_policy: NextPage = () => {
                         the time and date of your use of the Service, and other
                         statistics.
                     </p>
-                    <p><h5>Service Providers</h5></p>
+                    <h5>Service Providers</h5>
                     <p>
                         We may employ third-party companies and
                         individuals due to the following reasons:
@@ -101,7 +103,7 @@ const Privacy_policy: NextPage = () => {
                         them on our behalf. However, they are obligated not to
                         disclose or use the information for any other purpose.
                     </p>
-                    <p><h5>Security</h5></p>
+                    <h5>Security</h5>
                     <p>
                         We value your trust in providing us your
                         Personal Information, thus we are striving to use commercially
@@ -110,7 +112,7 @@ const Privacy_policy: NextPage = () => {
                         storage is 100% secure and reliable, and we cannot
                         guarantee its absolute security.
                     </p>
-                    <p><h5>Links to Other Sites</h5></p>
+                    <h5>Links to Other Sites</h5>
                     <p>
                         This Service may contain links to other sites. If you click on
                         a third-party link, you will be directed to that site. Note
@@ -121,7 +123,7 @@ const Privacy_policy: NextPage = () => {
                         privacy policies, or practices of any third-party sites or
                         services.
                     </p>
-                    <p><h5>Children’s Privacy</h5></p>
+                    <h5>Children’s Privacy</h5>
                     <div><p>
                         These Services do not address anyone under the age of 13.
                         We do not knowingly collect personally
@@ -133,7 +135,7 @@ const Privacy_policy: NextPage = () => {
                         personal information, please contact us so that
                         we will be able to do the necessary actions.
                     </p></div>
-                    <p><h5>Changes to This Privacy Policy</h5></p>
+                    <h5>Changes to This Privacy Policy</h5>
                     <p>
                         We may update our Privacy Policy from
                         time to time. Thus, you are advised to review this page
@@ -141,11 +143,12 @@ const Privacy_policy: NextPage = () => {
                         notify you of any changes by posting the new Privacy Policy on
                         this page.
                     </p> <p>This policy is effective as of 2022-06-21</p>
-                    <p><h5>Contact Us</h5></p>
+                    <h5>Contact Us</h5>
                     <p>
                         If you have any questions or suggestions about our
                         Privacy Policy, do not hesitate to contact us at a3gang03@gmail.com.
                     </p>
+                    
                 </div>
 
             </main>
