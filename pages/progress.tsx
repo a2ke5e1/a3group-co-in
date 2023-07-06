@@ -48,7 +48,7 @@ const Progress: NextPage = () => {
                 </div>
                 <div className={styles.project_progress_container} >
                     <img src='/images/a3_logo.png' height={30} />
-                    <Link href='/progress'><a className={styles.project_progress_link}>
+                    <Link legacyBehavior href='/progress'><a className={styles.project_progress_link}>
                         https://a3group.co.in/progress</a></Link>
                 </div>
             </main>
