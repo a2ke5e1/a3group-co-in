@@ -1,14 +1,22 @@
-import styles from '../styles/components/footer.module.scss'
-import Link from 'next/link'
+import styles from '../styles/components/footer.module.scss';
+import Link from 'next/link';
+import Image from 'next/image';
 
-export default function Footer() {
+interface FooterProps {
+    policy_url: string | null,
+    delete_data_url?: string | null
+}
+
+export default function Footer(
+    { policy_url, delete_data_url }: FooterProps
+) {
     return (
         <footer className={styles.container}>
             <div className={styles.divider}></div>
             <div className={styles["sub-container"]}>
                 <section className={styles["logo-container"]}>
-                    <img src='/images/a3_logo.png' width={"60rem"} />
-                    <p>©2022 A3 Group, All right reserved.</p>
+                    <Image src='/images/a3_logo.png' width={"60"} height={"21"} alt="A3 Group Logo" />
+                    <p className={styles["copy-right"]}>©2022 A3 Group, All right reserved.</p>
                 </section>
                 {/* <section className={styles["follow-container"]}>
                     <h5 className={styles["follow-site-title"]} >Follow our news site</h5>
@@ -24,7 +32,8 @@ export default function Footer() {
                     </Link>
                 </section> */}
                 <section className={styles["other-url-containers"]}>
-                    <Link href='/yearly-progress/privacy-policy'>Privacy Policy</Link>
+                    {delete_data_url && <Link href={delete_data_url}>Delete Your Data</Link>}
+                    {policy_url && <Link href={policy_url}>Privacy Policy</Link>}
                     <Link href='/about-us'>About Us</Link>
                 </section>
             </div>

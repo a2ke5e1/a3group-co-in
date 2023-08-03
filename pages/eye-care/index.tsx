@@ -1,6 +1,7 @@
 import type { NextPage } from "next"
 import Head from "next/head";
 import info from '../../info/eye-care.json'
+import Footer from "../../components/Footer";
 
 const EyeCareHome: NextPage = () => {
     return (
@@ -27,7 +28,8 @@ const EyeCareHome: NextPage = () => {
             <link rel="manifest" href="/eye-care/favicon/site.webmanifest"></link>
           </Head>
           <main>
-            <p></p>
+            <p>Still Pending...</p>
+            <Footer policy_url="/eye-care/privacy-policy" delete_data_url="/eye-care/delete-account" />
           </main>
         </>
       )

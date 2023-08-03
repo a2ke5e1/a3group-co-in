@@ -1,6 +1,9 @@
 import type { NextPage } from "next"
 import Head from "next/head";
 import info from '../../../info/eye-care.json'
+import Footer from "../../../components/Footer";
+import styles from '../../../styles/eye-care/eyecare.module.scss'
+import Image from "next/image";
 
 const DeletePage: NextPage = () => {
     return (
@@ -26,8 +29,16 @@ const DeletePage: NextPage = () => {
             <link rel="icon" type="image/png" sizes="16x16" href="/eye-care/favicon/favicon-16x16.png" />
             <link rel="manifest" href="/eye-care/favicon/site.webmanifest"></link>
           </Head>
-          <main>
+          <main className={styles.main}>
+            <div className={styles.header}>
+                <Image
+                    src={"/eye-care/favicon/icon-512-maskable.png"}
+                    className={styles.logo} height={60} width={60} alt="Eye Care Logo" />
+                <h1>{info.name}</h1>
+            </div>
+            <h2>Delete your account</h2>
             <p>In order to delete your account, contact us <a href="mailto:support@a3group.co.in" >support@a3group.co.in</a></p>
+            <Footer policy_url="/eye-care/privacy-policy" delete_data_url="/eye-care/delete-account" />
           </main>
         </>
       )
