@@ -14,9 +14,11 @@ export default function Footer(
         <footer className={styles.container}>
             <div className={styles.divider}></div>
             <div className={styles["sub-container"]}>
-                <section className={styles["logo-container"]}>
-                    <Image src='/images/a3_logo.png' width={"60"} height={"21"} alt="A3 Group Logo" />
-                    <p className={styles["copy-right"]}>©2022 A3 Group, All right reserved.</p>
+                <section className={styles["a3-container"]}>
+                    <section className={styles["logo-container"]}>
+                        <Image src='/images/a3_logo.png' width={"60"} height={"21"} alt="A3 Group Logo" />
+                        <p className={styles["copy-right"]}>© 2018 - 2023 A3 Group, All right reserved.</p>
+                    </section>
                 </section>
                 {/* <section className={styles["follow-container"]}>
                     <h5 className={styles["follow-site-title"]} >Follow our news site</h5>
@@ -31,8 +33,15 @@ export default function Footer(
                         </div>
                     </Link>
                 </section> */}
+                {delete_data_url &&
                 <section className={styles["other-url-containers"]}>
-                    {delete_data_url && <Link href={delete_data_url}>Delete Your Data</Link>}
+                    <p className={styles.footer_title}>MANAGE YOUR DATA</p>
+                     <Link href={delete_data_url}>Delete Your Data</Link>
+                </section>
+                }
+
+                <section className={styles["other-url-containers"]}>
+                    <p className={styles.footer_title}>OTHERS</p>
                     {policy_url && <Link href={policy_url}>Privacy Policy</Link>}
                     <Link href='/about-us'>About Us</Link>
                 </section>
