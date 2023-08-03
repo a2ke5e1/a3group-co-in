@@ -9,6 +9,25 @@ const Privacy_policy: NextPage = () => {
 
             <Head>
                 <title>Yearly Progress - Privacy Policy</title>
+                <meta name="description" content="Yearly Progress is an android app which provides beautiful widgets, which shows the progress of day, week, month and year." />
+
+
+                <meta property="og:url" content="https://www.a3group.co.in/yearly-progress" />
+                <meta property="og:type" content="website" />
+                <meta property="og:title" content="Yearly Progress" />
+                <meta property="og:description" content="Yearly Progress is an android app which provides beautiful widgets, which shows the progress of day, week, month and year." />
+                <meta property="og:image" content="https://www.a3group.co.in/yearly-progress/images/ss/Screenshot_20221002_014215.png" />
+
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content="Yearly Progress" />
+                <meta name="twitter:description" content="Yearly Progress is an android app which provides beautiful widgets, which shows the progress of day, week, month and year." />
+                <meta name="twitter:image" content="https://www.a3group.co.in/yearly-progress/images/ss/Screenshot_20221002_014215.png" />
+
+
+                <link rel="apple-touch-icon" sizes="180x180" href="/yearly-progress/favicon/apple-touch-icon.png" />
+                <link rel="icon" type="image/png" sizes="32x32" href="/yearly-progress/favicon/favicon-32x32.png" />
+                <link rel="icon" type="image/png" sizes="16x16" href="/yearly-progress/favicon/favicon-16x16.png" />
+                <link rel="manifest" href="/yearly-progress/favicon/site.webmanifest"></link>
             </Head>
             <main className={styles.body}>
                 <div>
@@ -57,21 +76,21 @@ const Privacy_policy: NextPage = () => {
                         we request will be retained by us and used as described in this privacy policy.
                     </p>
                     <div>
-                    <p>
-                        The app does use third-party services that may collect
-                        information used to identify you.
-                    </p>
-                    <p>
-                        Link to the privacy policy of third-party service providers used
-                        by the app
-                    </p>
-                    <ul>
-                        <li><a href="https://www.google.com/policies/privacy/" target="_blank"
-                            rel="noopener noreferrer">Google
-                            Play Services</a></li>
-                        <li><a href="https://support.google.com/admob/answer/6128543?hl=en" target="_blank"
-                            rel="noopener noreferrer">AdMob</a></li>
-                    </ul>
+                        <p>
+                            The app does use third-party services that may collect
+                            information used to identify you.
+                        </p>
+                        <p>
+                            Link to the privacy policy of third-party service providers used
+                            by the app
+                        </p>
+                        <ul>
+                            <li><a href="https://www.google.com/policies/privacy/" target="_blank"
+                                rel="noopener noreferrer">Google
+                                Play Services</a></li>
+                            <li><a href="https://support.google.com/admob/answer/6128543?hl=en" target="_blank"
+                                rel="noopener noreferrer">AdMob</a></li>
+                        </ul>
                     </div>
                     <h5>Log Data</h5>
                     <p>
@@ -148,7 +167,7 @@ const Privacy_policy: NextPage = () => {
                         If you have any questions or suggestions about our
                         Privacy Policy, do not hesitate to contact us at a3gang03@gmail.com.
                     </p>
-                    
+
                 </div>
 
             </main>

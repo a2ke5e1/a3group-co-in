@@ -6,18 +6,18 @@ const DeletePage: NextPage = () => {
     return (
         <>
           <Head>
-            <title>{info.name} - Delete Account</title>
-            <meta name="description" content="Yearly Progress is an android app which provides beautiful widgets, which shows the progress of day, week, month and year." />
+            <title>Eye Care - Delete Account</title>
+            <meta name="description" content="Eye Care - Your Vision Health Companion" />
 
             <meta property="og:url" content="https://www.a3group.co.in/eye-care" />
             <meta property="og:type" content="website" />
-            <meta property="og:title" content="Yearly Progress" />
-            <meta property="og:description" content="Yearly Progress is an android app which provides beautiful widgets, which shows the progress of day, week, month and year." />
+            <meta property="og:title" content="Eye Care" />
+            <meta property="og:description" content="Eye Care - Your Vision Health Companion" />
             <meta property="og:image" content="https://www.a3group.co.in/eye-care/images/ss/Screenshot_20221002_014215.png" />
     
             <meta name="twitter:card" content="summary_large_image" />
-            <meta name="twitter:title" content="Yearly Progress" />
-            <meta name="twitter:description" content="Yearly Progress is an android app which provides beautiful widgets, which shows the progress of day, week, month and year." />
+            <meta name="twitter:title" content="Eye Care" />
+            <meta name="twitter:description" content="Eye Care - Your Vision Health Companion" />
             <meta name="twitter:image" content="https://www.a3group.co.in/eye-care/images/ss/Screenshot_20221002_014215.png" />
     
     
