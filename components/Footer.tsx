@@ -3,8 +3,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 interface FooterProps {
-    policy_url: string | null,
-    delete_data_url?: string | null
+    policy_url?: string
+    delete_data_url?: string
 }
 
 export default function Footer(

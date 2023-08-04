@@ -11,7 +11,7 @@ const AboutUs: NextPage =()=> {
             <main>
                
             </main>
-            <Footer policy_url={null} delete_data_url={null} />
+            <Footer  />
         </>
     )
 }
