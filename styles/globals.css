@@ -36,9 +36,8 @@ h2 {
 }
 
 h2 {
-    font-weight: normal;
-    font-size: 20px;
-    margin-bottom: 20px !important;
+    font-weight: 400;
+    font-size: 24px;
 }
 
 p {
@@ -63,4 +62,12 @@ p {
 
 ::-webkit-scrollbar-thumb:hover {
     background: #05307f;
+}
+
+::marker {
+    color: #0047cb;
+}
+
+ol {
+    padding-left: 15px;
 }
