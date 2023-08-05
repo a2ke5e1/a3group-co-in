@@ -1,5 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import Image from 'next/image'
+import Link from 'next/link'
 import Article from '../../components/Article'
 import styles from '../../styles/yearly-progress/index.module.scss'
 import info from '../../info/yearly-progress.json'
@@ -37,10 +39,10 @@ const Home: NextPage = () => {
         <h1 className={styles["title"]}>{info.name}</h1>
         <a>A3.</a>
         <div className={styles["btn-container"]}>
-          <a className={styles["download-btn-container"]}
-            href='https://play.google.com/store/apps/details?id=com.a3.yearlyprogess&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'>
-            <img alt='Get it on Google Play' className={styles["download-btn"]} src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png' />
-          </a>
+          <Link className={styles["download-btn-container"]} href='https://play.google.com/store/apps/details?id=com.a3.yearlyprogess&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'>
+            <Image className={styles["download-btn"]} alt='Get it on Google Play' width={160} height={62} src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png' />
+          </Link>
+          <a className={styles["legal-dist"]}>Google Play and the Google Play logo are trademarks of Google LLC.</a>
         </div>
       </section>
       <main className={styles["main"]}>

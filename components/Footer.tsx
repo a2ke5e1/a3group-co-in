@@ -36,7 +36,7 @@ export default function Footer(
                 {delete_data_url &&
                 <section className={styles["other-url-containers"]}>
                     <p className={styles.footer_title}>MANAGE YOUR DATA</p>
-                     <Link href={delete_data_url}>Delete Your Data</Link>
+                     <Link href={delete_data_url}>Delete Your Account</Link>
                 </section>
                 }
 
