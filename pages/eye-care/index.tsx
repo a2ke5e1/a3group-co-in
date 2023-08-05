@@ -71,7 +71,7 @@ const EyeCareHome: NextPage = () => {
               </p>
             </li>
             <li>
-              <p>Suitable for Everyone: Eye Care is ideal for individuals seeking to manage personal vision health, parents keeping track of their children's eye check-ups, or anyone interested in proactive eye care. Customize the app to suit your specific needs and take charge of your vision health with confidence.
+              <p>Suitable for Everyone: Eye Care is ideal for individuals seeking to manage personal vision health, parents keeping track of their children&apos;s eye check-ups, or anyone interested in proactive eye care. Customize the app to suit your specific needs and take charge of your vision health with confidence.
               </p>
             </li> </ol>
         </Article>
