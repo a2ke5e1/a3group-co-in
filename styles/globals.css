@@ -63,3 +63,11 @@ p {
 ::-webkit-scrollbar-thumb:hover {
     background: #05307f;
 }
+
+::marker {
+    color: #0047cb;
+}
+
+ol {
+    padding-left: 15px;
+}

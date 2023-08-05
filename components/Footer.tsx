@@ -33,6 +33,11 @@ export default function Footer(
                         </div>
                     </Link>
                 </section> */}
+                <section className={styles["other-url-containers"]}>
+                    <p className={styles.footer_title}>JOIN OUR COMMUNITY</p>
+                     <Link href={"https://t.me/phycalc"}>Telegram</Link>
+                </section>
+
                 {delete_data_url &&
                 <section className={styles["other-url-containers"]}>
                     <p className={styles.footer_title}>MANAGE YOUR DATA</p>

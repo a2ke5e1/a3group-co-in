@@ -46,7 +46,7 @@ const Home: NextPage = () => {
         </div>
       </section>
       <main className={styles["main"]}>
-        <Article title={"About this app"}>
+        <Article title={"About The App"}>
           <p>
             {info.desc.about}
           </p>
@@ -55,11 +55,11 @@ const Home: NextPage = () => {
         </Article>
         <section>
           <div className={styles.ss_container} >
-            <img src="/yearly-progress/images/ss/Screenshot_20221002_014215.png" />
-            <img src="/yearly-progress/images/ss/Screenshot_20221002_014317.png" />
-            <img src="/yearly-progress/images/ss/Screenshot_20221002_014407.png" />
-            <img src="/yearly-progress/images/ss/Screenshot_20221002_014414.png" />
-            <img src="/yearly-progress/images/ss/Screenshot_20221002-014123.png" />
+            <Image src="/yearly-progress/images/ss/Screenshot_20221002_014215.png" width={120} quality={100} height={260} alt='Yearly Progress Screenshot 1' />
+            <Image src="/yearly-progress/images/ss/Screenshot_20221002_014317.png" width={120} quality={100} height={260} alt='Yearly Progress Screenshot 2' />
+            <Image src="/yearly-progress/images/ss/Screenshot_20221002_014407.png" width={120} quality={100} height={260} alt='Yearly Progress Screenshot 3' />
+            <Image src="/yearly-progress/images/ss/Screenshot_20221002_014414.png" width={120} quality={100} height={260} alt='Yearly Progress Screenshot 4' />
+            <Image src="/yearly-progress/images/ss/Screenshot_20221002-014123.png" width={120} quality={100} height={260} alt='Yearly Progress Screenshot 5'/>
           </div>
         </section>
         <Article title={"New Features"}>

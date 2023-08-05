@@ -11,7 +11,7 @@ const nextConfig = {
     ]
   }, 
   images: {
-    domains: ['play.google.com'],
+    domains: ['play.google.com', 'play-lh.googleusercontent.com'],
   }
 }
 

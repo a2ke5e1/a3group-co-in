@@ -38,6 +38,7 @@ const DeletePage: NextPage = () => {
             </div>
             <h2>Delete your account</h2>
             <p>In order to delete your account, contact us <a href="mailto:support@a3group.co.in" >support@a3group.co.in</a></p>
+            <p className={styles.disclaimer}>Your account will be deleted in 1 month after your intial data deletion request.<br />We will send confirmation email after we recive your request.</p>
             <Footer policy_url="/eye-care/privacy-policy" delete_data_url="/eye-care/delete-account" />
           </main>
         </>
