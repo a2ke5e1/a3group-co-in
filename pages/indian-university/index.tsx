@@ -26,14 +26,14 @@ const EyeCareHome: NextPage = () => {
         <meta name="twitter:image" content="https://www.a3group.co.in/eye-care/images/ss/Screenshot_1691238836.png" />
 
 
-        <link rel="apple-touch-icon" sizes="180x180" href="/eye-care/favicon/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/eye-care/favicon/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/eye-care/favicon/favicon-16x16.png" />
-        <link rel="manifest" href="/eye-care/favicon/site.webmanifest"></link>
+        <link rel="apple-touch-icon" sizes="180x180" href="/indian-university/favicon/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/indian-university/favicon/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/indian-university/favicon/favicon-16x16.png" />
+        <link rel="manifest" href="/indian-university/favicon/site.webmanifest"></link>
       </Head>
       <section className={styles["head-container"]}>
         <img
-          src={"https://play-lh.googleusercontent.com/MhkvnZGvvVQYwBKwxoeP7MhO_lwO7SIOF0ci5J9QAxoWGkWRBtldT5etyjcHEK3WfU4=w240-h480-rw"}
+          src={"/indian-university/favicon/android-chrome-192x192.png"}
           className={styles.logo} />
         <h1 className={styles["title"]}>{info.name}</h1>
         <a>A3.</a>
@@ -45,10 +45,9 @@ const EyeCareHome: NextPage = () => {
         </div>
       </section>
       <main className={styles["main"]}>
-        <Article title="What is Eye Care?">
+        <Article title="What is Indian University?">
           <p>
-            Eye Care is an app which is beautifully designed to help you to take care of your eyes. It provides you a way to keep records of their prescription
-            in the cloud and access them from anywhere.
+            Indian University is an app which is beautifully designed to help you navigate your dream university and share the details
           </p>
           <a>Features: </a>
           <ol>
