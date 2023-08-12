@@ -15,25 +15,25 @@ const EyeCarePrivacyPolicy: NextPage = () => {
                 <meta property="og:type" content="website" />
                 <meta property="og:title" content="Eye Care" />
                 <meta property="og:description" content="Eye Care - Your Vision Health Companion" />
-                <meta property="og:image" content="https://www.a3group.co.in/eye-care/images/ss/Screenshot_20221002_014215.png" />
+                <meta property="og:image" content="https://www.a3group.co.in/indian-university/images/ss/Screenshot_20221002_014215.png" />
 
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content="Eye Care" />
                 <meta name="twitter:description" content="Eye Care - Your Vision Health Companion" />
-                <meta name="twitter:image" content="https://www.a3group.co.in/eye-care/images/ss/Screenshot_20221002_014215.png" />
+                <meta name="twitter:image" content="https://www.a3group.co.in/indian-university/images/ss/Screenshot_20221002_014215.png" />
 
 
-                <link rel="apple-touch-icon" sizes="180x180" href="/eye-care/favicon/apple-touch-icon.png" />
-                <link rel="icon" type="image/png" sizes="32x32" href="/eye-care/favicon/favicon-32x32.png" />
-                <link rel="icon" type="image/png" sizes="16x16" href="/eye-care/favicon/favicon-16x16.png" />
-                <link rel="manifest" href="/eye-care/favicon/site.webmanifest"></link>
+                <link rel="apple-touch-icon" sizes="180x180" href="/indian-university/favicon/apple-touch-icon.png" />
+                <link rel="icon" type="image/png" sizes="32x32" href="/indian-university/favicon/favicon-32x32.png" />
+                <link rel="icon" type="image/png" sizes="16x16" href="/indian-university/favicon/favicon-16x16.png" />
+                <link rel="manifest" href="/indian-university/favicon/site.webmanifest"></link>
             </Head>
             <main className={styles.body}>
                 <div>
                     <div className={styles.sup_title}>
                         <div className={styles.title}>
                             <img
-                                src={"/eye-care/favicon/icon-512-maskable.png"}
+                                src={"/indian-university/favicon/android-chrome-192x192.png"}
                                 className={styles.shadow} />
                             <div>
                                 <h1>{info.name}</h1>
