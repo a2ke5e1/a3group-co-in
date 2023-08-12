@@ -57,7 +57,7 @@ const EyeCarePrivacyPolicy: NextPage = () => {
                     <h5>3. Use of Data</h5>
 
                     <p>3.1. Personal Information Personal information collected is used for the following purposes:</p>
-                    <p> &nbsp; - To provide and maintain the app's functionality.</p>
+                    <p> &nbsp; - To provide and maintain the app&apos;s functionality.</p>
                     <p> &nbsp; - To personalize your experience and improve user interface.</p>
                     <p> &nbsp; - To allow signed-in users to sync their favorite universities across devices.</p>
 
