@@ -69,10 +69,10 @@ const EyeCarePrivacyPolicy: NextPage = () => {
                     <p>We do not sell, trade, or otherwise transfer your personal information to third parties. However, we may share your data in the following circumstances:</p>
                     <p> &nbsp; - With service providers who assist us in app operation and maintenance.</p>
                     <p> &nbsp; - With legal authorities when required by law or to protect our rights.</p>
-                    
+
                     <h5>5. Data Security</h5>
                     <p> &nbsp; - We prioritize the security of your personal information. We implement appropriate measures to safeguard data from unauthorized access, alteration, or disclosure.</p>
-                   
+
                     <h5>6. Links to External Sites</h5>
                     <p> &nbsp; - Our app may contain links to external websites, including university websites. We are not responsible for the content or privacy practices of such sites. Please review their respective privacy policies before using them.</p>
 
