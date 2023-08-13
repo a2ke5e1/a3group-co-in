@@ -27,8 +27,8 @@ const EyeCareHome: NextPage = () => {
 
 
         <link rel="apple-touch-icon" sizes="180x180" href="/indian-university/favicon/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/indian-university/favicon/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/indian-university/favicon/favicon-16x16.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/indian-university/favicon/favicon-32x32-png.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/indian-university/favicon/favicon-16x16-png.png" />
         <link rel="manifest" href="/indian-university/favicon/site.webmanifest"></link>
       </Head>
       <section className={styles["head-container"]}>
