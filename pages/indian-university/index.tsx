@@ -3,7 +3,7 @@ import Head from "next/head";
 import Image from "next/image";
 import info from '../../info/indian-university.json'
 import Footer from "../../components/Footer";
-import styles from '../../styles/eye-care/index.module.scss'
+import styles from '../../styles/indian-university/index.module.scss'
 import Link from "next/link";
 import Article from "../../components/Article";
 
@@ -16,12 +16,12 @@ const EyeCareHome: NextPage = () => {
 
         <meta property="og:url" content="https://www.a3group.co.in/indian-university" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Eye Care" />
-        <meta property="og:description" content="Eye Care - Your Vision Health Companion" />
+        <meta property="og:title" content="Indian University" />
+        <meta property="og:description" content="Indian University - Navigate your dream university and share the details" />
         <meta property="og:image" content="https://www.a3group.co.in/eye-care/images/ss/Screenshot_1691238815.png" />
 
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Eye Care" />
+        <meta name="twitter:title" content="Indian University" />
         <meta name="twitter:description" content="Eye Care - Your Vision Health Companion" />
         <meta name="twitter:image" content="https://www.a3group.co.in/eye-care/images/ss/Screenshot_1691238836.png" />
 
@@ -53,43 +53,45 @@ const EyeCareHome: NextPage = () => {
           <ol>
             <li>
               <p>
-                Personalized Eye Report Tables: Create and manage personalized eye report tables with ease. Keep track of prescribed eyeglass prescriptions. Easily update, modify, or delete data as your eye health journey progresses.
+                Navigate to your dream university and share the details with friends.
               </p>
             </li>
             <li>
               <p>
-                Secure and Cloud-Synchronized: Your eye health data is stored securely in the cloud. Access your eye reports anytime, anywhere, from multiple device.
+                Secure and Cloud-Synchronized: Your eye health data is stored securely in the cloud. Access your favorite university list from any device, anywhere, anytime.
               </p>
             </li>
             <li>
-              <p>Shareable Eye Reports for Better Communication: Enhance communication with your eye care specialist by generating shareable eye reports as screenshots.
+              <p>Shareable Universities data card among friends and families.
               </p>
             </li>
             <li>
-              <p>User-Friendly and Intuitive Interface: Eye Care is designed to cater to users of all levels, from tech-savvy individuals to those new to mobile apps. The clean and intuitive layout makes it easy to access eye reports, update information, and view your eye health progress effortlessly.
+              <p>User-Friendly and Intuitive Interface: Indian University is designed to cater to users of all levels, from tech-savvy individuals to those new to mobile apps. The clean and intuitive layout makes it easy to search for Universities effortlessly.
               </p>
             </li>
             <li>
-              <p>Suitable for Everyone: Eye Care is ideal for individuals seeking to manage personal vision health, parents keeping track of their children&apos;s eye check-ups, or anyone interested in proactive eye care. Customize the app to suit your specific needs and take charge of your vision health with confidence.
+              <p>Suitable for Everyone: Indian Unniversity is an ideal app for students to keep track of their favorite universities and check their infromation at one place. Share the details with friends and families and help them to navigate their dream university.
               </p>
             </li> </ol>
         </Article>
         <section>
           <a>Screenshots: </a>
           <div className={styles.ss_container} >
-            <Image src="/eye-care/images/ss/Screenshot_1691238815.png" width={120} height={260} quality={100} alt="Eye Care home screen screenshot" />
-            <Image src="/eye-care/images/ss/Screenshot_1691238836.png" width={120} height={260} quality={100} alt="Eye Care recent screen screenshot" />
-            <Image src="https://play-lh.googleusercontent.com/scjasM7xzNrzFEQSCDKywfESwBgOagc5Xotz35SF1YXPU00gkz6nvpQ2JSxWhHCniJE=w526-h296-rw" width={120} height={260} quality={100} alt="Eye Care home screen screenshot in dark mode" />
-            <Image src="https://play-lh.googleusercontent.com/1wovtsQNjdTYFwqkKPNWyrQ4VWmOBaRgTfvK5iJnJD7v6cOU_S5yGv1-Cl9I1EqZGQ=w526-h296-rw" width={120} height={260} quality={100} alt="Eye Care add reports screen screenshot in dark mode" />
+            <Image src="/indian-university/images/ss/1.png" width={120} height={260} quality={100} alt="Eye Care home screen screenshot" />
+            <Image src="/indian-university/images/ss/2.png" width={120} height={260} quality={100} alt="Eye Care search screen screenshot" />
+            <Image src="/indian-university/images/ss/3.png" width={120} height={260} quality={100} alt="Eye Care user screen screenshot" />
+            <Image src="/indian-university/images/ss/4.png" width={120} height={260} quality={100} alt="Eye Care home screen screenshot in dark mode" />
+            <Image src="/indian-university/images/ss/5.png" width={120} height={260} quality={100} alt="Eye Care search screen screenshot in dark mode" />
+            <Image src="/indian-university/images/ss/6.png" width={120} height={260} quality={100} alt="Eye Care user screen screenshot in dark mode" />
           </div>
         </section>
         <Article title="Upcoming Features: ">
           <ol>
             <li>
-              <p>You will be able to set reminders to remind to drop your eye drops, medication, etc.</p>
+              <p>Get more details about universities and their qualification procedure</p>
             </li>
             <li>
-              <p>You will be able to set reminders to remind to take breaks from your screen.</p>
+              <p>Get updates on the feed of each universities.</p>
             </li>
           </ol>
         </Article>
