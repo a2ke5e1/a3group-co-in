@@ -1,50 +1,48 @@
 import { NextPage } from "next";
-import styles from "../../../../styles/yearly-progress/Privacy.module.scss"
+import styles from "../../../../styles/yearly-progress/Privacy.module.scss";
 import Head from "next/head";
+import PrivacyPolicy from "@/docs/yearly-progress/privacy-policy.mdx";
 
+
+export async function generateMetadata() {
+
+  const title: String = "Yearly Progress - Privacy Policy"
+  const description: String =  "Yearly Progress is an android app which provides beautiful widgets, which shows the progress of day, week, month and year."
+
+  return {
+    title: title,
+    description: description,
+    icons: '/eye-care/favicon/favicon.ico', 
+    twitter: {
+      images: 'https://www.a3group.co.in/eye-care/images/ss/Screenshot_1691238815.png', 
+    }
+  }
+}
 
 const Privacy_policy: NextPage = () => {
-    return (
+  return (
+    <div>
+      <main className={styles.body}>
         <div>
-
-            <Head>
-                <title>Yearly Progress - Privacy Policy</title>
-                <meta name="description" content="Yearly Progress is an android app which provides beautiful widgets, which shows the progress of day, week, month and year." />
-
-
-                <meta property="og:url" content="https://www.a3group.co.in/yearly-progress" />
-                <meta property="og:type" content="website" />
-                <meta property="og:title" content="Yearly Progress" />
-                <meta property="og:description" content="Yearly Progress is an android app which provides beautiful widgets, which shows the progress of day, week, month and year." />
-                <meta property="og:image" content="https://www.a3group.co.in/yearly-progress/images/ss/Screenshot_20221002_014215.png" />
-
-                <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:title" content="Yearly Progress" />
-                <meta name="twitter:description" content="Yearly Progress is an android app which provides beautiful widgets, which shows the progress of day, week, month and year." />
-                <meta name="twitter:image" content="https://www.a3group.co.in/yearly-progress/images/ss/Screenshot_20221002_014215.png" />
-
-
-                <link rel="apple-touch-icon" sizes="180x180" href="/yearly-progress/favicon/apple-touch-icon.png" />
-                <link rel="icon" type="image/png" sizes="32x32" href="/yearly-progress/favicon/favicon-32x32.png" />
-                <link rel="icon" type="image/png" sizes="16x16" href="/yearly-progress/favicon/favicon-16x16.png" />
-                <link rel="manifest" href="/yearly-progress/favicon/site.webmanifest"></link>
-            </Head>
-            <main className={styles.body}>
-                <div>
-                    <div className={styles.sup_title}>
-                        <div className={styles.title}>
-                            <img
-                                src={"https://play-lh.googleusercontent.com/SxZPrpX_9O2WxFiI067oHMRxsRS0Ozz6clBvao5lrH2SA-lG7vXs8rU_Rf7BHz0CZ0YO=w240-h480-rw"}
-                                className={styles.shadow} />
-                            <div>
-                                <h1>Yearly Progress</h1>
-                                <h2>Privacy Policy</h2>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-                <div>
+          <div className={styles.sup_title}>
+            <div className={styles.title}>
+              <img
+                src={
+                  "https://play-lh.googleusercontent.com/SxZPrpX_9O2WxFiI067oHMRxsRS0Ozz6clBvao5lrH2SA-lG7vXs8rU_Rf7BHz0CZ0YO=w240-h480-rw"
+                }
+                className={styles.shadow}
+              />
+              <div>
+                <h1 className="text-xl font-bold">Yearly Progress</h1>
+                <h2></h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="prose prose-sm only prose-h1:mt-0">
+          <PrivacyPolicy />
+        </div>
+        {/* <div>
                     <p>
                         A3 Inc. built the Yearly Progress app as
                         an Ad Supported app. This SERVICE is provided by
@@ -168,11 +166,11 @@ const Privacy_policy: NextPage = () => {
                         Privacy Policy, do not hesitate to contact us at a3gang03@gmail.com.
                     </p>
 
-                </div>
+                </div> */}
+        
+      </main>
+    </div>
+  );
+};
 
-            </main>
-        </div>
-    )
-}
-
-export default Privacy_policy
+export default Privacy_policy;

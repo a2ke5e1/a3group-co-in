@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-html,
-body {
-    font-family: Roboto;
-}
 
 main {
     margin-left: auto;
@@ -23,28 +19,6 @@ main {
     main {
         max-width: 90vw;
     }
-}
-
-h5 {
-    font-size: 20px;
-    padding: 0;
-    margin: 0;
-}
-
-h1,
-h2 {
-    padding: 0;
-    margin: 0;
-}
-
-h2 {
-    font-weight: 400;
-    font-size: 24px;
-}
-
-p {
-    margin-top: 5px;
-    text-align: justify;
 }
 
 /* Scrollbar Style */
@@ -68,8 +42,4 @@ p {
 
 ::marker {
     color: #0047cb;
-}
-
-ol {
-    padding-left: 15px;
 }

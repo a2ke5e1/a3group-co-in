@@ -10,7 +10,7 @@ export default function Home() {
 
   return (
     <main>
-      <div>
+      <div className='bg-red-400'>
         {"postPreviews"}
       </div>
     </main>
