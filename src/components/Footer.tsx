@@ -1,14 +1,15 @@
-import styles from '../styles/components/footer.module.scss';
+import styles from '../../styles/components/footer.module.scss';
 import Link from 'next/link';
 import Image from 'next/image';
 
 interface FooterProps {
     policy_url?: string
     delete_data_url?: string
+    apps?: boolean
 }
 
 export default function Footer(
-    { policy_url, delete_data_url }: FooterProps
+    { policy_url, delete_data_url, apps}: FooterProps
 ) {
     return (
         <footer className={styles.container}>
@@ -45,8 +46,16 @@ export default function Footer(
                 </section>
                 }
 
+                {apps &&
                 <section className={styles["other-url-containers"]}>
-                    <p className={styles.footer_title}>OTHERS</p>
+                    <p className={styles.footer_title}>Apps</p>
+                    <Link href='/yearly-progress'>Yearly Progress</Link>
+                    <Link href='/eye-care'>Eye Care</Link>
+                </section>
+                }
+
+                <section className={styles["other-url-containers"]}>
+                    <p className={styles.footer_title}>Others</p>
                     {policy_url && <Link href={policy_url}>Privacy Policy</Link>}
                     <Link href='/about-us'>About Us</Link>
                 </section>

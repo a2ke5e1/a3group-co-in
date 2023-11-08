@@ -1,9 +1,9 @@
 import type { NextPage } from "next"
 import Head from "next/head";
 import Image from "next/image";
-import info from '../../info/eye-care.json'
+import info from '../../../info/eye-care.json'
 import Footer from "../../components/Footer";
-import styles from '../../styles/eye-care/index.module.scss'
+import styles from '../../../styles/eye-care/index.module.scss'
 import Link from "next/link";
 import Article from "../../components/Article";
 
