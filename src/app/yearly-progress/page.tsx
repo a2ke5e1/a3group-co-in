@@ -1,37 +1,22 @@
-import type { NextPage } from 'next'
+import type { Metadata, NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 import Article from '@/components/Article'
-import styles from '../../../styles/yearly-progress/index.module.scss'
+import styles from '@styles/yearly-progress/index.module.scss'
 import info from '../../../info/yearly-progress.json'
-import Footer from '../../components/Footer'
+import Footer from '@/components/Footer'
+
+export const metadata: Metadata = {
+  title: info.name,
+  description: info.desc.about, 
+  icons : '/yearly-progress/favicon/favicon.ico'
+}
+
 
 const Home: NextPage = () => {
   return (
     <>
-      <Head>
-        <title>{info.name}</title>
-        <meta name="description" content="Yearly Progress is an android app which provides beautiful widgets, which shows the progress of day, week, month and year." />
-
-
-        <meta property="og:url" content="https://www.a3group.co.in/yearly-progress" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Yearly Progress" />
-        <meta property="og:description" content="Yearly Progress is an android app which provides beautiful widgets, which shows the progress of day, week, month and year." />
-        <meta property="og:image" content="https://www.a3group.co.in/yearly-progress/images/ss/Screenshot_20221002_014215.png" />
-
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Yearly Progress" />
-        <meta name="twitter:description" content="Yearly Progress is an android app which provides beautiful widgets, which shows the progress of day, week, month and year." />
-        <meta name="twitter:image" content="https://www.a3group.co.in/yearly-progress/images/ss/Screenshot_20221002_014215.png" />
-
-
-        <link rel="apple-touch-icon" sizes="180x180" href="/yearly-progress/favicon/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/yearly-progress/favicon/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/yearly-progress/favicon/favicon-16x16.png" />
-        <link rel="manifest" href="/yearly-progress/favicon/site.webmanifest"></link>
-      </Head>
       <section className={styles["head-container"]}>
         <img
           src={"https://play-lh.googleusercontent.com/SxZPrpX_9O2WxFiI067oHMRxsRS0Ozz6clBvao5lrH2SA-lG7vXs8rU_Rf7BHz0CZ0YO=w240-h480-rw"}
