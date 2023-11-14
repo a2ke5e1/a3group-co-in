@@ -10,6 +10,7 @@ export async function generateMetadata() {
   const description: String =  "Yearly Progress is an android app which provides beautiful widgets, which shows the progress of day, week, month and year."
 
   return {
+    metadataBase: new URL('https://a3group.co.in'),
     title: title,
     description: description,
     icons: '/yearly-progress/favicon/favicon.ico', 

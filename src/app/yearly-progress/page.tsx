@@ -8,6 +8,7 @@ import info from '../../../info/yearly-progress.json'
 import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://a3group.co.in'),
   title: info.name,
   description: info.desc.about, 
   icons : '/yearly-progress/favicon/favicon.ico'
@@ -23,9 +24,9 @@ const Home: NextPage = () => {
           className={styles.logo} />
         <h1 className={styles["title"]}>{info.name}</h1>
         <a>A3.</a>
-        <div className={styles["btn-container"]}>
-          <Link className={styles["download-btn-container"]} href='https://play.google.com/store/apps/details?id=com.a3.yearlyprogess&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'>
-            <Image className={styles["download-btn"]} alt='Get it on Google Play' width={160} height={62} src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png' />
+        <div className={"flex flex-col items-center mt-6"}>
+          <Link href='https://play.google.com/store/apps/details?id=com.a3.yearlyprogess&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'>
+            <Image alt='Get it on Google Play' width={160} height={62} src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png' />
           </Link>
           <a className={styles["legal-dist"]}>Google Play and the Google Play logo are trademarks of Google LLC.</a>
         </div>

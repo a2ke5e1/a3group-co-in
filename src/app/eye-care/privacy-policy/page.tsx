@@ -8,6 +8,7 @@ export async function generateMetadata() {
   const description: String = "Eye Care - Your Vision Health Companion";
 
   return {
+    metadataBase: new URL('https://a3group.co.in'),
     title: title,
     description: description,
     icons: "/eye-care/favicon/favicon.ico",
