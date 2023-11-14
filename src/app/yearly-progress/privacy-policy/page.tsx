@@ -1,6 +1,6 @@
 import { NextPage } from "next";
 import styles from "../../../../styles/yearly-progress/Privacy.module.scss";
-import Head from "next/head";
+import Image from "next/image"
 import PrivacyPolicy from "@/docs/yearly-progress/privacy-policy.mdx";
 
 
@@ -12,25 +12,28 @@ export async function generateMetadata() {
   return {
     title: title,
     description: description,
-    icons: '/eye-care/favicon/favicon.ico', 
+    icons: '/yearly-progress/favicon/favicon.ico', 
     twitter: {
-      images: 'https://www.a3group.co.in/eye-care/images/ss/Screenshot_1691238815.png', 
+      images: 'https://www.a3group.co.in/yearly-progress/images/ss/Screenshot_1691238815.png', 
     }
   }
 }
 
 const Privacy_policy: NextPage = () => {
   return (
-    <div>
-      <main className={styles.body}>
+    <div >
+      <main className={"mt-6"}>
         <div>
           <div className={styles.sup_title}>
             <div className={styles.title}>
-              <img
+              <Image
                 src={
                   "https://play-lh.googleusercontent.com/SxZPrpX_9O2WxFiI067oHMRxsRS0Ozz6clBvao5lrH2SA-lG7vXs8rU_Rf7BHz0CZ0YO=w240-h480-rw"
                 }
-                className={styles.shadow}
+                width={50}
+                height={50}
+                alt=""
+                className={ styles.shadow +" rounded-md"}
               />
               <div>
                 <h1 className="text-xl font-bold">Yearly Progress</h1>
@@ -39,7 +42,7 @@ const Privacy_policy: NextPage = () => {
             </div>
           </div>
         </div>
-        <div className="prose prose-sm only prose-h1:mt-0">
+        <div className="prose prose-sm only prose-h1:mt-0 mt-5">
           <PrivacyPolicy />
         </div>
         {/* <div>
