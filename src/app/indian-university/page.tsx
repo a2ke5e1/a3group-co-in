@@ -1,9 +1,9 @@
 import type { NextPage } from "next"
 import Head from "next/head";
 import Image from "next/image";
-import info from '../../info/indian-university.json'
+import info from '../../../info/indian-university.json'
 import Footer from "../../components/Footer";
-import styles from '../../styles/indian-university/index.module.scss'
+import styles from '@styles/indian-university/index.module.scss'
 import Link from "next/link";
 import Article from "../../components/Article";
 
@@ -37,12 +37,12 @@ const EyeCareHome: NextPage = () => {
           className={styles.logo} />
         <h1 className={styles["title"]}>{info.name}</h1>
         <a>A3.</a>
-        <div className={styles["btn-container"]}>
+        {/* <div className={styles["btn-container"]}>
           <Link className={styles["download-btn-container"]} href='https://play.google.com/store/apps/details?id=com.a3.eyecare&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'>
             <Image className={styles["download-btn"]} alt='Get it on Google Play' width={160} height={62} src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png' />
           </Link>
           <a className={styles["legal-dist"]}>Google Play and the Google Play logo are trademarks of Google LLC.</a>
-        </div>
+        </div> */}
       </section>
       <main className={styles["main"]}>
         <Article title="What is Indian University?">
@@ -99,7 +99,7 @@ const EyeCareHome: NextPage = () => {
           <a>Have suggestion? </a>
           <p>You can send your suggesion through our email at <Link href="mailto:support@a3group.co.in" >support@a3group.co.in.</Link><br />or you can join our telegram community <Link href="https://t.me/phycalc/651" >here.</Link></p>
         </Article>
-        <Footer policy_url="/indian-university/privacy-policy" delete_data_url="/indian-university/delete-account" />
+        <Footer policy_url="/indian-university/privacy-policy"  />
       </main>
     </>
   )

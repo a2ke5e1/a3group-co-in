@@ -1,8 +1,8 @@
 import type { NextPage } from "next"
 import Head from "next/head";
-import info from '../../../info/indian-university.json'
+import info from '../../../../info/indian-university.json'
 import Footer from "../../../components/Footer";
-import styles from '../../../styles/indian-university/indianuniversity.module.scss'
+import styles from '@styles/indian-university/indianuniversity.module.scss'
 import Image from "next/image";
 
 const DeletePage: NextPage = () => {

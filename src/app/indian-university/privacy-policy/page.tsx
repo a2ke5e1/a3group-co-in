@@ -1,7 +1,7 @@
 import { NextPage } from "next";
-import styles from "../../styles/yearly-progress/Privacy.module.scss"
+import styles from "@styles/yearly-progress/Privacy.module.scss"
 import Head from "next/head";
-import info from '../../info/indian-university.json'
+import info from '../../../../info/indian-university.json'
 
 const EyeCarePrivacyPolicy: NextPage = () => {
     return (
