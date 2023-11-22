@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://a3group.co.in'),
   title: info.name,
   description: info.desc.about, 
-  icons : '/yearly-progress/favicon/favicon.ico'
+  icons : '/yearly-progress/favicon/android-chrome-192x192.png'
 }
 
 
