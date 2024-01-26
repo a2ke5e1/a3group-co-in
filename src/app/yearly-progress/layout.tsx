@@ -10,7 +10,7 @@ export default function RootLayout({
     <>
       <main>
         {children}
-        <Footer policy_url="/yearly-progress/privacy-policy" />
+        <Footer terms_of_service_url="/yearly-progress/TOS" policy_url="/yearly-progress/privacy-policy" />
       </main>
     </>
   );
