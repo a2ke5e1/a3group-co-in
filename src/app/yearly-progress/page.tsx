@@ -54,6 +54,8 @@ const Home: NextPage = () => {
           <img className={styles["widget-img"]} src="/yearly-progress/images/ss/Screenshot_20221002_015212.png" />
           <p>You can see a preview of the widget above, It contains all the information that one might need such as date, week, month and year with their respective progress.</p>
         </Article>
+        <div className='h-16' />
+        <div className='h-16' />
       </main>
     </>
   )

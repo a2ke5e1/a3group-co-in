@@ -1,12 +1,12 @@
 import { NextPage } from "next";
 import styles from "../../../../styles/yearly-progress/Privacy.module.scss";
 import Image from "next/image"
-import PrivacyPolicy from "@/docs/yearly-progress/privacy-policy.mdx";
+import TermsOfService from "@/docs/yearly-progress/tos.mdx";
 
 
 export async function generateMetadata() {
 
-  const title: String = "Yearly Progress - Privacy Policy"
+  const title: String = "Yearly Progress - Terms and Service"
   const description: String =  "Yearly Progress is an android app which provides beautiful widgets, which shows the progress of day, week, month and year."
 
   return {
@@ -20,7 +20,7 @@ export async function generateMetadata() {
   }
 }
 
-const Privacy_policy: NextPage = () => {
+const TOS: NextPage = () => {
   return (
     <div >
       <main className={"mt-6"}>
@@ -38,13 +38,13 @@ const Privacy_policy: NextPage = () => {
               />
               <div>
                 <h1 className="text-xl font-bold">Yearly Progress</h1>
-                <h2 className="text-sm text-gray-500">Privacy Policy</h2>
+                <h2 className="text-sm text-gray-500">Terms Of Service</h2>
               </div>
             </div>
           </div>
         </div>
-        <div className="prose prose-sm only prose-h1:mt-0 mt-5">
-          <PrivacyPolicy />
+        <div className="prose prose-sm only prose-h1:mt-0 mt-5 ">
+          <TermsOfService />
         </div>
         {/* <div>
                     <p>
@@ -177,4 +177,4 @@ const Privacy_policy: NextPage = () => {
   );
 };
 
-export default Privacy_policy;
+export default TOS;
