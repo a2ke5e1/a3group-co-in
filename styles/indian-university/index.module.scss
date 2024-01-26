@@ -7,7 +7,8 @@
 $header-height: 20em;
 
 .head-container {
-	background: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.8)), url("/indian-university/images/cover.png");
+	background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.8)), url("/indian-university/images/cover.png");
+	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-size: cover;
 	color: white;

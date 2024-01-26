@@ -1,4 +1,4 @@
-import styles from "../styles/components/article.module.scss"
+import styles from "../../styles/components/article.module.scss"
 
 interface ArticleProps {
     title: String,
