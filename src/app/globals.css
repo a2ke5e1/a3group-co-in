@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 
+
 /* Scrollbar Style */
 ::-webkit-scrollbar {
     width: 4px;
