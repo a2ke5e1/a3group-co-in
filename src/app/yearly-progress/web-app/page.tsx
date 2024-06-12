@@ -12,7 +12,11 @@ export const metadata: Metadata = {
 export default function YearlyProgressWebApp() {
   return (
     <div className="">
-      <div className="flex flex-col flex-grow gap-2 my-4">
+      <div className="my-4">
+        <h1 className="font-bold text-2xl ">Yearly Progress <span className="text-sm text-blue-800">v0.01</span></h1>
+        <p className="ml-1 text-gray-700 font-light">Yearly Progress but in the web.</p>
+      </div>
+      <div className="grid md:grid-cols-2 gap-4 my-4 grid-cols-1">
         <YearlyProgressWidget type="year" />
         <YearlyProgressWidget type="month" />
         <YearlyProgressWidget type="week" />

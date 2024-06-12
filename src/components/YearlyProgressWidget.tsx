@@ -65,9 +65,9 @@ const YearlyProgressWidget: React.FC<YearlyProgressWidgetProps> = ({
   }
 
   return (
-    isClient ? <div className="relative bg-blue-50 py-2 px-4 min-w-fit rounded-2xl overflow-hidden text-blue-800">
+    isClient ? <div className="relative bg-blue-50 py-2 px-4 rounded-2xl overflow-hidden text-blue-800">
       <div
-        className="absolute top-0 left-0 h-full bg-blue-200 transition-all duration-1000 ease-in-out"
+        className="absolute top-0 left-0 h-full bg-blue-200 transition-all duration-150 ease-in-out"
         style={{ width: `${progress}%` }}
       ></div>
       <h2 className="relative text-sm font-light uppercase p-0 m-0">{type}</h2>
