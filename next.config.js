@@ -9,11 +9,11 @@ const nextConfig = {
   pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'tsx'],
   async redirects() { 
     return [
-      {
-        source: '/', 
-        destination: '/yearly-progress',
-        permanent: true,
-      }
+      // {
+      //   source: '/', 
+      //   destination: '/yearly-progress',
+      //   permanent: true,
+      // }
     ]
   }, 
 }

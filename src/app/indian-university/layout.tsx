@@ -9,10 +9,7 @@ export default function RootLayout({
   return (
     <>
       <div className="mx-auto max-w-screen-2xl">{children}</div>
-      <Footer
-        policy_url="/eye-care/privacy-policy"
-        delete_data_url="/eye-care/delete-account"
-      />
+      <Footer policy_url="/indian-university/privacy-policy" />
     </>
   );
 }

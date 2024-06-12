@@ -99,7 +99,6 @@ const EyeCareHome: NextPage = () => {
           <a>Have suggestion? </a>
           <p>You can send your suggesion through our email at <Link href="mailto:support@a3group.co.in" >support@a3group.co.in.</Link><br />or you can join our telegram community <Link href="https://t.me/phycalc/651" >here.</Link></p>
         </Article>
-        <Footer policy_url="/indian-university/privacy-policy"  />
       </main>
     </>
   )
