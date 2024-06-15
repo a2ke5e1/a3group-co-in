@@ -12,6 +12,9 @@ export const metadata: Metadata = {
   icons: "/yearly-progress/favicon/android-chrome-192x192.png",
 };
 
+
+
+
 export default async function YearlyProgressWebApp() {
   
 
