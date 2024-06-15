@@ -3,6 +3,8 @@ import info from "../../../../info/yearly-progress.json";
 import { Metadata } from "next";
 import YearlyProgressSunsetSunriseWidget from "@/components/YearlyProgressSunsetSunriseWidget";
 
+const OPEN_WEATHER_API_KEY = process.env.OPEN_WEATHER_API_KEY;
+
 
 
 
@@ -36,7 +38,7 @@ export default async function YearlyProgressWebApp() {
         <YearlyProgressWidget type="month" />
         <YearlyProgressWidget type="week" />
         <YearlyProgressWidget type="day" />
-        <YearlyProgressSunsetSunriseWidget />
+        <YearlyProgressSunsetSunriseWidget apiKey={OPEN_WEATHER_API_KEY} />
         
       </div>
     </div>
