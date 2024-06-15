@@ -5,10 +5,6 @@ import YearlyProgressSunsetSunriseWidget from "@/components/YearlyProgressSunset
 
 const OPEN_WEATHER_API_KEY = process.env.OPEN_WEATHER_API_KEY;
 
-
-
-
-
 export const metadata: Metadata = {
   metadataBase: new URL("https://a3group.co.in"),
   title: info.name,
@@ -17,10 +13,6 @@ export const metadata: Metadata = {
 };
 
 export default async function YearlyProgressWebApp() {
-  // const getLocationPermission = await navigator.permissions.query({
-  //   name: "geolocation",
-  // });
-
   
 
   return (
