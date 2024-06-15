@@ -1,7 +1,8 @@
 import YearlyProgressWidget from "@/components/YearlyProgressWidget";
 import info from "../../../../info/yearly-progress.json";
 import { Metadata } from "next";
-import YearlyProgressSunsetSunriseWidget from "@/components/YearlyProgressSunsetSunriseWidget";
+import YearlyProgressDaylightWidget from "@/components/YearlyProgressDaylightWidget";
+import YearlyProgressNightWidget from "@/components/YearlyProgressNightWidget";
 
 
 export const metadata: Metadata = {
@@ -31,7 +32,8 @@ export default async function YearlyProgressWebApp() {
         <YearlyProgressWidget type="month" />
         <YearlyProgressWidget type="week" />
         <YearlyProgressWidget type="day" />
-        <YearlyProgressSunsetSunriseWidget />
+        <YearlyProgressDaylightWidget />
+        <YearlyProgressNightWidget />
         
       </div>
     </div>
