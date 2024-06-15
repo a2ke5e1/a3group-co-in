@@ -1,3 +1,5 @@
+"use client"
+
 import YearlyProgressWidget from "@/components/YearlyProgressWidget";
 
 type Coordinates = [number, number];
