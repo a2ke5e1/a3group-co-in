@@ -3,9 +3,7 @@ import React, { useEffect, useState } from "react";
 import YearlyProgressWidget from "@/components/YearlyProgressWidget";
 import { parse } from "path";
 
-type YearlyProgressSunsetSunriseWidgetProps = {
-  apiKey?: string;
-};
+
 
 type Coordinates = [number, number];
 type SunsetSunrise = {
@@ -13,9 +11,7 @@ type SunsetSunrise = {
   sunset: number;
 };
 
-const YearlyProgressSunsetSunriseWidget = ({
-  apiKey,
-}: YearlyProgressSunsetSunriseWidgetProps) => {
+const YearlyProgressSunsetSunriseWidget = () => {
   const [coordinates, setCoordinates] = useState<Coordinates | null>(null);
   const [weatherData, setWeatherData] = useState<any>(null);
   const [sunriseSunset, setSunriseSunset] = useState<SunsetSunrise|null>(null); // [sunset, sunrise

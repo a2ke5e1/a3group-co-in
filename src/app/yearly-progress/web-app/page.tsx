@@ -3,7 +3,6 @@ import info from "../../../../info/yearly-progress.json";
 import { Metadata } from "next";
 import YearlyProgressSunsetSunriseWidget from "@/components/YearlyProgressSunsetSunriseWidget";
 
-const OPEN_WEATHER_API_KEY = process.env.OPEN_WEATHER_API_KEY;
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://a3group.co.in"),
@@ -11,7 +10,6 @@ export const metadata: Metadata = {
   description: info.desc.about,
   icons: "/yearly-progress/favicon/android-chrome-192x192.png",
 };
-
 
 
 
@@ -33,7 +31,7 @@ export default async function YearlyProgressWebApp() {
         <YearlyProgressWidget type="month" />
         <YearlyProgressWidget type="week" />
         <YearlyProgressWidget type="day" />
-        <YearlyProgressSunsetSunriseWidget apiKey={OPEN_WEATHER_API_KEY} />
+        <YearlyProgressSunsetSunriseWidget />
         
       </div>
     </div>
