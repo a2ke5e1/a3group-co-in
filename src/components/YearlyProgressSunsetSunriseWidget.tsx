@@ -50,6 +50,9 @@ const YearlyProgressSunsetSunriseWidget = ({
       try {
         const [lat, lon] = await getLongLat();
         setCoordinates([lat, lon]);
+
+        // console.log("Coordinates:", lat, lon);
+
         const data = await fetchWeatherData(lat, lon);
         setWeatherData(data);
       } catch (error) {
