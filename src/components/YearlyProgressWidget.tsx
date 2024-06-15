@@ -32,10 +32,15 @@ const YearlyProgressWidget: React.FC<YearlyProgressWidgetProps> = ({
   const [progress, setProgress] = useState<Number>(0);
 
   useEffect(() => {
-
     setIsClient(true);
     const interval = setInterval(() => {
-      const _progress = Math.min(Math.max(getProgress(type, custom?.startTimestamp, custom?.endTimestamp), 0), 100.00);
+      const _progress = Math.min(
+        Math.max(
+          getProgress(type, custom?.startTimestamp, custom?.endTimestamp),
+          0
+        ),
+        100.0
+      );
       setProgress(_progress);
     }, 1000);
     return () => {
@@ -64,7 +69,13 @@ const YearlyProgressWidget: React.FC<YearlyProgressWidgetProps> = ({
   };
 
   const styledProgress = () => {
-    var progress = Math.min(Math.max(getProgress(type, custom?.startTimestamp, custom?.endTimestamp), 0), 100.00);
+    var progress = Math.min(
+      Math.max(
+        getProgress(type, custom?.startTimestamp, custom?.endTimestamp),
+        0
+      ),
+      100.0
+    );
 
     const progressText = progress.toString().split(".");
     const progressInteger = progressText[0];
@@ -86,14 +97,26 @@ const YearlyProgressWidget: React.FC<YearlyProgressWidgetProps> = ({
         className="absolute top-0 left-0 h-full bg-blue-200 transition-all duration-150 ease-out"
         style={{ width: `${progress}%` }}
       ></div>
-      <h2 className="relative text-sm font-light uppercase p-0 m-0">{type}</h2>
-      <p className="relative text-lg p-0 ">{getTypeValue(type)}</p>
-      {custom?.description && <p className="relative text-xs p-0 ">{custom.description}</p>}
+      {!custom && (
+        <>
+          <h2 className="relative text-sm font-light uppercase p-0 m-0">
+            {type}
+          </h2>
+          <p className="relative text-lg p-0 ">{getTypeValue(type)}</p>
+        </>
+      )}
+      {custom?.title && (
+        <h2 className="relative text-sm font-light uppercase p-0 m-0">{custom.title}</h2>
+      )}
+      {custom?.description && (
+        <p className="relative text-sm p-0 ">{custom.description}</p>
+      )}
       <p className="relative pt-4">{styledProgress()}</p>
       <p className="relative text-sm">
         of{" "}
         {(
-          (getEndOfTimeMillis(type, custom?.endTimestamp) - getStartOfTimeMillis(type, custom?.startTimestamp)) /
+          (getEndOfTimeMillis(type, custom?.endTimestamp) -
+            getStartOfTimeMillis(type, custom?.startTimestamp)) /
           1000
         ).toFixed(0)}
         s
