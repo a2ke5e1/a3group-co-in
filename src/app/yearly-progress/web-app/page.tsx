@@ -50,7 +50,7 @@ export default async function YearlyProgressWebApp() {
 
   const convertUnixSeconds = (unix: number) => {
     const date = new Date(unix * 1000);
-    return date.toLocaleTimeString();
+    return date.toLocaleTimeString().toUpperCase();
   };
 
   return (
@@ -68,8 +68,15 @@ export default async function YearlyProgressWebApp() {
         <YearlyProgressWidget type="month" />
         <YearlyProgressWidget type="week" />
         <YearlyProgressWidget type="day" />
-        {sunrise && `Sunrise: ${convertUnixSeconds(sunrise)}`} <br />
-        {sunset && `Sunset: ${convertUnixSeconds(sunset)}`}
+        <YearlyProgressWidget type="custom" custom={
+          {
+            title: "Daylight",
+            description: `Sunrise at ${convertUnixSeconds(sunrise)} and Sunset at ${convertUnixSeconds(sunset)}.`,
+            startTimestamp: sunrise * 1000,
+            endTimestamp: sunset * 1000,
+          }
+        } />
+        
       </div>
     </div>
   );
