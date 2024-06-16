@@ -51,7 +51,7 @@ const YearlyProgressNightWidget = () => {
         const prevDate = new Date();
 
         // add day 1 to the next date
-        prevDate.setDate(currentDate.getDate() - 1);
+        currentDate.setDate(currentDate.getDate() + 1);
 
         var endDate = ""; 
         endDate += currentDate.getFullYear() + "-";
@@ -105,13 +105,13 @@ const YearlyProgressNightWidget = () => {
       type="custom"
       custom={{
         title: "Night",
-        description: `Last light on ${results[0].date} at ${convertUnixToTime(
-          convertDateTimeToUnix(results[0].date, results[0].last_light)
-        )} and first light on ${results[1].date} at ${convertUnixToTime(
-          convertDateTimeToUnix(results[1].date, results[1].first_light)
+        description: `Sunset on ${results[0].date} at ${convertUnixToTime(
+          convertDateTimeToUnix(results[0].date, results[0].sunset)
+        )} and Sunrise on ${results[1].date} at ${convertUnixToTime(
+          convertDateTimeToUnix(results[1].date, results[1].sunrise)
         )}.`,
-        startTimestamp: convertDateTimeToUnix(results[0].date, results[0].last_light),
-        endTimestamp: convertDateTimeToUnix(results[1].date, results[1].first_light),
+        startTimestamp: convertDateTimeToUnix(results[0].date, results[0].sunset),
+        endTimestamp: convertDateTimeToUnix(results[1].date, results[1].sunrise),
       }}
     />
   );
