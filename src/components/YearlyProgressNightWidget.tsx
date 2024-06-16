@@ -6,6 +6,7 @@ import {
   Coordinates,
   Results,
   convertDateTimeToUnix,
+  convertUnixToDateTime,
   convertUnixToTime,
   getLongLat
 } from "@/components/YearlyProgressDaylightWidget";
@@ -83,9 +84,12 @@ const YearlyProgressNightWidget = () => {
 
         // get current time 
         const currentTime = new Date();
-        const currentHour = currentTime.getHours();
+        const currentUnixTime = currentTime.getTime();
 
-        if (currentHour >= 0 && currentHour < 12) {
+        console.log("Current Time:", currentUnixTime);
+        console.log("Unix Time:", convertDateTimeToUnix(results[1].date, results[1].sunset)); 
+        
+        if (currentUnixTime < convertDateTimeToUnix(results[1].date, results[1].sunset)) {
           setNightData({
             startTimestamp: convertDateTimeToUnix(results[0].date, results[0].sunset),
             endTimestamp: convertDateTimeToUnix(results[1].date, results[1].sunrise),
@@ -97,9 +101,7 @@ const YearlyProgressNightWidget = () => {
           });
         }
 
-        console.log("Current Hour:", currentHour);
-        
-
+      
         console.log("Results:", results);
 
        
@@ -129,7 +131,7 @@ const YearlyProgressNightWidget = () => {
       type="custom"
       custom={{
         title: "Night",
-        description: `Last night's sunset was at ${convertUnixToTime(nightData.startTimestamp)} and next sunrise will be at ${convertUnixToTime(nightData.endTimestamp)}`,
+        description: `Last night's sunset was at ${convertUnixToDateTime(nightData.startTimestamp)} and next sunrise will be at ${convertUnixToDateTime(nightData.endTimestamp)}`,
         startTimestamp: nightData.startTimestamp,
         endTimestamp: nightData.endTimestamp,
       }}

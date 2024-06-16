@@ -29,6 +29,11 @@ export const convertUnixToTime = (unix: number) => {
   return date.toLocaleTimeString().toUpperCase();
 };
 
+export const convertUnixToDateTime = (unix: number) => {
+  const date = new Date(unix);
+  return date.toLocaleDateString() + " " + date.toLocaleTimeString();
+}
+
 export const convertDateTimeToUnix = (date: string, time: string): number => {
   const dateTime = new Date(`${date} ${time}`);
   return dateTime.getTime();
