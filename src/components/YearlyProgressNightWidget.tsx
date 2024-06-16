@@ -25,10 +25,16 @@ export const fetchSunsetSunriseWithRangeApi = async (
   return staticData.json();
 };
 
+type NightData = {
+  startTimestamp: number;
+  endTimestamp: number;
+}
+
 
 const YearlyProgressNightWidget = () => {
   const [coordinates, setCoordinates] = useState<Coordinates | null>(null);
   const [results, setResults] = useState<Results[] | null>(null);
+  const [nightData, setNightData] = useState<NightData | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
 
   // const fetchWeatherData = async (lat: number, lon: number) => {
@@ -47,33 +53,51 @@ const YearlyProgressNightWidget = () => {
         const [lat, lon] = await getLongLat();
         setCoordinates([lat, lon]);
 
-        const currentDate = new Date();
-        const prevDate = new Date();
+        const startRange = new Date();
+        const endRange = new Date();
 
-        // add day 1 to the next date
-        currentDate.setDate(currentDate.getDate() + 1);
+        startRange.setDate(startRange.getDate() -1);
+        endRange.setDate(endRange.getDate() + 1);
 
-        var endDate = ""; 
-        endDate += currentDate.getFullYear() + "-";
-        endDate += (currentDate.getMonth() + 1) + "-";
-        endDate += currentDate.getDate();
+        var startDate = ""; 
+        startDate += startRange.getFullYear() + "-";
+        startDate += (startRange.getMonth() + 1) + "-";
+        startDate += startRange.getDate();
 
-        var startDate = "";
-        startDate += prevDate.getFullYear() + "-";
-        startDate += (prevDate.getMonth() + 1) + "-";
-        startDate += prevDate.getDate();
+        var endDate = "";
+        endDate += endRange.getFullYear() + "-";
+        endDate += (endRange.getMonth() + 1) + "-";
+        endDate += endRange.getDate();
 
 
 
-        console.log("Start Date:", endDate);
-        console.log("End Date:", startDate);
+        console.log("Start Date:", startDate);
+        console.log("End Date:", endDate);
         
         
 
 
-        const { results } = await fetchSunsetSunriseWithRangeApi(lat, lon, startDate, endDate,);
+        const { results } = await fetchSunsetSunriseWithRangeApi(lat, lon, startDate, endDate);
         setResults(results);
 
+
+        // get current time 
+        const currentTime = new Date();
+        const currentHour = currentTime.getHours();
+
+        if (currentHour >= 0 && currentHour < 12) {
+          setNightData({
+            startTimestamp: convertDateTimeToUnix(results[0].date, results[0].sunset),
+            endTimestamp: convertDateTimeToUnix(results[1].date, results[1].sunrise),
+          });
+        } else {
+          setNightData({
+            startTimestamp: convertDateTimeToUnix(results[1].date, results[1].sunset),
+            endTimestamp: convertDateTimeToUnix(results[2].date, results[2].sunrise),
+          });
+        }
+
+        console.log("Current Hour:", currentHour);
         
 
         console.log("Results:", results);
@@ -94,7 +118,7 @@ const YearlyProgressNightWidget = () => {
   }
 
 
-  if (!results) {
+  if (!results || !nightData) {
     return <div></div>;
   }
 
@@ -105,13 +129,9 @@ const YearlyProgressNightWidget = () => {
       type="custom"
       custom={{
         title: "Night",
-        description: `Sunset on ${results[0].date} at ${convertUnixToTime(
-          convertDateTimeToUnix(results[0].date, results[0].sunset)
-        )} and Sunrise on ${results[1].date} at ${convertUnixToTime(
-          convertDateTimeToUnix(results[1].date, results[1].sunrise)
-        )}.`,
-        startTimestamp: convertDateTimeToUnix(results[0].date, results[0].sunset),
-        endTimestamp: convertDateTimeToUnix(results[1].date, results[1].sunrise),
+        description: `Last night's sunset was at ${convertUnixToTime(nightData.startTimestamp)} and next sunrise will be at ${convertUnixToTime(nightData.endTimestamp)}`,
+        startTimestamp: nightData.startTimestamp,
+        endTimestamp: nightData.endTimestamp,
       }}
     />
   );
