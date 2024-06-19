@@ -2,13 +2,16 @@ import { NextPage } from "next";
 import styles from "../../../../styles/yearly-progress/Privacy.module.scss";
 import PrivacyPolicy from "@/docs/eye-care/privacy-policy.mdx";
 import Image from "next/image";
+import { ArrowBack } from "@mui/icons-material";
+import Link from "next/link";
+import { LegalDocument } from "@/components/LegalDocument";
 
 export async function generateMetadata() {
   const title: String = "Eye Care - Privacy Policy";
   const description: String = "Eye Care - Your Vision Health Companion";
 
   return {
-    metadataBase: new URL('https://a3group.co.in'),
+    metadataBase: new URL("https://a3group.co.in"),
     title: title,
     description: description,
     icons: "/eye-care/favicon/favicon.ico",
@@ -22,27 +25,28 @@ export async function generateMetadata() {
 const EyeCarePrivacyPolicy: NextPage = () => {
   return (
     <div>
-      <main className={"mt-6"}>
-        <div>
-          <div className={styles.sup_title}>
-            <div className={styles.title}>
-              <Image
-                src={"/eye-care/favicon/icon-512-maskable.png"}
-                width={50}
-                height={50}
-                alt=""
-                className={styles.shadow + " rounded-md"}
-              />
-              <div>
-                <h1 className="text-xl font-bold">Eye Care</h1>
-                <h2></h2>
-              </div>
-            </div>
-          </div>
+      <main className={"2xl:mx-0 mx-2 my-8"}>
+        <Link
+          href="/eye-care/"
+          aria-description="Go Back"
+          className="hover:bg-blue-50 hover:rounded-full"
+        >
+          <ArrowBack />
+        </Link>
+        <div className="my-2 w-fit mx-auto justify-center flex flex-col items-center">
+          <Image
+            src={"/eye-care/favicon/icon-512-maskable.png"}
+            width={50}
+            height={50}
+            alt="Eye Care Logo"
+            className={styles.shadow + " rounded-md"}
+          />
+          <h1 className="text-lg font-bold text-center mt-2">Eye Care</h1>
         </div>
-        <div className="prose prose-sm only prose-h1:mt-0 mt-5">
+
+        <LegalDocument title="Privacy Policy">
           <PrivacyPolicy />
-        </div>
+        </LegalDocument>
       </main>
     </div>
   );
