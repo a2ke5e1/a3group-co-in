@@ -1,5 +1,4 @@
 import Footer from "@/components/Footer";
-import styles from "@styles/yearly-progress/index.module.scss";
 
 export default function RootLayout({
   children,
@@ -8,10 +7,11 @@ export default function RootLayout({
 }) {
   return (
     <>
-      <main>
-        {children}
-        <Footer terms_of_service_url="/yearly-progress/TOS" policy_url="/yearly-progress/privacy-policy" />
-      </main>
+      <div className="mx-auto max-w-screen-2xl">{children}</div>
+      <Footer
+        terms_of_service_url="/yearly-progress/TOS"
+        policy_url="/yearly-progress/privacy-policy"
+      />
     </>
   );
 }

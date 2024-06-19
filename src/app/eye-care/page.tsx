@@ -55,8 +55,11 @@ const EyeCareHome: NextPage = () => {
             Google Play and the Google Play logo are trademarks of Google LLC.
           </a>
         </div>
+        <div className="my-8">
+          <Link href={"#what-is-eye-care"} className="font-extralight text-sm">Learn More</Link>
+        </div>
       </section>
-      <main className={"container mt-[21rem]"}>
+      <main className={`${styles["main"]} mx-4 2xl:mx-0 my-8`} id="what-is-eye-care">
         <Article title="What is Eye Care?">
           <p>
             Eye Care is an app which is beautifully designed to help you to take

@@ -1,6 +1,7 @@
 {
     "name": "Eye Care", 
     "desc" : {
-        "about" :"EyeCare - Your Vision Health Companion"
+        "about" :"EyeCare - Your Vision Health Companion.", 
+        "about_long": "Eye Care is an app which is beautifully designed to help you to take care of your eyes. It provides you a way to keep records of their prescription in the cloud and access them from anywhere."
     }
 }

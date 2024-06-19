@@ -1,4 +1,4 @@
-type field = "year" | "month" | "week" | "day";
+type field = "year" | "month" | "week" | "day" | "custom";
 
 export function getOrdinal(n: number) {
   var s = ["th", "st", "nd", "rd"],
@@ -85,7 +85,7 @@ export function getMonthName() {
   return months[month];
 }
 
-export function getStartOfTimeMillis(field: field) {
+export function getStartOfTimeMillis(field: field, startOfTimeMillis?: number): number {
   switch (field) {
     case "year":
       return new Date(getYear(), 0, 1, 0, 0, 0, 0).getTime();
@@ -105,10 +105,16 @@ export function getStartOfTimeMillis(field: field) {
         0,
         0
       ).getTime();
+    case "custom":
+      if (!startOfTimeMillis) {
+        throw new Error("Start of time is not defined");
+      }
+
+      return startOfTimeMillis;
   }
 }
 
-export function getEndOfTimeMillis(field: field) {
+export function getEndOfTimeMillis(field: field, endOfTimeMillis?: number): number {
   switch (field) {
     case "year":
       return new Date(getYear(), 11, 31, 23, 59, 59, 999).getTime();
@@ -127,12 +133,19 @@ export function getEndOfTimeMillis(field: field) {
         59,
         999
       ).getTime();
+    case "custom":
+      if (!endOfTimeMillis) {
+        throw new Error("End of time is not defined");
+      }
+
+      return endOfTimeMillis;
   }
 }
 
-export function getProgress(field: field) {
-  const start = getStartOfTimeMillis(field);
-  const end = getEndOfTimeMillis(field);
+export function getProgress(field: field, startOfTimeMillis?: number,endOfTimeMillis?: number) {
+  const start = getStartOfTimeMillis(field, startOfTimeMillis);
+  const end = getEndOfTimeMillis(field, endOfTimeMillis);
   const now = new Date().getTime();
   return ((now - start) / (end - start)) * 100;
 }
+
