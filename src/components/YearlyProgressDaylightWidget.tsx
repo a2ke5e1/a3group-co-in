@@ -55,23 +55,29 @@ export const fetchSunsetSunriseApi = async (lat: number, lon: number) => {
   return staticData.json();
 };
 
+const getCoordinatesFromIp = async (): Promise<Coordinates> => {
+  const ip = await fetch("/api/v1/ip");
+  const { location } = await ip.json();
+  return new Promise<Coordinates>((resolve, reject) => {
+    resolve([location.lat, location.lon]), reject("No location available");
+  });
+};
+
 export const getLongLat = async (): Promise<Coordinates> => {
+  // Check if the browser has geolocation
   if (!navigator.geolocation) {
-    const ip = await fetch("/api/v1/ip");
-    const { location } = await ip.json();
-    return new Promise<Coordinates>((resolve, reject) => {
-      resolve([location.lat, location.lon]), 
-      reject("No location available");
-    });
+    return getCoordinatesFromIp();
   }
 
+  // check if the user has given permission to access geolocation
   return new Promise<Coordinates>((resolve, reject) => {
     navigator.geolocation.getCurrentPosition(
       (position) => {
         resolve([position.coords.latitude, position.coords.longitude]);
       },
       (error) => {
-        reject(error);
+        console.error("Error getting location:", error);
+        resolve(getCoordinatesFromIp());
       }
     );
   });
