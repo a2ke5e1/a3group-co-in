@@ -56,23 +56,23 @@ export const fetchSunsetSunriseApi = async (lat: number, lon: number) => {
 };
 
 export const getLongLat = async (): Promise<Coordinates> => {
-  if (navigator.geolocation) {
+  if (!navigator.geolocation) {
+    const ip = await fetch("/api/v1/ip");
+    const { location } = await ip.json();
     return new Promise<Coordinates>((resolve, reject) => {
-      navigator.geolocation.getCurrentPosition(
-        (position) => {
-          resolve([position.coords.latitude, position.coords.longitude]);
-        },
-        (error) => {
-          reject(error);
-        }
-      );
+      resolve([location.lat, location.lon]);
     });
   }
 
-  const ip = await fetch("/api/v1/ip");
-  const { location } = await ip.json();
   return new Promise<Coordinates>((resolve, reject) => {
-    resolve([location.lat, location.lon]);
+    navigator.geolocation.getCurrentPosition(
+      (position) => {
+        resolve([position.coords.latitude, position.coords.longitude]);
+      },
+      (error) => {
+        reject(error);
+      }
+    );
   });
 };
 
