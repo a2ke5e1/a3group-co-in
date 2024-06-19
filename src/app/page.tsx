@@ -37,7 +37,7 @@ export default function Home() {
               width={60}
               height={50}
             />
-            <p className="text-sm">
+            <p className="text-sm text-center">
               A3 Group is a group of friends trying to make some apps.
             </p>
           </div>
@@ -54,7 +54,7 @@ export default function Home() {
                 height={225}
                 className="rounded-2xl md:w-[400px] w-full"
               />
-              <div className="max-w-xl">
+              <div className="max-w-2xl">
                 <h1 className="font-semibold md:text-4xl text-3xl text-blue-800">
                   {YearlyProgressInfo.name}
                 </h1>
@@ -99,7 +99,7 @@ export default function Home() {
                 className="rounded-2xl md:w-[400px] w-full md:hidden"
               />
               
-              <div className="max-w-xl">
+              <div className="max-w-2xl">
                 <h1 className="font-semibold md:text-4xl text-3xl text-blue-800">
                   {EyeCareInfo.name}
                 </h1>

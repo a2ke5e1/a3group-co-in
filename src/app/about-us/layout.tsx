@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   }) {
     return (
       <>
-        <main className="md:mx-auto max-w-screen-2xl my-2 mx-2">{children}</main>
+        <main className="2xl:mx-auto max-w-screen-2xl my-2 mx-2">{children}</main>
         <Footer />
       </>
     );
