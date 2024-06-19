@@ -52,35 +52,35 @@ const Home: NextPage = () => {
         <section>
           <div className={styles.ss_container}>
             <Image
-              src="/yearly-progress/images/ss/Screenshot_20221002_014215.png"
+              src="/yearly-progress/images/ss/Screenshot_20221002_014215.webp"
               width={120}
               quality={100}
               height={260}
               alt="Yearly Progress Screenshot 1"
             />
             <Image
-              src="/yearly-progress/images/ss/Screenshot_20221002_014317.png"
+              src="/yearly-progress/images/ss/Screenshot_20221002_014317.webp"
               width={120}
               quality={100}
               height={260}
               alt="Yearly Progress Screenshot 2"
             />
             <Image
-              src="/yearly-progress/images/ss/Screenshot_20221002_014407.png"
+              src="/yearly-progress/images/ss/Screenshot_20221002_014407.webp"
               width={120}
               quality={100}
               height={260}
               alt="Yearly Progress Screenshot 3"
             />
             <Image
-              src="/yearly-progress/images/ss/Screenshot_20221002_014414.png"
+              src="/yearly-progress/images/ss/Screenshot_20221002_014414.webp"
               width={120}
               quality={100}
               height={260}
               alt="Yearly Progress Screenshot 4"
             />
             <Image
-              src="/yearly-progress/images/ss/Screenshot_20221002-014123.png"
+              src="/yearly-progress/images/ss/Screenshot_20221002-014123.webp"
               width={120}
               quality={100}
               height={260}
@@ -97,7 +97,7 @@ const Home: NextPage = () => {
           </p>
           <img
             className={styles["widget-img"]}
-            src="/yearly-progress/images/ss/Screenshot_20221002_015212.png"
+            src="/yearly-progress/images/ss/Screenshot_20221002_015212.webp"
           />
           <p>
             You can see a preview of the widget above, It contains all the

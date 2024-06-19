@@ -48,7 +48,7 @@ export default function Home() {
             </h1>
             <div className="grid md:grid-flow-col grid-flow-row md:gap-4 gap-2 mx-auto w-fit my-8">
               <Image
-                src="/yearly-progress/images/cover.png"
+                src="/yearly-progress/images/cover.webp"
                 alt="Yearly Progress Cover"
                 width={400}
                 height={225}

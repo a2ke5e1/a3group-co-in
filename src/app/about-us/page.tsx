@@ -88,7 +88,7 @@ const AboutUs: NextPage = () => {
         <MemeberCards
           name="a2ke5e1"
           description="Full Stack Developer"
-          imgSrc="/images/a2k.jpg"
+          imgSrc="/images/a2k.webp"
           links={{
             github: "https://www.github.com/a2ke5e1",
             linkedin: "https://www.linkedin.com/in/a2ke5e1",
@@ -99,12 +99,12 @@ const AboutUs: NextPage = () => {
         <MemeberCards
           name="ADK"
           description="Full Stack Developer"
-          imgSrc="/images/a2k.jpg"
+          imgSrc="/images/a2k.webp"
         />
         <MemeberCards
           name="FCatilizer"
           description="Full Stack Developer"
-          imgSrc="/images/a2k.jpg"
+          imgSrc="/images/a2k.webp"
         />
       </div>
       <p className="my-2 text-sm">
