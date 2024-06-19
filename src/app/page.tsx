@@ -61,7 +61,7 @@ export default function Home() {
                 <p className="text-gray-800 md:ml-2 ml-1 mt-1 md:text-base text-sm">
                   {YearlyProgressInfo.desc.about}
                   <span className="text-blue-500">
-                    <Link href="/yearly-progress"> Learn More</Link>
+                    <Link href="/yearly-progress#about-yearly-progress"> Learn More</Link>
                   </span>
                 </p>
                 <p className="text-gray-800 mt-5 md:ml-2 ml-1 md:text-base text-sm gap-2 flex flex-col">
@@ -106,7 +106,7 @@ export default function Home() {
                 <p className="text-gray-800 md:ml-0.5 ml-1 mt-1 md:text-base text-sm">
                   {EyeCareInfo.desc.about_long}
                   <span className="text-blue-500">
-                    <Link href="/eye-care"> Learn More</Link>
+                    <Link href="/eye-care#what-is-eye-care"> Learn More</Link>
                   </span>
                 </p>
                 <p className="text-gray-800 mt-5 md:ml-0.5 ml-1 md:text-base text-sm gap-2 flex flex-col">
@@ -132,10 +132,10 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="mt-8 h-10"> </div>
+          <div className="mt-8 h-20"> </div>
         </div>
       </main>
-      <Footer />
+      <Footer  />
     </>
   );
 }

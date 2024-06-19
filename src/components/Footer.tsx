@@ -32,20 +32,20 @@ export default function Footer({
           </section>
 
           <section>
-            <p className="text-sm uppercase font-light">JOIN OUR COMMUNITY</p>
+            <p className="text-xs uppercase font-light">JOIN OUR COMMUNITY</p>
             <Link href={"https://t.me/phycalc"}>Telegram</Link>
           </section>
 
           {delete_data_url && (
             <section>
-              <p className="text-sm uppercase font-light">MANAGE YOUR DATA</p>
+              <p className="text-xs uppercase font-light">MANAGE YOUR DATA</p>
               <Link href={delete_data_url}>Delete Your Account</Link>
             </section>
           )}
 
           {apps && (
             <section>
-              <p className="text-sm uppercase font-light">Apps</p>
+              <p className="text-xs uppercase font-light">Apps</p>
               <div className="grid grid-cols-1">
                 <Link href="/yearly-progress">Yearly Progress</Link>
                 <Link href="/eye-care">Eye Care</Link>
@@ -54,7 +54,7 @@ export default function Footer({
           )}
 
           <section>
-            <p className="text-sm uppercase font-light">Others</p>
+            <p className="text-xs uppercase font-light">Others</p>
             <div className="grid grid-cols-1">
               {terms_of_service_url && (
                 <Link href={terms_of_service_url}>Terms of Service</Link>
