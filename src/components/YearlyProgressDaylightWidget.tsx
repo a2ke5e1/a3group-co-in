@@ -32,7 +32,7 @@ export const convertUnixToTime = (unix: number) => {
 export const convertUnixToDateTime = (unix: number) => {
   const date = new Date(unix);
   return date.toLocaleDateString() + " " + date.toLocaleTimeString();
-}
+};
 
 export const convertDateTimeToUnix = (date: string, time: string): number => {
   const dateTime = new Date(`${date} ${time}`);
@@ -40,14 +40,12 @@ export const convertDateTimeToUnix = (date: string, time: string): number => {
 };
 
 export const fetchSunsetSunriseApi = async (lat: number, lon: number) => {
-
   const currentDate = new Date();
-  
-  var formatedDate = ""; 
-  formatedDate += currentDate.getFullYear() + "-";
-  formatedDate += (currentDate.getMonth() + 1) + "-";
-  formatedDate += currentDate.getDate();
 
+  var formatedDate = "";
+  formatedDate += currentDate.getFullYear() + "-";
+  formatedDate += currentDate.getMonth() + 1 + "-";
+  formatedDate += currentDate.getDate();
 
   const staticData = await fetch(
     `https://api.sunrisesunset.io/json?lat=${lat}&lng=${lon}&date=${formatedDate}`,
@@ -57,30 +55,29 @@ export const fetchSunsetSunriseApi = async (lat: number, lon: number) => {
   return staticData.json();
 };
 
-
 export const getLongLat = async (): Promise<Coordinates> => {
-  if (!navigator.geolocation) {
-    throw new Error("Geolocation is not supported by your browser");
+  if (navigator.geolocation) {
+    return new Promise<Coordinates>((resolve, reject) => {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          resolve([position.coords.latitude, position.coords.longitude]);
+        },
+        (error) => {
+          reject(error);
+        }
+      );
+    });
   }
 
-  return new Promise<Coordinates>((resolve, reject) => {
-    navigator.geolocation.getCurrentPosition(
-      (position) => {
-        resolve([position.coords.latitude, position.coords.longitude]);
-      },
-      (error) => {
-        reject(error);
-      }
-    );
-  });
+  const ip = await fetch("/api/v1/ip");
+  const { location } = await ip.json();
+  return [location.lat, location.lon];
 };
 
 const YearlyProgressDaylightWidget = () => {
   const [coordinates, setCoordinates] = useState<Coordinates | null>(null);
   const [results, setResults] = useState<Results | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
-
-  
 
   // const fetchWeatherData = async (lat: number, lon: number) => {
   //   const staticData = await fetch(
@@ -90,11 +87,7 @@ const YearlyProgressDaylightWidget = () => {
   //   return staticData.json();
   // };
 
-  
-
   useEffect(() => {
-    
-
     const fetchData = async () => {
       try {
         const [lat, lon] = await getLongLat();
