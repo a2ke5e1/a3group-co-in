@@ -71,7 +71,9 @@ export const getLongLat = async (): Promise<Coordinates> => {
 
   const ip = await fetch("/api/v1/ip");
   const { location } = await ip.json();
-  return [location.lat, location.lon];
+  return new Promise<Coordinates>((resolve, reject) => {
+    resolve([location.lat, location.lon]);
+  });
 };
 
 const YearlyProgressDaylightWidget = () => {
@@ -93,7 +95,7 @@ const YearlyProgressDaylightWidget = () => {
         const [lat, lon] = await getLongLat();
         setCoordinates([lat, lon]);
 
-        // console.log("Coordinates:", lat, lon);
+        console.log("Coordinates:", lat, lon);
 
         const { results } = await fetchSunsetSunriseApi(lat, lon);
         // console.log("Sunset/Sunrise:", results);
