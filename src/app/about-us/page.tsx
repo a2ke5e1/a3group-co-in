@@ -13,10 +13,10 @@ type MemeberCardsProps = {
 };
 
 type LinkProps = {
-  github: string;
-  linkedin: string;
-  x: string;
-  website: string;
+  github?: string;
+  linkedin?: string;
+  x?: string;
+  website?: string;
 };
 
 const MemeberCards = ({
@@ -29,15 +29,15 @@ const MemeberCards = ({
     <Image
       src={imgSrc}
       alt={name}
-      className="rounded-full"
+      className="rounded-full h-24 w-24"
       width={80}
       height={80}
     />
-    <div className="h-fit">
+    <div className="max-w-md">
       <h2 className="font-bold text-lg">{name}</h2>
-      <p>{description}</p>
+      <p className="text-base text-gray-800">{description}</p>
 
-      <div className="flex flex-row gap-2">
+      <div className="flex flex-row gap-2 my-2">
         {links?.github && (
           <Link href={links.github}>
             <GitHub />
@@ -87,7 +87,7 @@ const AboutUs: NextPage = () => {
       <div className="grid md:grid-flow-col gap-2">
         <MemeberCards
           name="a2ke5e1"
-          description="Full Stack Developer"
+          description="Web and App Developer + Designer"
           imgSrc="/images/a2k.webp"
           links={{
             github: "https://www.github.com/a2ke5e1",
@@ -98,31 +98,31 @@ const AboutUs: NextPage = () => {
         />
         <MemeberCards
           name="ADK"
-          description="Full Stack Developer"
-          imgSrc="/images/a2k.webp"
+          description="Web Developer + Angular"
+          imgSrc="/images/adk.webp"
+          links={{
+            github: "https://www.github.com/ADKANK",
+            linkedin: "https://www.linkedin.com/in/anand-kumar-808ba0194",
+          }}
         />
         <MemeberCards
           name="FCatilizer"
           description="Full Stack Developer"
-          imgSrc="/images/a2k.webp"
+          imgSrc="/images/asg.webp"
+          links={{
+            github: "https://www.github.com/Fcatilizer",
+            linkedin: "https://www.linkedin.com/in/ashish-gaurav03",
+            x: "https://www.twitter.com/FeatherCatlizer"
+          }}
         />
       </div>
-      <p className="my-2 text-sm">
-        Aliquam dignissim justo magna, eget vulputate urna tincidunt et.
-        Maecenas vulputate, erat vitae venenatis maximus, orci diam lobortis
-        lorem, non eleifend nunc quam ac erat. Suspendisse potenti. Suspendisse
-        dui sapien, pharetra vel augue vitae, volutpat convallis justo. Nam
-        volutpat consectetur lectus, eget congue ex efficitur id. Cras in neque
-        sit amet magna commodo dignissim id et ante. Duis posuere erat sem. Nam
-        molestie hendrerit nisi ut elementum. Vivamus nisi purus, sollicitudin
-        id turpis nec, iaculis dictum quam. Sed sagittis non lectus nec blandit.
-      </p>
+     
 
       {/* 
           This is a temporary spacing,       
           TODO: Add actual content 
       */}
-      <div className="h-[48vh]"></div>
+      <div className="h-[60vh]"></div>
     </>
   );
 };
