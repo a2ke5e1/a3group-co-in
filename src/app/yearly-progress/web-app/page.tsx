@@ -36,6 +36,7 @@ export default async function YearlyProgressWebApp() {
         <YearlyProgressNightWidget />
       </div>
       <p className="text-sm text-gray-600">Daylight and Night Widget needs your location to get sunset and surise time.</p>
+      <p className="text-sm text-gray-600">For accurate results, Allow location permission in your browser.</p>
     </div>
   );
 }

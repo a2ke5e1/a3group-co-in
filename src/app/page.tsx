@@ -104,7 +104,7 @@ export default function Home() {
                   {EyeCareInfo.name}
                 </h1>
                 <p className="text-gray-800 md:ml-0.5 ml-1 mt-1 md:text-base text-sm">
-                  {EyeCareInfo.desc.about}
+                  {EyeCareInfo.desc.about_long}
                   <span className="text-blue-500">
                     <Link href="/eye-care"> Learn More</Link>
                   </span>
