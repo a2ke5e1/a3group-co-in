@@ -60,7 +60,8 @@ export const getLongLat = async (): Promise<Coordinates> => {
     const ip = await fetch("/api/v1/ip");
     const { location } = await ip.json();
     return new Promise<Coordinates>((resolve, reject) => {
-      resolve([location.lat, location.lon]);
+      resolve([location.lat, location.lon]), 
+      reject("No location available");
     });
   }
 
