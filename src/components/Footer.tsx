@@ -20,12 +20,14 @@ export default function Footer({
       <div className="max-w-screen-2xl mx-auto">
         <div className="grid md:grid-cols-3 sm:md:grid-cols-2 grid-cols-1 align-top justify-between gap-4">
           <section>
-            <Image
-              src="/images/a3_logo.png"
-              width={"60"}
-              height={"21"}
-              alt="A3 Group Logo"
-            />
+            <Link href={"/"}>
+              <Image
+                src="/images/a3_logo.png"
+                width={"60"}
+                height={"21"}
+                alt="A3 Group Logo"
+              />
+            </Link>
             <p className="my-2 font-light text-sm">
               © 2018 - 2024 A3 Group, All right reserved.
             </p>

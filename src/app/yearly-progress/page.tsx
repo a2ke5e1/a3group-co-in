@@ -43,13 +43,12 @@ const Home: NextPage = () => {
           <Link href={"#about-yearly-progress"} className="font-extralight text-sm">Learn More</Link>
         </div>
       </section>
-      <main className={`${styles["main"]} mx-4 2xl:mx-0 my-8`} id="about-yearly-progress">
+      <main className={`${styles["main"]} mx-4 2xl:mx-0 my-8 flex flex-col gap-2`} id="about-yearly-progress">
         <Article title={"About The App"}>
-          <p>{info.desc.about}</p>
-          <a>Updated On</a>
-          <p>January 11, 2023</p>
+          <p className="my-1 max-w-xl">{info.desc.about}</p>
         </Article>
         <section>
+          <h1 className="font-bold uppercase text-xs">Screenshot</h1>
           <div className={styles.ss_container}>
             <Image
               src="/yearly-progress/images/ss/Screenshot_20221002_014215.webp"
@@ -89,8 +88,8 @@ const Home: NextPage = () => {
           </div>
         </section>
         <Article title={"New Features"}>
-          <a>All In One Widget</a>
-          <p>
+          <h2 className="mt-2 font-bold">All In One Widget</h2>
+          <p className="max-w-xl">
             Now, You can use all in one widget which let to see the information
             with having add multiple widget to the homescreen of your android
             device.
@@ -99,7 +98,7 @@ const Home: NextPage = () => {
             className={styles["widget-img"]}
             src="/yearly-progress/images/ss/Screenshot_20221002_015212.webp"
           />
-          <p>
+          <p className="max-w-xl">
             You can see a preview of the widget above, It contains all the
             information that one might need such as date, week, month and year
             with their respective progress.
