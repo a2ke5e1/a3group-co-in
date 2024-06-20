@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import Image from "next/image";
 import Link from "next/link";
 import { GitHub, X, LinkedIn, Web } from "@mui/icons-material";
+import { BackButton } from "@/components/BackButton";
 
 type MemeberCardsProps = {
   name: string;
@@ -65,7 +66,8 @@ const MemeberCards = ({
 
 const AboutUs: NextPage = () => {
   return (
-    <>
+    <main className="2xl:mx-0 mx-2 my-8">
+      <BackButton />
       <div className="my-2 w-fit mx-auto justify-center flex flex-col items-center">
         <Link href="/" aria-label="Home">
           <Image
@@ -112,18 +114,17 @@ const AboutUs: NextPage = () => {
           links={{
             github: "https://www.github.com/Fcatilizer",
             linkedin: "https://www.linkedin.com/in/ashish-gaurav03",
-            x: "https://www.twitter.com/FeatherCatlizer"
+            x: "https://www.twitter.com/FeatherCatlizer",
           }}
         />
       </div>
-     
 
       {/* 
           This is a temporary spacing,       
           TODO: Add actual content 
       */}
       <div className="h-[60vh]"></div>
-    </>
+    </main>
   );
 };
 

@@ -8,10 +8,15 @@ import { useRouter } from "next/navigation";
 
 export const BackButton = () => {
   const router = useRouter();
+
+  const handleBackBehavior = () => {
+    router.back();
+  };
+
   return (
     <Link
-      href={"/"}
-      onClick={() => router.back()}
+      href="/"
+      onClick={handleBackBehavior}
       aria-description="Go Back"
       className="hover:bg-blue-50 hover:rounded-full p-2 hover:text-blue-900"
     >
