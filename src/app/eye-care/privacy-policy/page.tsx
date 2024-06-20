@@ -5,6 +5,7 @@ import Image from "next/image";
 import { ArrowBack } from "@mui/icons-material";
 import Link from "next/link";
 import { LegalDocument } from "@/components/LegalDocument";
+import { BackButton } from "@/components/BackButton";
 
 export async function generateMetadata() {
   const title: String = "Eye Care - Privacy Policy";
@@ -26,13 +27,7 @@ const EyeCarePrivacyPolicy: NextPage = () => {
   return (
     <div>
       <main className={"2xl:mx-0 mx-2 my-8"}>
-        <Link
-          href="/eye-care/"
-          aria-description="Go Back"
-          className="hover:bg-blue-50 hover:rounded-full"
-        >
-          <ArrowBack />
-        </Link>
+        <BackButton />
         <div className="my-2 w-fit mx-auto justify-center flex flex-col items-center">
           <Image
             src={"/eye-care/favicon/icon-512-maskable.png"}
