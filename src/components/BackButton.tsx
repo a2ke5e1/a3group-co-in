@@ -18,7 +18,7 @@ export const BackButton = () => {
       href="/"
       onClick={handleBackBehavior}
       aria-description="Go Back"
-      className="hover:bg-blue-50 hover:rounded-full p-2 hover:text-blue-900"
+      className="hover:bg-blue-50 hover:rounded-full p-2 hover:text-blue-900 dark:text-white"
     >
       <ArrowBack className="-mt-1 " /> {/** -mt-1 is for vertical centering */}
     </Link>

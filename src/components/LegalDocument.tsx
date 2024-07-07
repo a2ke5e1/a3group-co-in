@@ -9,8 +9,8 @@ export const LegalDocument: React.FC<LegalDocumentProps> = ({
 }) => {
   return (
     <>
-      <div className="text-md uppercase font-mono font-bold text-center">{title}</div>
-      <div className="prose  prose-h1:mt-0 mx-auto mt-8">{children}</div>
+      <div className="text-md uppercase font-mono font-bold text-center dark:text-white">{title}</div>
+      <div className="prose  prose-h1:mt-0 mx-auto mt-8 dark:prose-headings:">{children}</div>
     </>
   );
 };
