@@ -15,7 +15,7 @@ export default function Article(
         <>
             <section>
                 <article className={styles.article}>
-                    <h3 className={styles.title}>{title}</h3>
+                    <h1 className="font-bold uppercase text-xs">{title}</h1>
                     {children}
                 </article>
             </section>

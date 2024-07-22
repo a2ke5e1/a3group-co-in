@@ -29,15 +29,15 @@ export default function Home() {
   return (
     <>
       <main>
-        <div className="max-w-screen-2xl lg:mx-auto mx-2 my-2">
-          <div className="my-2 w-fit mx-auto justify-center flex flex-col items-center">
+        <div className="max-w-screen-2xl xl:mx-auto mx-2 my-2">
+          <div className="my-8 w-fit mx-auto justify-center flex flex-col items-center gap-4">
             <Image
-              src="/images/a3_logo.jpg"
+              src="/images/a3_logo.png"
               alt="A3 Group"
               width={60}
               height={50}
             />
-            <p className="text-sm text-center">
+            <p className="text-sm text-center dark:text-white">
               A3 Group is a group of friends trying to make some apps.
             </p>
           </div>
@@ -55,16 +55,16 @@ export default function Home() {
                 className="rounded-2xl md:w-[400px] w-full"
               />
               <div className="max-w-2xl">
-                <h1 className="font-semibold md:text-4xl text-3xl text-blue-800">
+                <h1 className="font-semibold md:text-4xl text-3xl text-blue-800 dark:text-blue-600">
                   {YearlyProgressInfo.name}
                 </h1>
-                <p className="text-gray-800 md:ml-2 ml-1 mt-1 md:text-base text-sm">
+                <p className="text-gray-800 md:ml-2 ml-1 mt-1 md:text-base text-sm dark:text-gray-300">
                   {YearlyProgressInfo.desc.about}
-                  <span className="text-blue-500">
+                  <span className="text-blue-500 dark:text-blue-800">
                     <Link href="/yearly-progress#about-yearly-progress"> Learn More</Link>
                   </span>
                 </p>
-                <p className="text-gray-800 mt-5 md:ml-2 ml-1 md:text-base text-sm gap-2 flex flex-col">
+                <p className="text-gray-800 dark:text-gray-300 mt-5 md:ml-2 ml-1 md:text-base text-sm gap-2 flex flex-col">
                   <span>
                     <Link
                       href={
@@ -103,13 +103,13 @@ export default function Home() {
                 <h1 className="font-semibold md:text-4xl text-3xl text-blue-800">
                   {EyeCareInfo.name}
                 </h1>
-                <p className="text-gray-800 md:ml-0.5 ml-1 mt-1 md:text-base text-sm">
+                <p className="text-gray-800 md:ml-0.5 ml-1 mt-1 md:text-base text-sm dark:text-gray-300">
                   {EyeCareInfo.desc.about_long}
-                  <span className="text-blue-500">
+                  <span className="text-blue-500 dark:text-blue-800">
                     <Link href="/eye-care#what-is-eye-care"> Learn More</Link>
                   </span>
                 </p>
-                <p className="text-gray-800 mt-5 md:ml-0.5 ml-1 md:text-base text-sm gap-2 flex flex-col">
+                <p className="text-gray-800  dark:text-gray-300 mt-5 md:ml-0.5 ml-1 md:text-base text-sm gap-2 flex flex-col">
                   <span>
                     <Link
                       href={

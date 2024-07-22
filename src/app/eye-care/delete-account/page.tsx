@@ -4,6 +4,9 @@ import info from '../../../../info/eye-care.json'
 import Footer from "@/components/Footer";
 import styles from '@styles/eye-care/eyecare.module.scss'
 import Image from "next/image";
+import Link from "next/link";
+import { ArrowBack } from "@mui/icons-material";
+import { BackButton } from "@/components/BackButton";
 
 export async function generateMetadata() {
 
@@ -26,8 +29,9 @@ export async function generateMetadata() {
 const DeletePage: NextPage = () => {
     return (
         <>
-          <main className={styles.main}>
-            <div className={styles.header}>
+          <main className={"2xl:mx-0 mx-2 my-8"}>
+            <BackButton />
+            <div className={`${styles.header} my-2`}>
                 <Image
                     src={"/eye-care/favicon/icon-512-maskable.png"}
                     className={styles.logo} height={60} width={60} alt="Eye Care Logo" />
@@ -46,7 +50,7 @@ const DeletePage: NextPage = () => {
             <br /><br />
              */}
             <h2 className="text-2xl">Delete your account</h2>
-            <p>In order to delete your account, contact us <a className="text-blue-600 underline" href="mailto:support@a3group.co.in" >support@a3group.co.in</a></p>
+            <p>In order to delete your account, contact us <span><Link className="text-blue-600 underline" href="mailto:support@a3group.co.in" >support@a3group.co.in</Link></span></p>
             <p className={styles.disclaimer}>Your account will be deleted in 1 month after your intial data deletion request.<br />We will send confirmation email after we recive your request.</p>
           </main>
         </>
