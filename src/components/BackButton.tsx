@@ -14,9 +14,11 @@ export const BackButton = () => {
   const handleBackBehavior = () => {
     if (pathname.startsWith("/yearly-progress/")) {
       router.push("/yearly-progress");
+      return;
     }
     if (pathname.startsWith("/eye-care/")) {
       router.push("/eye-care");
+      return;
     }
     router.push("/");
   };
