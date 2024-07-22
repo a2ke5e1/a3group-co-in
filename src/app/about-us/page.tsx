@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import Image from "next/image";
 import Link from "next/link";
 import { GitHub, X, LinkedIn, Web } from "@mui/icons-material";
+import { BackButton } from "@/components/BackButton";
 
 type MemeberCardsProps = {
   name: string;
@@ -25,7 +26,7 @@ const MemeberCards = ({
   imgSrc,
   links,
 }: MemeberCardsProps) => (
-  <div className="bg-blue-50 rounded-2xl p-2 flex flex-row items-center gap-2">
+  <div className="bg-blue-50 dark:bg-gray-950 rounded-2xl p-2 flex flex-row items-center gap-2">
     <Image
       src={imgSrc}
       alt={name}
@@ -35,7 +36,7 @@ const MemeberCards = ({
     />
     <div className="max-w-md">
       <h2 className="font-bold text-lg">{name}</h2>
-      <p className="text-base text-gray-800">{description}</p>
+      <p className="text-base text-gray-800 dark:text-gray-400">{description}</p>
 
       <div className="flex flex-row gap-2 my-2">
         {links?.github && (
@@ -65,14 +66,16 @@ const MemeberCards = ({
 
 const AboutUs: NextPage = () => {
   return (
-    <>
+    <main className="2xl:mx-0 mx-2 my-8">
+      <BackButton />
       <div className="my-2 w-fit mx-auto justify-center flex flex-col items-center">
         <Link href="/" aria-label="Home">
           <Image
-            src="/images/a3_logo.jpg"
+            src="/images/a3_logo.png"
             alt="A3 Group"
             width={60}
             height={50}
+            className="my-2"
           />
         </Link>
         <h1 className="font-bold text-3xl ">About Us</h1>
@@ -112,18 +115,17 @@ const AboutUs: NextPage = () => {
           links={{
             github: "https://www.github.com/Fcatilizer",
             linkedin: "https://www.linkedin.com/in/ashish-gaurav03",
-            x: "https://www.twitter.com/FeatherCatlizer"
+            x: "https://www.twitter.com/FeatherCatlizer",
           }}
         />
       </div>
-     
 
       {/* 
           This is a temporary spacing,       
           TODO: Add actual content 
       */}
       <div className="h-[60vh]"></div>
-    </>
+    </main>
   );
 };
 

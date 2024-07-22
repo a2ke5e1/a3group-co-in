@@ -16,35 +16,37 @@ export default function Footer({
   terms_of_service_url,
 }: FooterProps) {
   return (
-    <footer className="bg-blue-50 px-4 py-8">
+    <footer className="bg-blue-50 dark:bg-gray-950 dar px-4 py-8">
       <div className="max-w-screen-2xl mx-auto">
         <div className="grid md:grid-cols-3 sm:md:grid-cols-2 grid-cols-1 align-top justify-between gap-4">
           <section>
-            <Image
-              src="/images/a3_logo.png"
-              width={"60"}
-              height={"21"}
-              alt="A3 Group Logo"
-            />
-            <p className="my-2 font-light text-sm">
+            <Link href={"/"}>
+              <Image
+                src="/images/a3_logo.png"
+                width={60}
+                height={21}
+                alt="A3 Group Logo"
+              />
+            </Link>
+            <p className="my-2 font-light text-sm dark:text-white">
               © 2018 - 2024 A3 Group, All right reserved.
             </p>
           </section>
 
-          <section>
+          <section className="dark:text-white">
             <p className="text-xs uppercase font-light">JOIN OUR COMMUNITY</p>
             <Link href={"https://t.me/phycalc"}>Telegram</Link>
           </section>
 
           {delete_data_url && (
-            <section>
+            <section className="dark:text-white">
               <p className="text-xs uppercase font-light">MANAGE YOUR DATA</p>
               <Link href={delete_data_url}>Delete Your Account</Link>
             </section>
           )}
 
           {apps && (
-            <section>
+            <section className="dark:text-white">
               <p className="text-xs uppercase font-light">Apps</p>
               <div className="grid grid-cols-1">
                 <Link href="/yearly-progress">Yearly Progress</Link>
@@ -53,7 +55,7 @@ export default function Footer({
             </section>
           )}
 
-          <section>
+          <section className="dark:text-white">
             <p className="text-xs uppercase font-light">Others</p>
             <div className="grid grid-cols-1">
               {terms_of_service_url && (

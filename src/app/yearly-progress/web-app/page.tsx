@@ -5,6 +5,7 @@ import YearlyProgressDaylightWidget from "@/components/YearlyProgressDaylightWid
 import YearlyProgressNightWidget from "@/components/YearlyProgressNightWidget";
 import Link from "next/link";
 import { ArrowBack } from "@mui/icons-material";
+import { BackButton } from "@/components/BackButton";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://a3group.co.in"),
@@ -13,15 +14,10 @@ export const metadata: Metadata = {
   icons: "/yearly-progress/favicon/android-chrome-192x192.png",
 };
 
-
-
 export default async function YearlyProgressWebApp() {
-  
-
   return (
     <div className="2xl:mx-0 mx-2 my-8">
-      <Link href="/" aria-description="Go Back" 
-      className="hover:bg-blue-50 hover:rounded-full" ><ArrowBack /></Link>
+      <BackButton />
       <div className="my-4">
         <h1 className="font-bold text-2xl ">
           Yearly Progress <span className="text-sm text-blue-800">v0.04</span>
@@ -38,8 +34,13 @@ export default async function YearlyProgressWebApp() {
         <YearlyProgressDaylightWidget />
         <YearlyProgressNightWidget />
       </div>
-      <p className="text-sm text-gray-600">Daylight and Night Widget needs your location to get sunset and surise time.</p>
-      <p className="text-sm text-gray-600">For accurate results, Allow location permission in your browser.</p>
+      <p className="text-sm text-gray-600">
+        Daylight and Night Widget needs your location to get sunset and surise
+        time.
+      </p>
+      <p className="text-sm text-gray-600">
+        For accurate results, Allow location permission in your browser.
+      </p>
       <div className="h-64"></div>
     </div>
   );
