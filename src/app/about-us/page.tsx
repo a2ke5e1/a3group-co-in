@@ -26,7 +26,7 @@ const MemeberCards = ({
   imgSrc,
   links,
 }: MemeberCardsProps) => (
-  <div className="bg-blue-50 rounded-2xl p-2 flex flex-row items-center gap-2">
+  <div className="bg-blue-50 dark:bg-gray-950 rounded-2xl p-2 flex flex-row items-center gap-2">
     <Image
       src={imgSrc}
       alt={name}
@@ -36,7 +36,7 @@ const MemeberCards = ({
     />
     <div className="max-w-md">
       <h2 className="font-bold text-lg">{name}</h2>
-      <p className="text-base text-gray-800">{description}</p>
+      <p className="text-base text-gray-800 dark:text-gray-400">{description}</p>
 
       <div className="flex flex-row gap-2 my-2">
         {links?.github && (

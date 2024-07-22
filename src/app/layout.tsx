@@ -23,7 +23,7 @@ export default function RootLayout({
           crossOrigin={"anonymous"}
         ></script>
       </head>
-      <body className={`${inter.className} dark:bg-black`}>
+      <body className={`${inter.className} dark:bg-black dark:text-white`}>
         <main>{children}</main>
       </body>
     </html>

@@ -36,6 +36,9 @@ export const convertUnixToDateTime = (unix: number) => {
 
 export const convertDateTimeToUnix = (date: string, time: string): number => {
   const dateTime = new Date(`${date} ${time}`);
+
+  console.log("Orginal", `${date} ${time}`, "ConvertDateTimeToUnix: ", dateTime.getTime());
+
   return dateTime.getTime();
 };
 
