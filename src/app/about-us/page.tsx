@@ -71,10 +71,11 @@ const AboutUs: NextPage = () => {
       <div className="my-2 w-fit mx-auto justify-center flex flex-col items-center">
         <Link href="/" aria-label="Home">
           <Image
-            src="/images/a3_logo.jpg"
+            src="/images/a3_logo.png"
             alt="A3 Group"
             width={60}
             height={50}
+            className="my-2"
           />
         </Link>
         <h1 className="font-bold text-3xl ">About Us</h1>

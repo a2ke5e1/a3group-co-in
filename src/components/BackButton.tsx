@@ -5,12 +5,20 @@ import Link from "next/link";
 import { ArrowBack } from "@mui/icons-material";
 
 import { useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 
 export const BackButton = () => {
   const router = useRouter();
+  const pathname = usePathname();
 
   const handleBackBehavior = () => {
-    router.back();
+    if (pathname.startsWith("/yearly-progress/")) {
+      router.push("/yearly-progress");
+    }
+    if (pathname.startsWith("/eye-care/")) {
+      router.push("/eye-care");
+    }
+    router.push("/");
   };
 
   return (
