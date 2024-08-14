@@ -96,7 +96,7 @@ const AboutUs: NextPage = () => {
             github: "https://www.github.com/a2ke5e1",
             linkedin: "https://www.linkedin.com/in/a2ke5e1",
             x: "https://www.twitter.com/a2ke5e1",
-            website: "https://www.a2krocks.com",
+            website: "https://a2krocks-com.vercel.app",
           }}
         />
         <MemeberCards
