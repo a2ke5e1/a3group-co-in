@@ -61,7 +61,10 @@ export default function Home() {
                 <p className="text-gray-800 md:ml-2 ml-1 mt-1 md:text-base text-sm dark:text-gray-300">
                   {YearlyProgressInfo.desc.about}
                   <span className="text-blue-500 dark:text-blue-800">
-                    <Link href="/yearly-progress#about-yearly-progress"> Learn More</Link>
+                    <Link href="/yearly-progress#about-yearly-progress">
+                      {" "}
+                      Learn More
+                    </Link>
                   </span>
                 </p>
                 <p className="text-gray-800 dark:text-gray-300 mt-5 md:ml-2 ml-1 md:text-base text-sm gap-2 flex flex-col">
@@ -90,15 +93,14 @@ export default function Home() {
               </div>
             </div>
             <div className="grid md:grid-flow-col grid-flow-row md:gap-4 gap-2 mx-auto w-fit my-8">
-              
-            <Image
+              <Image
                 src="/eye-care/images/cover.png"
                 alt="Eye Care Cover"
                 width={400}
                 height={225}
                 className="rounded-2xl md:w-[400px] w-full md:hidden"
               />
-              
+
               <div className="max-w-2xl">
                 <h1 className="font-semibold md:text-4xl text-3xl text-blue-800">
                   {EyeCareInfo.name}
@@ -130,12 +132,46 @@ export default function Home() {
                 className="rounded-2xl md:w-[400px] w-full hidden md:block"
               />
             </div>
+            <div className="grid md:grid-flow-col grid-flow-row md:gap-4 gap-2 mx-auto w-fit my-8">
+              <Image
+                src="/sound-profile-scheduler/images/cover.png"
+                alt="Sound Profile Scheduler Cover"
+                width={400}
+                height={225}
+                className="rounded-2xl md:w-[400px] w-full"
+              />
+              <div className="max-w-2xl">
+                <h1 className="font-semibold md:text-4xl text-3xl text-blue-800 dark:text-blue-600">
+                  {"Sound Profile Scheduler"}
+                </h1>
+                <p className="text-gray-800 md:ml-2 ml-1 mt-1 md:text-base text-sm dark:text-gray-300">
+                  {
+                    "Introducing our versatile audio profile scheduler app, designed to give you full control over your device's sound settings with precision. Whether you need your phone to be quiet during meetings, loud for alarms, or at a moderate volume for media, this app lets you automate these changes just like setting an alarm clock."
+                  }
+                  <span className="text-blue-500 dark:text-blue-800">
+                    <Link href="/sound-profile-scheduler#about">
+                      {" "}
+                      Learn More
+                    </Link>
+                  </span>
+                </p>
+                <p className="text-gray-800 dark:text-gray-300 mt-5 md:ml-2 ml-1 md:text-base text-sm gap-2 flex flex-col">
+                  <span>
+                    <Link
+                      href={
+                        "https://play.google.com/store/apps/details?id=com.a3.soundprofiles"
+                      }
+                    >
+                      {<Shop />} Get Play Store
+                    </Link>
+                  </span>
+                </p>
+              </div>
+            </div>
           </div>
-
-          <div className="mt-8 h-20"> </div>
         </div>
       </main>
-      <Footer  />
+      <Footer />
     </>
   );
 }

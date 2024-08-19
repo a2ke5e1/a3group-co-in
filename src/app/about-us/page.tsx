@@ -36,7 +36,9 @@ const MemeberCards = ({
     />
     <div className="max-w-md">
       <h2 className="font-bold text-lg">{name}</h2>
-      <p className="text-base text-gray-800 dark:text-gray-400">{description}</p>
+      <p className="text-base text-gray-800 dark:text-gray-400">
+        {description}
+      </p>
 
       <div className="flex flex-row gap-2 my-2">
         {links?.github && (
@@ -66,7 +68,7 @@ const MemeberCards = ({
 
 const AboutUs: NextPage = () => {
   return (
-    <main className="2xl:mx-0 mx-2 my-8">
+    <main className="2xl:mx-0 mx-2 my-8 min-h-[80vh]">
       <BackButton />
       <div className="my-2 w-fit mx-auto justify-center flex flex-col items-center">
         <Link href="/" aria-label="Home">
@@ -119,12 +121,6 @@ const AboutUs: NextPage = () => {
           }}
         />
       </div>
-
-      {/* 
-          This is a temporary spacing,       
-          TODO: Add actual content 
-      */}
-      <div className="h-[60vh]"></div>
     </main>
   );
 };
