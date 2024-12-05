@@ -1,10 +1,10 @@
 import type { NextPage } from "next";
-import Head from "next/head";
-import Footer from "@/components/Footer";
 import Image from "next/image";
 import Link from "next/link";
-import { GitHub, X, LinkedIn, Web } from "@mui/icons-material";
+import { GitHub, LinkedIn, Web, X } from "@mui/icons-material";
 import { BackButton } from "@/components/BackButton";
+import { IconButton } from "@/components/button/button";
+import { Icon } from "@/components/icon/icon";
 
 type MemeberCardsProps = {
   name: string;
@@ -26,7 +26,7 @@ const MemeberCards = ({
   imgSrc,
   links,
 }: MemeberCardsProps) => (
-  <div className="bg-blue-50 dark:bg-gray-950 rounded-2xl p-2 flex flex-row items-center gap-2">
+  <div className="bg-surface-container-low rounded-2xl p-2 flex flex-row items-center gap-2 ">
     <Image
       src={imgSrc}
       alt={name}
@@ -35,30 +35,48 @@ const MemeberCards = ({
       height={80}
     />
     <div className="max-w-md">
-      <h2 className="font-bold text-lg">{name}</h2>
-      <p className="text-base text-gray-800 dark:text-gray-400">
-        {description}
-      </p>
+      <div className="mt-4">
+        <h2 className="font-bold text-body-large m">{name}</h2>
+        <p className="text-body-medium text-on-surface-variant">
+          {description}
+        </p>
+      </div>
 
       <div className="flex flex-row gap-2 my-2">
         {links?.github && (
           <Link href={links.github}>
-            <GitHub />
+            <IconButton>
+              <Icon>
+                <GitHub />
+              </Icon>
+            </IconButton>
           </Link>
         )}
         {links?.linkedin && (
           <Link href={links.linkedin}>
-            <LinkedIn />
+            <IconButton>
+              <Icon>
+                <LinkedIn />
+              </Icon>
+            </IconButton>
           </Link>
         )}
         {links?.x && (
           <Link href={links.x}>
-            <X />
+            <IconButton>
+              <Icon>
+                <X />
+              </Icon>
+            </IconButton>
           </Link>
         )}
         {links?.website && (
           <Link href={links.website}>
-            <Web />
+            <IconButton>
+              <Icon>
+                <Web />
+              </Icon>
+            </IconButton>
           </Link>
         )}
       </div>
@@ -89,7 +107,7 @@ const AboutUs: NextPage = () => {
       <h2 className="font-bold text-lg my-2 text-center font-mono uppercase">
         Our Team
       </h2>
-      <div className="grid md:grid-flow-col gap-2">
+      <div className="grid md:grid-flow-col gap-2 ">
         <MemeberCards
           name="a2ke5e1"
           description="Web and App Developer + Designer"

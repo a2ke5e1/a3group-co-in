@@ -16,7 +16,7 @@ export default function Footer({
   terms_of_service_url,
 }: FooterProps) {
   return (
-    <footer className="bg-blue-50 dark:bg-gray-950 dar px-4 py-8">
+    <footer className="bg-surface-container-low px-4 py-8">
       <div className="max-w-screen-2xl mx-auto">
         <div className="grid md:grid-cols-3 sm:md:grid-cols-2 grid-cols-1 align-top justify-between gap-4">
           <section>
