@@ -33,7 +33,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="flex flex-col gap-16">
+          <div className="flex flex-col gap-10">
             <ProjectCard
               title={YearlyProgressInfo.name}
               description={YearlyProgressInfo.desc.about}

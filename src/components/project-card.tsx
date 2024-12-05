@@ -15,7 +15,7 @@ export interface ProjectCardProps
     playStore: string | undefined;
     sourceCode?: string;
     webApp?: string;
-    learnMore: string | undefined;
+    learnMore: string;
   };
   reverseImage?: boolean;
 }
@@ -47,13 +47,13 @@ const ProjectCard = React.forwardRef<HTMLDivElement, ProjectCardProps>(
           src={coverImage}
           alt={`${title} Cover`}
           width={400}
-          height={225}
+          height={225}  
           className="rounded-2xl md:w-[400px] w-full aspect-video"
         />
         <div className="max-w-2xl flex flex-col gap-2">
           <div className="flex flex-col gap-1">
             <h1 className="font-semibold text-headline-large">{title}</h1>
-            <p className="text-on-surface-variant text-body-large">
+            <p className="text-on-surface-variant text-body-large text-justify">
               {description}{" "}
               {links.learnMore && (
                 <Link
