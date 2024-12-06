@@ -29,7 +29,7 @@ export async function generateMetadata() {
 const DeletePage: NextPage = () => {
     return (
         <>
-          <main className={"2xl:mx-0 mx-2 my-8"}>
+          <main className={"2xl:mx-0 mx-2 my-8 min-h-[75vh]"}>
             <BackButton />
             <div className={`${styles.header} my-2`}>
                 <Image

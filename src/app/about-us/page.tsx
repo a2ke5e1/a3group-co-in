@@ -98,16 +98,16 @@ const AboutUs: NextPage = () => {
             className="my-2"
           />
         </Link>
-        <h1 className="font-bold text-3xl ">About Us</h1>
-        <p className="text-sm text-center">
+        <h1 className="font-bold text-headline-large ">About Us</h1>
+        <p className="text-center text-body-large">
           A3 Group is a group of friends trying to make some apps. <br /> <br />
         </p>
       </div>
 
-      <h2 className="font-bold text-lg my-2 text-center font-mono uppercase">
+      <h2 className="my-2 text-label-large text-center">
         Our Team
       </h2>
-      <div className="grid md:grid-flow-col gap-2 ">
+      <div className="grid grid-flow-row md:grid-cols-2  grid-cols-1  gap-2 ">
         <MemeberCards
           name="a2ke5e1"
           description="Web and App Developer + Designer"

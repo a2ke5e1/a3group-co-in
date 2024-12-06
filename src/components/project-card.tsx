@@ -20,20 +20,17 @@ export interface ProjectCardProps
   reverseImage?: boolean;
 }
 
-const ProjectCardVariants = cva(
-  "flex md:flex-row flex-col gap-8 mx-auto w-fit",
-  {
-    variants: {
-      reverseImage: {
-        true: "md:flex-row-reverse",
-        false: "",
-      },
+const ProjectCardVariants = cva("flex md:flex-row flex-col gap-8 ", {
+  variants: {
+    reverseImage: {
+      true: "md:flex-row-reverse",
+      false: "",
     },
-    defaultVariants: {
-      reverseImage: false,
-    },
-  }
-);
+  },
+  defaultVariants: {
+    reverseImage: false,
+  },
+});
 
 const ProjectCard = React.forwardRef<HTMLDivElement, ProjectCardProps>(
   ({ title, description, coverImage, links, reverseImage, ...props }, ref) => {
@@ -47,10 +44,10 @@ const ProjectCard = React.forwardRef<HTMLDivElement, ProjectCardProps>(
           src={coverImage}
           alt={`${title} Cover`}
           width={400}
-          height={225}  
+          height={225}
           className="rounded-2xl md:w-[400px] w-full aspect-video"
         />
-        <div className="max-w-2xl flex flex-col gap-2">
+        <div className="flex flex-col gap-2">
           <div className="flex flex-col gap-1">
             <h1 className="font-semibold text-headline-large">{title}</h1>
             <p className="text-on-surface-variant text-body-large text-justify">
