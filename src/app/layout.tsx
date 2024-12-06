@@ -17,7 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="">
       <body className={`${inter.className} `}>
-        <ThemeToggleButton />
+        <div className="m-2 absolute top-0 right-0"><ThemeToggleButton /></div>
         <main>{children}</main>
       </body>
     </html>
