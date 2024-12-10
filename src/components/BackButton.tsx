@@ -26,14 +26,8 @@ export const BackButton = () => {
   };
 
   return (
-    <Link
-      href="/"
-      onClick={handleBackBehavior}
-      aria-description="Go Back"
-    >
-      <IconButton>
-        <Icon>arrow_back</Icon>
-      </IconButton>
-    </Link>
+    <IconButton onClick={handleBackBehavior}>
+      <Icon>arrow_back</Icon>
+    </IconButton>
   );
 };
