@@ -24,8 +24,8 @@ const Home: NextPage = () => {
                     }
                     className={styles.logo}
                 />
-                <h1 className={styles["title"]}>{info.name}</h1>
-                <a>A3.</a>
+                <h1 className="text-display-large">{info.name}</h1>
+                <p className="text-body-medium mt-2">A3.</p>
                 <div className={"flex flex-col items-center mt-6"}>
                     <Link
                         href="https://play.google.com/store/apps/details?id=com.a3.yearlyprogess&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1">
@@ -36,12 +36,12 @@ const Home: NextPage = () => {
                             src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
                         />
                     </Link>
-                    <a className={styles["legal-dist"]}>
+                    <a className="text-label-small">
                         Google Play and the Google Play logo are trademarks of Google LLC.
                     </a>
                 </div>
                 <div className="my-8">
-                    <Link href={"#about-yearly-progress"} className="font-extralight text-sm">Learn More</Link>
+                    <Link href={"#about-yearly-progress"} className="text-body-large hover:underline">Learn More</Link>
                 </div>
             </section>
             <main className={`${styles["main"]} mx-4 2xl:mx-0 my-8 flex flex-col gap-2`} id="about-yearly-progress">

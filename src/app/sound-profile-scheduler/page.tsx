@@ -27,8 +27,8 @@ const Home: NextPage = () => {
           src={"/sound-profile-scheduler/favicon/android-chrome-512x512.png"}
           className={styles.logo}
         />
-        <h1 className={styles["title"]}>Sound Profile Scheduler</h1>
-        <a>A3.</a>
+        <h1 className="text-display-large">Sound Profile Scheduler</h1>
+        <p className="text-body-medium mt-2">A3.</p>
         <div className={"flex flex-col items-center mt-6"}>
           <Link href="https://play.google.com/store/apps/details?id=com.a3.soundprofiles">
             <Image
@@ -43,7 +43,7 @@ const Home: NextPage = () => {
           </a>
         </div>
         <div className="my-8">
-          <Link href={"#about"} className="font-extralight text-sm">
+          <Link href={"#about"} className="text-body-large hover:underline">
             Learn More
           </Link>
         </div>
