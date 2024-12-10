@@ -143,12 +143,12 @@
 
   ::-webkit-scrollbar {
     width: 4px;
-    height: 4px;
+    height: 8px;
   }
 
   ::-webkit-scrollbar-track {
     @apply bg-surface-variant;
-    border-radius: 50%;
+    border-radius: 50px;
   }
 
   ::-webkit-scrollbar-thumb {

@@ -1,3 +1,5 @@
+"use client"
+
 import Image from "next/image";
 import Link from "next/link";
 import { FilledTonalButton, TextButton } from "@/components/button/button";
@@ -20,7 +22,7 @@ export interface ProjectCardProps
   reverseImage?: boolean;
 }
 
-const ProjectCardVariants = cva("flex md:flex-row flex-col gap-8 ", {
+const ProjectCardVariants = cva("flex md:flex-row flex-col gap-8", {
   variants: {
     reverseImage: {
       true: "md:flex-row-reverse",
