@@ -112,7 +112,7 @@ const YearlyProgressWidget: React.FC<YearlyProgressWidgetProps> = ({
           </h2>
         )}
         {custom?.description && (
-          <p className="relative text-sm p-0 text-on-primary-fixed-variant">
+          <p className="relative text-body-medium p-0 text-on-primary-fixed-variant dark:text-on-primary-fixed">
             {custom.description}
           </p>
         )}

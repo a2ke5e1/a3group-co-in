@@ -72,7 +72,7 @@ const EyeCareHome: NextPage = () => {
                         prescription in the cloud and access them from anywhere.
                     </p>
                     <h2 className="font-bold mt-2">Features: </h2>
-                    <div className="flex flex-col gap-2">
+                    <div className="flex flex-col gap-6">
                         <p className="max-w-xl">
                             Personalized Eye Report Tables: Create and manage personalized eye
                             report tables with ease. Keep track of prescribed eyeglass

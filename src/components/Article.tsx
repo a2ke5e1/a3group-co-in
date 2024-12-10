@@ -9,7 +9,7 @@ export default function Article({ title, children }: ArticleProps) {
       <section>
         <article>
           <h1 className="text-headline-small">{title}</h1>
-          <div className="text-secondary text-body-medium">{children}</div>
+          <div className="text-on-surface-variant text-body-medium flex flex-col gap-4">{children}</div>
         </article>
       </section>
     </>

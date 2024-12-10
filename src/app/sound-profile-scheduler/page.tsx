@@ -43,10 +43,7 @@ const Home: NextPage = () => {
           </a>
         </div>
         <div className="my-8">
-          <Link
-            href={"#about"}
-            className="font-extralight text-sm"
-          >
+          <Link href={"#about"} className="font-extralight text-sm">
             Learn More
           </Link>
         </div>
@@ -91,7 +88,7 @@ const Home: NextPage = () => {
           />
         </div>
         <Article title={""}>
-          <p className="my-2 max-w-xl">
+          <p className=" max-w-xl">
             You can schedule your audio profiles by day, week, hour, or even
             minute, tailoring the volume levels for ringtones, alarms, and media
             to fit your lifestyle. Create multiple schedules for different days
@@ -100,8 +97,10 @@ const Home: NextPage = () => {
             those who need a flexible solution to manage sound in various
             environments without manual adjustments.
           </p>
-          <h2 className="mt-2 font-bold">Features include</h2>
-          <p className="my-2 max-w-xl">
+          <p className="max-w-xl">
+            <strong>
+              Features include: <br />
+            </strong>
             Customizable schedules for ringtone, alarm, and media volumes.
             Time-based triggers: set profiles by weeks, days, hours, or minutes.
             Easy-to-use interface with options to create, edit, or delete
