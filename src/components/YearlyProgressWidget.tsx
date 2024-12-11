@@ -92,9 +92,9 @@ const YearlyProgressWidget: React.FC<YearlyProgressWidgetProps> = ({
   };
 
   return isClient ? (
-    <div className="relative  bg-primary-container py-2 px-4 rounded-2xl overflow-hidden text-on-primary-fixed flex flex-col justify-between">
+    <div className="relative  bg-surface-container py-2 px-4 rounded-2xl overflow-hidden text-on-secondary-container flex flex-col justify-between">
       <div
-        className="absolute top-0 left-0 h-full bg-primary-fixed-dim transition-all duration-150 ease-out"
+        className="absolute top-0 left-0 h-full bg-secondary-container transition-all duration-150 ease-out"
         style={{ width: `${progress}%` }}
       ></div>
       <div className="relative">
@@ -103,7 +103,7 @@ const YearlyProgressWidget: React.FC<YearlyProgressWidgetProps> = ({
             <h2 className="text-label-medium uppercase p-0 m-0">
               {type}
             </h2>
-            <p className="text-title-large p-0 ">{getTypeValue(type)}</p>
+            <p className="text-title-large p-0  text-tertiary">{getTypeValue(type)}</p>
           </>
         )}
         {custom?.title && (
@@ -112,14 +112,14 @@ const YearlyProgressWidget: React.FC<YearlyProgressWidgetProps> = ({
           </h2>
         )}
         {custom?.description && (
-          <p className="relative text-body-medium p-0 text-on-primary-fixed-variant dark:text-on-primary-fixed">
+          <p className="relative text-body-medium p-0 ">
             {custom.description}
           </p>
         )}
       </div>
       <div className="relative  text-body-large">
         <p className="pt-4">{styledProgress()}</p>
-        <p className="">
+        <p className="text-on-surface-variant">
           of{" "}
           {(
             (getEndOfTimeMillis(type, custom?.endTimestamp) -
