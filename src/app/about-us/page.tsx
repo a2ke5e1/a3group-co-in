@@ -26,7 +26,7 @@ const MemeberCards = ({
   imgSrc,
   links,
 }: MemeberCardsProps) => (
-  <div className="bg-surface-container-low rounded-2xl p-2 flex flex-row items-center gap-2 ">
+  <div className="bg-surface-container-low rounded-2xl p-2 flex flex-row items-center gap-4 ">
     <Image
       src={imgSrc}
       alt={name}
@@ -36,48 +36,40 @@ const MemeberCards = ({
     />
     <div className="max-w-md">
       <div className="mt-4">
-        <h2 className="font-bold text-body-large m">{name}</h2>
+        <h2 className="font-bold text-body-large text-primary">{name}</h2>
         <p className="text-body-medium text-on-surface-variant">
           {description}
         </p>
       </div>
 
-      <div className="flex flex-row gap-2 my-2">
+      <div className="flex flex-row gap-2 my-2 -ml-2">
         {links?.github && (
-          <Link href={links.github}>
-            <IconButton>
-              <Icon>
-                <GitHub />
-              </Icon>
-            </IconButton>
-          </Link>
+          <IconButton href={links.github}>
+            <Icon>
+              <GitHub />
+            </Icon>
+          </IconButton>
         )}
         {links?.linkedin && (
-          <Link href={links.linkedin}>
-            <IconButton>
-              <Icon>
-                <LinkedIn />
-              </Icon>
-            </IconButton>
-          </Link>
+          <IconButton href={links.linkedin}>
+            <Icon>
+              <LinkedIn />
+            </Icon>
+          </IconButton>
         )}
         {links?.x && (
-          <Link href={links.x}>
-            <IconButton>
-              <Icon>
-                <X />
-              </Icon>
-            </IconButton>
-          </Link>
+          <IconButton href={links.x}>
+            <Icon>
+              <X />
+            </Icon>
+          </IconButton>
         )}
         {links?.website && (
-          <Link href={links.website}>
-            <IconButton>
-              <Icon>
-                <Web />
-              </Icon>
-            </IconButton>
-          </Link>
+          <IconButton href={links.website}>
+            <Icon>
+              <Web />
+            </Icon>
+          </IconButton>
         )}
       </div>
     </div>
@@ -104,10 +96,8 @@ const AboutUs: NextPage = () => {
         </p>
       </div>
 
-      <h2 className="my-2 text-label-large text-center">
-        Our Team
-      </h2>
-      <div className="grid grid-flow-row md:grid-cols-2  grid-cols-1  gap-2 ">
+      <h2 className="my-4 text-title-large text-center text-primary">Our Team</h2>
+      <div className="grid grid-flow-row md:grid-cols-2  grid-cols-1  gap-4 ">
         <MemeberCards
           name="a2ke5e1"
           description="Web and App Developer + Designer"

@@ -17,6 +17,7 @@ export interface ProjectCardProps
     playStore: string | undefined;
     sourceCode?: string;
     webApp?: string;
+    terminalApp?: string;
     learnMore: string;
   };
   reverseImage?: boolean;
@@ -81,6 +82,12 @@ const ProjectCard = React.forwardRef<HTMLDivElement, ProjectCardProps>(
               <TextButton href={links.webApp}>
                 <Icon slot="icon">language</Icon>
                 Web App
+              </TextButton>
+            )}
+            {links.terminalApp && (
+              <TextButton href={links.terminalApp}>
+                <Icon slot="icon">terminal</Icon>
+                Terminal App
               </TextButton>
             )}
           </div>

@@ -44,6 +44,7 @@ export default function Home() {
                   "https://play.google.com/store/apps/details?id=com.a3.yearlyprogess",
                 sourceCode: "https://github.com/a2ke5e1/yearly-progress",
                 webApp: "/yearly-progress/web-app",
+                terminalApp: "https://github.com/a2ke5e1/yearly-progress-cli-py/"
               }}
             />
             <ProjectCard
