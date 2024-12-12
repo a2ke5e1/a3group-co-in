@@ -2,7 +2,6 @@ import type { Metadata, NextPage } from "next";
 import Head from "next/head";
 import info from "../../../../info/eye-care.json";
 import Footer from "@/components/Footer";
-import styles from "@styles/eye-care/eyecare.module.scss";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowBack } from "@mui/icons-material";
@@ -29,10 +28,9 @@ const DeletePage: NextPage = () => {
     <>
       <main className={"2xl:mx-0 mx-2 my-8 min-h-[80vh]"}>
         <BackButton />
-        <div className={`${styles.header} my-2`}>
+        <div className={`flex flex-wrap gap-4 items-center my-2`}>
           <Image
             src={"/eye-care/favicon/icon-512-maskable.png"}
-            className={styles.logo}
             height={60}
             width={60}
             alt="Eye Care Logo"

@@ -1,8 +1,6 @@
 import { NextPage } from "next";
-import styles from "../../../../styles/yearly-progress/Privacy.module.scss";
 import PrivacyPolicy from "@/docs/eye-care/privacy-policy.mdx";
 import Image from "next/image";
-import { ArrowBack } from "@mui/icons-material";
 import Link from "next/link";
 import { LegalDocument } from "@/components/LegalDocument";
 import { BackButton } from "@/components/BackButton";
@@ -34,7 +32,7 @@ const EyeCarePrivacyPolicy: NextPage = () => {
             width={50}
             height={50}
             alt="Eye Care Logo"
-            className={styles.shadow + " rounded-md"}
+            className={" rounded-md"}
           />
           <h1 className="text-lg font-bold text-center mt-2">Eye Care</h1>
         </div>

@@ -1,5 +1,4 @@
 import { NextPage } from "next";
-import styles from "../../../../styles/yearly-progress/Privacy.module.scss";
 import Image from "next/image";
 import TermsOfService from "@/docs/sound-profile-scheduler/tos.mdx";
 import { LegalDocument } from "@/components/LegalDocument";
@@ -35,7 +34,7 @@ const TOS: NextPage = () => {
             width={50}
             height={50}
             alt="Sound Profile Scheduler Logo"
-            className={styles.shadow + " rounded-md"}
+            className={" rounded-md"}
           />
           <h1 className="text-lg font-bold text-center mt-2">
             Sound Profile Scheduler

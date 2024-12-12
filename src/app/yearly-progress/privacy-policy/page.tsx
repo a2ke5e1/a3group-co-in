@@ -1,5 +1,4 @@
 import { NextPage } from "next";
-import styles from "../../../../styles/yearly-progress/Privacy.module.scss";
 import Image from "next/image";
 import PrivacyPolicy from "@/docs/yearly-progress/privacy-policy.mdx";
 import { LegalDocument } from "@/components/LegalDocument";
@@ -38,7 +37,7 @@ const Privacy_policy: NextPage = () => {
               width={50}
               height={50}
               alt="Yearly Progress Logo"
-              className={styles.shadow + " rounded-md"}
+              className={" rounded-md"}
             />
             <h1 className="text-lg font-bold text-center mt-2">
               Yearly Progress
