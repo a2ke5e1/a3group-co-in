@@ -8,7 +8,7 @@ export default function RootLayout({
 }) {
   return (
     <>
-      <div className="xl:mx-auto max-w-screen-xl mx-2 my-8">{children}</div>
+      <div className="2xl:mx-auto max-w-screen-xl mx-2 my-8">{children}</div>
       <Footer
         policy_url="/eye-care/privacy-policy"
         delete_data_url="/eye-care/delete-account"

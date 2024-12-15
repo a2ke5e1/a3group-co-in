@@ -29,7 +29,7 @@ export async function generateMetadata() {
 const EyeCareHome: NextPage = () => {
   return (
     <>
-      <Cover src="/eye-care/images/cover.png" alt={info.name} />
+      <Cover src="/eye-care/images/cover.png" alt={info.name} className="bg-[#b5c9ff]" />
 
       <AppInfo
         appIcon="https://play-lh.googleusercontent.com/MhkvnZGvvVQYwBKwxoeP7MhO_lwO7SIOF0ci5J9QAxoWGkWRBtldT5etyjcHEK3WfU4=w240-h480-rw"

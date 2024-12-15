@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 const Home: React.FC = () => {
   return (
     <>
-      <Cover src="/yearly-progress/images/cover.webp" alt={info.name} />
+      <Cover src="/yearly-progress/images/cover.webp" alt={info.name} className="bg-[#e8f4f0]" />
 
       <AppInfo
         appIcon="https://play-lh.googleusercontent.com/SxZPrpX_9O2WxFiI067oHMRxsRS0Ozz6clBvao5lrH2SA-lG7vXs8rU_Rf7BHz0CZ0YO=w240-h480-rw"

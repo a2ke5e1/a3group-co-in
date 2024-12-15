@@ -5,7 +5,7 @@ import Link from "next/link";
 
 
 // Cover component
-const coverVariants = cva("w-full h-80 bg-primary-container object-cover rounded-2xl", {
+const coverVariants = cva("w-full bg-primary-container object-contain rounded-2xl aspect-[4.5/1] ", {
   variants: {},
   defaultVariants: {},
 });

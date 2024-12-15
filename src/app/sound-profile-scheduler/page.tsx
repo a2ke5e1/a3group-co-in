@@ -27,7 +27,7 @@ export async function generateMetadata() {
 const Home: NextPage = () => {
   return (
     <>
-      <Cover src="/sound-profile-scheduler/images/cover.png" alt={"Sound Profile Scheduler"} />
+      <Cover src="/sound-profile-scheduler/images/cover.png" alt={"Sound Profile Scheduler"} className="bg-[#fadbba]" />
 
       <AppInfo
         appIcon="/sound-profile-scheduler/favicon/android-chrome-512x512.png"
@@ -37,7 +37,7 @@ const Home: NextPage = () => {
         playStoreBadge="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
       />
 
-      <main className={`max-w-xl`} id="about">
+      <main className={`max-w-xl`}>
         <Article title={"About App"}>
           <p>Schedule and automate ring, alarm, media volume, etc.</p>
           <p>

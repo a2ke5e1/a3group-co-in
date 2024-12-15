@@ -6,9 +6,6 @@ import YearlyProgressInfo from "../../info/yearly-progress.json";
 import EyeCareInfo from "../../info/eye-care.json";
 import Link from "next/link";
 
-import { Shop, Terminal, Language as WebBrowser } from "@mui/icons-material";
-import { FilledTonalButton, TextButton } from "@/components/button/button";
-import { Icon } from "@/components/icon/icon";
 import { ProjectCard } from "@/components/project-card";
 
 export const metadata: Metadata = {
@@ -39,7 +36,7 @@ export default function Home() {
               description={YearlyProgressInfo.desc.about}
               coverImage={"/yearly-progress/images/cover.webp"}
               links={{
-                learnMore: "/yearly-progress#about-yearly-progress",
+                learnMore: "/yearly-progress",
                 playStore:
                   "https://play.google.com/store/apps/details?id=com.a3.yearlyprogess",
                 sourceCode: "https://github.com/a2ke5e1/yearly-progress",
@@ -52,7 +49,7 @@ export default function Home() {
               description={EyeCareInfo.desc.about_long}
               coverImage={"/eye-care/images/cover.png"}
               links={{
-                learnMore: "/eye-care#what-is-eye-care",
+                learnMore: "/eye-care",
                 playStore:
                   "https://play.google.com/store/apps/details?id=com.a3.eyecare",
               }}
@@ -65,7 +62,7 @@ export default function Home() {
               }
               coverImage={"/sound-profile-scheduler/images/cover.png"}
               links={{
-                learnMore: "/sound-profile-scheduler#about",
+                learnMore: "/sound-profile-scheduler",
                 playStore:
                   "https://play.google.com/store/apps/details?id=com.a3.soundprofiles",
                 sourceCode: "https://github.com/a2ke5e1/Sound-Profiles-Manager",
