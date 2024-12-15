@@ -20,6 +20,7 @@ export const metadata: Metadata = {
 const Home: React.FC = () => {
   return (
     <>
+    {/* TODO: Added a proper 4.5/1 ratio cover page for Yearly Progress */}
       <Cover src="/yearly-progress/images/cover.webp" alt={info.name} className="bg-[#e8f4f0]" />
 
       <AppInfo

@@ -29,6 +29,7 @@ export async function generateMetadata() {
 const EyeCareHome: NextPage = () => {
   return (
     <>
+      {/* TODO: Added a proper 4.5/1 ratio cover page for Eye Care */}
       <Cover src="/eye-care/images/cover.png" alt={info.name} className="bg-[#b5c9ff]" />
 
       <AppInfo

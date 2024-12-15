@@ -27,6 +27,7 @@ export async function generateMetadata() {
 const Home: NextPage = () => {
   return (
     <>
+      {/* TODO: Added a proper 4.5/1 ratio cover page for Sound Profile Scheduler */}
       <Cover src="/sound-profile-scheduler/images/cover.png" alt={"Sound Profile Scheduler"} className="bg-[#fadbba]" />
 
       <AppInfo
