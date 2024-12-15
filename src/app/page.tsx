@@ -11,6 +11,7 @@ import { ProjectCard } from "@/components/project-card";
 export const metadata: Metadata = {
   title: "A3 Group",
   description: "A3 Group is a group of friends trying to make some apps.",
+  icons: "/favicon.ico",
 };
 
 export default function Home() {
