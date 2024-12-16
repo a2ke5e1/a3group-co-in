@@ -26,7 +26,7 @@ export const AppStats = React.forwardRef<HTMLDivElement, AppStatsProps>(
         <div className="flex flex-row gap-2 items-center">
           <Icon>star</Icon>
           <div className="flex flex-col items-center">
-            <h1 className="text-title-large font-bold">{rating}</h1>
+            <h1 className="text-title-large font-bold">{rating.toFixed(2)}</h1>
             <p className="text-body-small">Rating</p>
           </div>
         </div>

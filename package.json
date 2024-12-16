@@ -21,6 +21,7 @@
     "@types/mdx": "^2.0.10",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
+    "google-play-scraper": "^10.0.1",
     "googleapis": "^144.0.0",
     "gray-matter": "^4.0.3",
     "lucide-react": "^0.446.0",

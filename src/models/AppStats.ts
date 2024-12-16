@@ -5,7 +5,7 @@ export interface IAppStats extends Document {
   downloads: number;
   reviews: number;
   rating: number;
-  lastUpdated: Date;
+  updatedAt: Date;
   createdAt: Date;
 }
 
