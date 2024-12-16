@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { ThemeToggleButton } from "./button/button";
 
 type FooterProps = {
   terms_of_service_url?: string;
@@ -30,6 +31,9 @@ export default function Footer({
             <p className="my-2 text-label-medium">
               © 2018 - 2024 A3 Group, All right reserved.
             </p>
+            <div className="my-4 -ml-2">
+              <ThemeToggleButton />
+            </div>
           </section>
 
           <section className="">

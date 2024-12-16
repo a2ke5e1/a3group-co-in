@@ -68,7 +68,7 @@ export const OutlinedIconButton = createComponent({
 });
 
 export const ThemeToggleButton = () => {
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState("dark");
 
   useEffect(() => {
     const userTheme = localStorage.getItem("theme");
@@ -98,12 +98,11 @@ export const ThemeToggleButton = () => {
   const active = theme === "light";
 
   return (
-    <IconButton onClick={toggleTheme}>
-      <Icon>
-        <span className={"material-symbols-rounded"}>
+    <TextButton onClick={toggleTheme} >
+      <Icon slot="icon">
           {active ? "dark_mode" : "light_mode"}
-        </span>
       </Icon>
-    </IconButton>
+      Switch to {active ? "Dark Mode" : "Light Mode"}
+    </TextButton>
   );
 };
