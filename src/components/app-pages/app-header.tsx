@@ -3,12 +3,14 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-
 // Cover component
-const coverVariants = cva("w-full bg-primary-container object-contain rounded-2xl aspect-[4.5/1] ", {
-  variants: {},
-  defaultVariants: {},
-});
+const coverVariants = cva(
+  "w-full object-contain sm:rounded-2xl rounded-lg lg:aspect-[4.5/1] md:aspect-[2.5/1]  aspect-[2/1]  ",
+  {
+    variants: {},
+    defaultVariants: {},
+  }
+);
 
 interface CoverProps {
   src: string;
@@ -28,10 +30,13 @@ const Cover: React.FC<CoverProps> = ({ src, alt, className }) => (
 );
 
 // AppInfo component
-const appInfoVariants = cva("flex flex-row justify-between my-8 items-center flex-wrap gap-4", {
-  variants: {},
-  defaultVariants: {},
-});
+const appInfoVariants = cva(
+  "flex flex-row justify-between my-8 items-center flex-wrap gap-4",
+  {
+    variants: {},
+    defaultVariants: {},
+  }
+);
 
 interface AppInfoProps {
   appIcon: string;
@@ -83,17 +88,23 @@ const AppInfo: React.FC<AppInfoProps> = ({
 );
 
 // ScreenshotGallery component
-const screenshotGalleryVariants = cva("flex flex-row overflow-x-auto gap-4 my-2 py-2", {
-  variants: {},
-  defaultVariants: {},
-});
+const screenshotGalleryVariants = cva(
+  "flex flex-row overflow-x-auto gap-4 my-2 py-2",
+  {
+    variants: {},
+    defaultVariants: {},
+  }
+);
 
 interface ScreenshotGalleryProps {
   screenshots: { src: string; alt: string }[];
   className?: string;
 }
 
-const ScreenshotGallery: React.FC<ScreenshotGalleryProps> = ({ screenshots, className }) => (
+const ScreenshotGallery: React.FC<ScreenshotGalleryProps> = ({
+  screenshots,
+  className,
+}) => (
   <div>
     <strong>Screenshot</strong>
     <div className={screenshotGalleryVariants({ className })}>
