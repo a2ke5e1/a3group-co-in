@@ -9,6 +9,9 @@ import {
   AppInfo,
   ScreenshotGallery,
 } from "@/components/app-pages/app-header";
+import { BASE_URL } from "@/lib/utils";
+import { IAppStats } from "@/models/AppStats";
+import { AppStats } from "@/components/app-pages/app-stats";
 
 export async function generateMetadata() {
   const title: String = "Eye Care";
@@ -26,11 +29,22 @@ export async function generateMetadata() {
   };
 }
 
-const EyeCareHome: NextPage = () => {
+const EyeCareHome: NextPage = async () => {
+  const allAppStats = await fetch(`${BASE_URL}/api/v1/statics`).then((res) =>
+    res.json()
+  );
+  const eyeCareStats = allAppStats.find(
+    (app: IAppStats) => app.appId === "com.a3.eyecare"
+  );
+
   return (
-    <>
+    <div className="flex flex-col gap-4 py-2">
       {/* TODO: Added a proper 4.5/1 ratio cover page for Eye Care */}
-      <Cover src="/eye-care/images/cover.png" alt={info.name} className="bg-[#b5c9ff]" />
+      <Cover
+        src="/eye-care/images/cover.png"
+        alt={info.name}
+        className="bg-[#b5c9ff]"
+      />
 
       <AppInfo
         appIcon="https://play-lh.googleusercontent.com/MhkvnZGvvVQYwBKwxoeP7MhO_lwO7SIOF0ci5J9QAxoWGkWRBtldT5etyjcHEK3WfU4=w240-h480-rw"
@@ -38,6 +52,12 @@ const EyeCareHome: NextPage = () => {
         appPublisher="A3."
         playStoreLink="https://play.google.com/store/apps/details?id=com.a3.eyecare&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"
         playStoreBadge="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+      />
+
+      <AppStats
+        downloads={eyeCareStats.downloads}
+        rating={eyeCareStats.rating}
+        reviews={eyeCareStats.reviews}
       />
 
       <main className={`max-w-xl`}>
@@ -135,7 +155,7 @@ const EyeCareHome: NextPage = () => {
           </p>
         </Article>
       </main>
-    </>
+    </div>
   );
 };
 

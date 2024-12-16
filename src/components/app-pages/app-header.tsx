@@ -31,7 +31,7 @@ const Cover: React.FC<CoverProps> = ({ src, alt, className }) => (
 
 // AppInfo component
 const appInfoVariants = cva(
-  "flex flex-row justify-between my-8 items-center flex-wrap gap-4",
+  "flex flex-row justify-between items-center flex-wrap gap-4",
   {
     variants: {},
     defaultVariants: {},
@@ -77,6 +77,7 @@ const AppInfo: React.FC<AppInfoProps> = ({
             width={160}
             height={62}
             src={playStoreBadge}
+            className=" sm:ml-0 -ml-3"
           />
         </Link>
         <a className="text-label-small">

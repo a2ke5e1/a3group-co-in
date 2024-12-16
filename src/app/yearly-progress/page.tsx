@@ -8,6 +8,9 @@ import {
   AppInfo,
   ScreenshotGallery,
 } from "@/components/app-pages/app-header";
+import { BASE_URL } from "@/lib/utils";
+import { IAppStats } from "@/models/AppStats";
+import { AppStats } from "@/components/app-pages/app-stats";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://a3group.co.in"),
@@ -17,11 +20,22 @@ export const metadata: Metadata = {
 };
 
 // Usage in the Home page
-const Home: React.FC = () => {
+const Home: React.FC = async () => {
+  const allAppStats = await fetch(`${BASE_URL}/api/v1/statics`).then((res) =>
+    res.json()
+  );
+  const yearlyProgressStats = allAppStats.find(
+    (app: IAppStats) => app.appId === "com.a3.yearlyprogess"
+  );
+
   return (
-    <>
-    {/* TODO: Added a proper 4.5/1 ratio cover page for Yearly Progress */}
-      <Cover src="/yearly-progress/images/cover.webp" alt={info.name} className="bg-[#e8f4f0]" />
+    <div className="flex flex-col gap-4 py-2">
+      {/* TODO: Added a proper 4.5/1 ratio cover page for Yearly Progress */}
+      <Cover
+        src="/yearly-progress/images/cover.webp"
+        alt={info.name}
+        className="bg-[#e8f4f0]"
+      />
 
       <AppInfo
         appIcon="https://play-lh.googleusercontent.com/SxZPrpX_9O2WxFiI067oHMRxsRS0Ozz6clBvao5lrH2SA-lG7vXs8rU_Rf7BHz0CZ0YO=w240-h480-rw"
@@ -29,6 +43,12 @@ const Home: React.FC = () => {
         appPublisher="A3."
         playStoreLink="https://play.google.com/store/apps/details?id=com.a3.yearlyprogess&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"
         playStoreBadge="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+      />
+
+      <AppStats
+        downloads={yearlyProgressStats.downloads}
+        rating={yearlyProgressStats.rating}
+        reviews={yearlyProgressStats.reviews}
       />
 
       <main className="max-w-xl">
@@ -83,7 +103,7 @@ const Home: React.FC = () => {
           </div>
         </Article>
       </main>
-    </>
+    </div>
   );
 };
 

@@ -8,6 +8,9 @@ import {
   Cover,
   ScreenshotGallery,
 } from "@/components/app-pages/app-header";
+import { BASE_URL } from "@/lib/utils";
+import { IAppStats } from "@/models/AppStats";
+import { AppStats } from "@/components/app-pages/app-stats";
 
 export async function generateMetadata() {
   const title: String = "Sound Profile Scheduler";
@@ -24,11 +27,22 @@ export async function generateMetadata() {
     // },
   };
 }
-const Home: NextPage = () => {
+const Home: NextPage = async () => {
+  const allAppStats = await fetch(`${BASE_URL}/api/v1/statics`).then((res) =>
+    res.json()
+  );
+  const soundProfileSchedularStats = allAppStats.find(
+    (app: IAppStats) => app.appId === "com.a3.soundprofiles"
+  );
+
   return (
-    <>
+    <div className="flex flex-col gap-4 py-2">
       {/* TODO: Added a proper 4.5/1 ratio cover page for Sound Profile Scheduler */}
-      <Cover src="/sound-profile-scheduler/images/cover.png" alt={"Sound Profile Scheduler"} className="bg-[#fadbba]" />
+      <Cover
+        src="/sound-profile-scheduler/images/cover.png"
+        alt={"Sound Profile Scheduler"}
+        className="bg-[#fadbba]"
+      />
 
       <AppInfo
         appIcon="/sound-profile-scheduler/favicon/android-chrome-512x512.png"
@@ -36,6 +50,12 @@ const Home: NextPage = () => {
         appPublisher="A3."
         playStoreLink="https://play.google.com/store/apps/details?id=com.a3.soundprofiles"
         playStoreBadge="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+      />
+
+      <AppStats
+        downloads={soundProfileSchedularStats.downloads}
+        rating={soundProfileSchedularStats.rating}
+        reviews={soundProfileSchedularStats.reviews}
       />
 
       <main className={`max-w-xl`}>
@@ -58,7 +78,6 @@ const Home: NextPage = () => {
               {
                 src: "/sound-profile-scheduler/images/Screenshot_20240819_121813.png",
                 alt: "",
-             
               },
               {
                 src: "/sound-profile-scheduler/images/Screenshot_20240819_121824.png",
@@ -89,7 +108,7 @@ const Home: NextPage = () => {
           </div>
         </Article>
       </main>
-    </>
+    </div>
   );
 };
 
