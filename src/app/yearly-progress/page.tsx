@@ -56,28 +56,11 @@ const Home: React.FC = async () => {
           <div>{info.desc.about}</div>
 
           <ScreenshotGallery
-            screenshots={[
-              {
-                src: "/yearly-progress/images/ss/Screenshot_20221002_014215.webp",
-                alt: "Yearly Progress Screenshot 1",
-              },
-              {
-                src: "/yearly-progress/images/ss/Screenshot_20221002_014317.webp",
-                alt: "Yearly Progress Screenshot 2",
-              },
-              {
-                src: "/yearly-progress/images/ss/Screenshot_20221002_014407.webp",
-                alt: "Yearly Progress Screenshot 3",
-              },
-              {
-                src: "/yearly-progress/images/ss/Screenshot_20221002_014414.webp",
-                alt: "Yearly Progress Screenshot 4",
-              },
-              {
-                src: "/yearly-progress/images/ss/Screenshot_20221002-014123.webp",
-                alt: "Yearly Progress Screenshot 5",
-              },
-            ]}
+            screenshots={[...Array(8).keys()].map((i) => ({
+              src: `/yearly-progress/images/ss/${i}.png`,
+              alt: `Screenshot ${i + 1}`,
+            }))
+            }
           />
 
           <div>
