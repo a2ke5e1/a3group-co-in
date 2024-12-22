@@ -37,10 +37,10 @@ const Home: NextPage = async () => {
 
   return (
     <div className="flex flex-col gap-4 py-2">
-      {/* TODO: Added a proper 4.5/1 ratio cover page for Sound Profile Scheduler */}
       <Cover
         src="/sound-profile-scheduler/images/cover.png"
         alt={"Sound Profile Scheduler"}
+        dynamic={false}
         className="bg-[#fadbba]"
       />
 
