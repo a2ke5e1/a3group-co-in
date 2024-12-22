@@ -18,7 +18,7 @@ export default function Home() {
   return (
     <>
       <main  className="my-8 min-h-[80vh]">
-        <div className="max-w-screen-xl 2xl:mx-auto mx-8 my-2">
+        <div className="xl:mx-auto max-w-screen-xl mx-4 my-8">
           <div className="my-8 w-fit mx-auto justify-center flex flex-col items-center gap-4">
             <Image
               src="/images/a3_logo.png"

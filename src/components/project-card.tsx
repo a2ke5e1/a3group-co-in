@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -6,6 +6,7 @@ import { FilledTonalButton, TextButton } from "@/components/button/button";
 import { Icon } from "@/components/icon/icon";
 import { cva, type VariantProps } from "class-variance-authority";
 import React, { Component } from "react";
+import { cn } from "@/lib/utils";
 
 export interface ProjectCardProps
   extends React.HTMLAttributes<HTMLDivElement>,
@@ -40,7 +41,7 @@ const ProjectCard = React.forwardRef<HTMLDivElement, ProjectCardProps>(
     return (
       <div
         ref={ref}
-        className={ProjectCardVariants({ reverseImage })}
+        className={cn(ProjectCardVariants({ reverseImage }), props.className)}
         {...props}
       >
         <Image
@@ -48,13 +49,13 @@ const ProjectCard = React.forwardRef<HTMLDivElement, ProjectCardProps>(
           alt={`${title} Cover`}
           width={400}
           height={225}
-          className="rounded-2xl md:w-[400px] w-full aspect-video"
+          className="rounded-2xl md:w-[400px] w-full aspect-video h-fit"
         />
         <div className="flex flex-col gap-2">
           <div className="flex flex-col gap-1">
             <h1 className="font-semibold text-headline-large">{title}</h1>
             <p className="text-on-surface-variant text-body-large text-justify">
-              {description}{" "}
+              <span className=" line-clamp-3">{description}</span>{" "}
               {links.learnMore && (
                 <Link
                   href={links.learnMore}

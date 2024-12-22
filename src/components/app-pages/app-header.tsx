@@ -2,31 +2,45 @@ import { cva, type VariantProps } from "class-variance-authority";
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { cn } from "@/lib/utils";
+import { FilledTonalButton } from "../button/button";
+import { Icon } from "../icon/icon";
 
 // Cover component
-const coverVariants = cva(
-  "w-full object-contain sm:rounded-2xl rounded-lg lg:aspect-[4.5/1] md:aspect-[2.5/1]  aspect-[2/1]  ",
-  {
-    variants: {},
-    defaultVariants: {},
-  }
-);
+const coverVariants = cva("object-contain sm:rounded-2xl rounded-lg", {
+  variants: {
+    dynamic: {
+      true: "lg:aspect-[4.5/1] md:aspect-[2.5/1] aspect-[2/1] w-full",
+      false: "",
+    },
+  },
+  defaultVariants: {
+    dynamic: true,
+  },
+});
 
-interface CoverProps {
+interface CoverProps
+  extends React.HTMLAttributes<HTMLImageElement>,
+    VariantProps<typeof coverVariants> {
   src: string;
   alt: string;
   className?: string;
+  dynamic?: boolean;
 }
 
-const Cover: React.FC<CoverProps> = ({ src, alt, className }) => (
-  <Image
-    src={src}
-    className={coverVariants({ className })}
-    width={1280}
-    height={720}
-    quality={100}
-    alt={alt}
-  />
+const Cover = React.forwardRef<HTMLImageElement, CoverProps>(
+  ({ src, alt, dynamic, className, ...props }, ref) => (
+    <Image
+      ref={ref}
+      src={src}
+      alt={alt}
+      className={cn(coverVariants({ dynamic, className }))}
+      width={1546}
+      height={423}
+      quality={100}
+      {...props}
+    />
+  )
 );
 
 // AppInfo component
@@ -71,18 +85,10 @@ const AppInfo: React.FC<AppInfoProps> = ({
     </div>
     <div>
       <div className="flex flex-col items-start sm:items-end">
-        <Link href={playStoreLink}>
-          <Image
-            alt="Get it on Google Play"
-            width={160}
-            height={62}
-            src={playStoreBadge}
-            className=" sm:ml-0 -ml-3"
-          />
-        </Link>
-        <a className="text-label-small">
-          Google Play and the Google Play logo are trademarks of Google LLC.
-        </a>
+        <FilledTonalButton href={playStoreLink}>
+          <Icon slot="icon">shop</Icon>
+          Get on Play Store
+        </FilledTonalButton>
       </div>
     </div>
   </section>

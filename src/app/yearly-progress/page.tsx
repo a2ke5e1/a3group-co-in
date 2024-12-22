@@ -30,11 +30,11 @@ const Home: React.FC = async () => {
 
   return (
     <div className="flex flex-col gap-4 py-2">
-      {/* TODO: Added a proper 4.5/1 ratio cover page for Yearly Progress */}
       <Cover
-        src="/yearly-progress/images/cover.webp"
+        src="/yearly-progress/images/cover-banner.webp"
         alt={info.name}
         className="bg-[#e8f4f0]"
+        dynamic={false}
       />
 
       <AppInfo
