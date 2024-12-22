@@ -52,46 +52,45 @@ const appInfoVariants = cva(
   }
 );
 
-interface AppInfoProps {
+interface AppInfoProps
+  extends React.HtmlHTMLAttributes<HTMLDivElement>,
+    VariantProps<typeof appInfoVariants> {
   appIcon: string;
   appName: string;
   appPublisher: string;
   playStoreLink: string;
   playStoreBadge: string;
-  className?: string;
 }
 
-const AppInfo: React.FC<AppInfoProps> = ({
-  appIcon,
-  appName,
-  appPublisher,
-  playStoreLink,
-  playStoreBadge,
-  className,
-}) => (
-  <section className={appInfoVariants({ className })}>
-    <div className="flex flex-row gap-2">
-      <Image
-        src={appIcon}
-        width={56}
-        height={56}
-        className="rounded-md h-fit"
-        alt={appName}
-      />
+const AppInfo = React.forwardRef<HTMLDivElement, AppInfoProps>(
+  (
+    { appIcon, appName, appPublisher, playStoreLink, playStoreBadge, ...props },
+    ref
+  ) => (
+    <section ref={ref} className={cn(appInfoVariants())} {...props} >
+      <div className="flex flex-row gap-2">
+        <Image
+          src={appIcon}
+          width={56}
+          height={56}
+          className="rounded-md h-fit"
+          alt={appName}
+        />
+        <div>
+          <h1 className="text-headline-small">{appName}</h1>
+          <p className="text-label-small ml-1 text-tertiary">{appPublisher}</p>
+        </div>
+      </div>
       <div>
-        <h1 className="text-headline-small">{appName}</h1>
-        <p className="text-label-small ml-1 text-tertiary">{appPublisher}</p>
+        <div className="flex flex-col items-start sm:items-end">
+          <FilledTonalButton href={playStoreLink}>
+            <Icon slot="icon">shop</Icon>
+            Get on Play Store
+          </FilledTonalButton>
+        </div>
       </div>
-    </div>
-    <div>
-      <div className="flex flex-col items-start sm:items-end">
-        <FilledTonalButton href={playStoreLink}>
-          <Icon slot="icon">shop</Icon>
-          Get on Play Store
-        </FilledTonalButton>
-      </div>
-    </div>
-  </section>
+    </section>
+  )
 );
 
 // ScreenshotGallery component
@@ -103,18 +102,19 @@ const screenshotGalleryVariants = cva(
   }
 );
 
-interface ScreenshotGalleryProps {
+interface ScreenshotGalleryProps
+  extends React.HtmlHTMLAttributes<HTMLDivElement>,
+    VariantProps<typeof screenshotGalleryVariants> {
   screenshots: { src: string; alt: string }[];
-  className?: string;
 }
 
-const ScreenshotGallery: React.FC<ScreenshotGalleryProps> = ({
-  screenshots,
-  className,
-}) => (
-  <div>
+const ScreenshotGallery = React.forwardRef<
+  HTMLDivElement,
+  ScreenshotGalleryProps
+>(({ screenshots, ...props }, ref) => (
+  <div {...props} ref={ref}>
     <strong>Screenshot</strong>
-    <div className={screenshotGalleryVariants({ className })}>
+    <div className={cn(screenshotGalleryVariants())}>
       {screenshots.map((screenshot, index) => (
         <Image
           key={index}
@@ -127,6 +127,6 @@ const ScreenshotGallery: React.FC<ScreenshotGalleryProps> = ({
       ))}
     </div>
   </div>
-);
+));
 
 export { Cover, AppInfo, ScreenshotGallery };

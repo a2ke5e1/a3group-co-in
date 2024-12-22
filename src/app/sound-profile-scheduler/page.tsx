@@ -38,7 +38,7 @@ const Home: NextPage = async () => {
   return (
     <div className="flex flex-col gap-4 py-2">
       <Cover
-        src="/sound-profile-scheduler/images/cover.png"
+        src="/sound-profile-scheduler/images/cover-banner-sps.png"
         alt={"Sound Profile Scheduler"}
         dynamic={false}
         className="bg-[#fadbba]"
