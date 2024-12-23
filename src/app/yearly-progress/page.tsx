@@ -53,36 +53,37 @@ const Home: React.FC = async () => {
 
       <main className="max-w-xl">
         <Article title="About App">
-          <div>{info.desc.about}</div>
+          <div>
+            {`Yearly Progress is a powerful Android app designed to enhance your time management and tracking experience. With beautifully designed widgets, you can monitor the progress of your day, week, month, and year directly from your home screen. The app also includes features to track custom events and visualize daylight and nightlight progress, making it a versatile tool for everyday use.`}
+          </div>
 
           <ScreenshotGallery
             screenshots={[...Array(8).keys()].map((i) => ({
               src: `/yearly-progress/images/ss/${i}.png`,
               alt: `Screenshot ${i + 1}`,
-            }))
-            }
+            }))}
           />
 
           <div>
-            <strong>New Features</strong>
-            <h2 className="mt-2 font-bold">All In One Widget</h2>
-            <p>
-              Now, You can use all in one widget which let to see the
-              information with having add multiple widget to the homescreen of
-              your android device.
-            </p>
-            <Image
-              className="my-2"
-              alt="All In One Widget"
-              width={400}
-              height={260}
-              src="/yearly-progress/images/ss/Screenshot_20221002_015212.webp"
-            />
-            <p>
-              You can see a preview of the widget above, It contains all the
-              information that one might need such as date, week, month and year
-              with their respective progress.
-            </p>
+            <strong>Key Features</strong>
+            <ul className="list-disc pl-4 flex flex-col gap-2 my-4">
+              <li>
+                <strong>All-In-One Widget: </strong>
+                {`A sleek widget that combines essential information, including the date, week, month, and year progress, all in one place. Perfect for decluttering your home screen while staying informed.`}
+              </li>
+              <li>
+                <strong>Custom Event Tracking: </strong>
+                {`Keep track of your special milestones and personal events with ease. Whether it’s an important deadline or a meaningful celebration, Yearly Progress ensures you never lose sight of what matters most.`}
+              </li>
+              <li>
+                <strong>Daylight and Nightlight Progress: </strong>
+                {`Visualize the natural rhythms of your day with widgets that display the progress of daylight and nightlight, providing a unique perspective on time.`}
+              </li>
+              <li>
+                <strong>Adaptive Theming: </strong>
+                {`Enjoy beautifully crafted widgets that adapt to your device’s theme, creating a cohesive and modern look for your home screen.`}
+              </li>{" "}
+            </ul>
           </div>
         </Article>
       </main>
