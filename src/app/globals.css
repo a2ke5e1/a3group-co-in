@@ -1,8 +1,17 @@
-@import "material-symbols";
+@import "material-symbols" layer(base);
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@layer theme, base, components, utilities;
+
+@import "tailwindcss/theme.css" layer(theme);
+@import "./reset.css" layer(base);
+@import "tailwindcss/utilities.css" layer(utilities);
+@custom-variant dark (&:is(.dark *));
+
+@config '../../tailwind.config.ts';
+
+@utility text-balance {
+  text-wrap: balance;
+}
 
 @layer base {
   :root {
@@ -155,11 +164,5 @@
   }
   ::marker {
     @apply text-primary;
-  }
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
   }
 }

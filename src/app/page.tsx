@@ -7,6 +7,7 @@ import EyeCareInfo from "../../info/eye-care.json";
 import Link from "next/link";
 
 import { ProjectCard } from "@/components/project-card";
+import { TextButton } from "@/components/button/button";
 
 export const metadata: Metadata = {
   title: "A3 Group",
@@ -17,7 +18,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
-      <main  className="my-8 min-h-[80vh]">
+      <main className="my-8 min-h-[80vh]">
         <div className="xl:mx-auto max-w-screen-xl mx-4 my-8">
           <div className="my-8 w-fit mx-auto justify-center flex flex-col items-center gap-4">
             <Image
@@ -42,7 +43,8 @@ export default function Home() {
                   "https://play.google.com/store/apps/details?id=com.a3.yearlyprogess",
                 sourceCode: "https://github.com/a2ke5e1/yearly-progress",
                 webApp: "/yearly-progress/web-app",
-                terminalApp: "https://github.com/a2ke5e1/yearly-progress-cli-py/"
+                terminalApp:
+                  "https://github.com/a2ke5e1/yearly-progress-cli-py/",
               }}
             />
             <ProjectCard
@@ -72,6 +74,7 @@ export default function Home() {
           </div>
         </div>
       </main>
+
       <Footer />
     </>
   );
