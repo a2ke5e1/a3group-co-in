@@ -26,23 +26,23 @@ const MemeberCards = ({
   imgSrc,
   links,
 }: MemeberCardsProps) => (
-  <div className="bg-surface-container-low rounded-2xl p-2 flex flex-row items-center gap-4 ">
+  <div className="bg-surface-container-low flex flex-row items-center gap-4 rounded-2xl p-2">
     <Image
       src={imgSrc}
       alt={name}
-      className="rounded-full h-24 w-24"
+      className="h-24 w-24 rounded-full"
       width={80}
       height={80}
     />
     <div className="max-w-md">
       <div className="mt-4">
-        <h2 className="font-bold text-body-large text-primary">{name}</h2>
+        <h2 className="text-body-large text-primary font-bold">{name}</h2>
         <p className="text-body-medium text-on-surface-variant">
           {description}
         </p>
       </div>
 
-      <div className="flex flex-row gap-2 my-2 -ml-2">
+      <div className="my-2 -ml-2 flex flex-row gap-2">
         {links?.github && (
           <IconButton href={links.github}>
             <Icon>
@@ -78,26 +78,11 @@ const MemeberCards = ({
 
 const AboutUs: NextPage = () => {
   return (
-    <main className="2xl:mx-0 mx-2 my-8 min-h-[80vh]">
-      <BackButton />
-      <div className="my-2 w-fit mx-auto justify-center flex flex-col items-center">
-        <Link href="/" aria-label="Home">
-          <Image
-            src="/images/a3_logo.png"
-            alt="A3 Group"
-            width={60}
-            height={50}
-            className="my-2"
-          />
-        </Link>
-        <h1 className="font-bold text-headline-large ">About Us</h1>
-        <p className="text-center text-body-large">
-          A3 Group is a group of friends trying to make some apps. <br /> <br />
-        </p>
-      </div>
-
-      <h2 className="my-4 text-title-large text-center text-primary">Our Team</h2>
-      <div className="grid grid-flow-row md:grid-cols-2  grid-cols-1  gap-4 ">
+    <main className="mx-2 my-8 min-h-[80vh] 2xl:mx-0">
+      <h2 className="text-title-large text-primary my-4 text-center">
+        Our Team
+      </h2>
+      <div className="grid grid-flow-row grid-cols-1 gap-4 md:grid-cols-2">
         <MemeberCards
           name="a2ke5e1"
           description="Web and App Developer + Designer"

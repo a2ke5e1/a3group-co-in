@@ -202,6 +202,9 @@ const config: Config = {
           },
         ],
       },
+      screens: {
+        desktop: '1280px'
+      }
     },
   },
   plugins: [require("@tailwindcss/typography"), require("tailwindcss-animate")],
