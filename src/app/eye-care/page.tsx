@@ -31,10 +31,10 @@ export async function generateMetadata() {
 
 const EyeCareHome: NextPage = async () => {
   const allAppStats = await fetch(`${BASE_URL}/api/v1/statics`).then((res) =>
-    res.json()
+    res.json(),
   );
   const eyeCareStats = allAppStats.find(
-    (app: IAppStats) => app.appId === "com.a3.eyecare"
+    (app: IAppStats) => app.appId === "com.a3.eyecare",
   );
 
   return (
@@ -48,7 +48,7 @@ const EyeCareHome: NextPage = async () => {
 
       <AppInfo
         appIcon="https://play-lh.googleusercontent.com/MhkvnZGvvVQYwBKwxoeP7MhO_lwO7SIOF0ci5J9QAxoWGkWRBtldT5etyjcHEK3WfU4=w240-h480-rw"
-        appName={info.name}
+        name={info.name}
         appPublisher="A3."
         playStoreLink="https://play.google.com/store/apps/details?id=com.a3.eyecare&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"
         playStoreBadge="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
@@ -145,7 +145,7 @@ const EyeCareHome: NextPage = async () => {
             You can send your suggesion through our email at{" "}
             <Link
               href="mailto:support@a3group.co.in"
-              className="underline text-primary"
+              className="text-primary underline"
             >
               support@a3group.co.in.
             </Link>

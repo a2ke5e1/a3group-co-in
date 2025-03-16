@@ -40,7 +40,7 @@ const Cover = React.forwardRef<HTMLImageElement, CoverProps>(
       quality={100}
       {...props}
     />
-  )
+  ),
 );
 
 // AppInfo component
@@ -49,14 +49,14 @@ const appInfoVariants = cva(
   {
     variants: {},
     defaultVariants: {},
-  }
+  },
 );
 
 interface AppInfoProps
   extends React.HtmlHTMLAttributes<HTMLDivElement>,
     VariantProps<typeof appInfoVariants> {
   appIcon: string;
-  appName: string;
+  name: string;
   appPublisher: string;
   playStoreLink: string;
   playStoreBadge: string;
@@ -64,21 +64,28 @@ interface AppInfoProps
 
 const AppInfo = React.forwardRef<HTMLDivElement, AppInfoProps>(
   (
-    { appIcon, appName, appPublisher, playStoreLink, playStoreBadge, ...props },
-    ref
+    {
+      appIcon,
+      name: appName,
+      appPublisher,
+      playStoreLink,
+      playStoreBadge,
+      ...props
+    },
+    ref,
   ) => (
-    <section ref={ref} className={cn(appInfoVariants())} {...props} >
+    <section ref={ref} className={cn(appInfoVariants())} {...props}>
       <div className="flex flex-row gap-2">
         <Image
           src={appIcon}
           width={56}
           height={56}
-          className="rounded-md h-fit"
+          className="h-fit rounded-md"
           alt={appName}
         />
         <div>
           <h1 className="text-headline-small">{appName}</h1>
-          <p className="text-label-small ml-1 text-tertiary">{appPublisher}</p>
+          <p className="text-label-small text-tertiary ml-1">{appPublisher}</p>
         </div>
       </div>
       <div>
@@ -90,7 +97,7 @@ const AppInfo = React.forwardRef<HTMLDivElement, AppInfoProps>(
         </div>
       </div>
     </section>
-  )
+  ),
 );
 
 // ScreenshotGallery component
@@ -99,7 +106,7 @@ const screenshotGalleryVariants = cva(
   {
     variants: {},
     defaultVariants: {},
-  }
+  },
 );
 
 interface ScreenshotGalleryProps

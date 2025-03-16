@@ -29,10 +29,10 @@ export async function generateMetadata() {
 }
 const Home: NextPage = async () => {
   const allAppStats = await fetch(`${BASE_URL}/api/v1/statics`).then((res) =>
-    res.json()
+    res.json(),
   );
   const soundProfileSchedularStats = allAppStats.find(
-    (app: IAppStats) => app.appId === "com.a3.soundprofiles"
+    (app: IAppStats) => app.appId === "com.a3.soundprofiles",
   );
 
   return (
@@ -46,7 +46,7 @@ const Home: NextPage = async () => {
 
       <AppInfo
         appIcon="/sound-profile-scheduler/favicon/android-chrome-512x512.png"
-        appName={"Sound Profile Scheduler"}
+        name={"Sound Profile Scheduler"}
         appPublisher="A3."
         playStoreLink="https://play.google.com/store/apps/details?id=com.a3.soundprofiles"
         playStoreBadge="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"

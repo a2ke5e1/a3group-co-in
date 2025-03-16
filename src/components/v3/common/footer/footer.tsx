@@ -11,7 +11,7 @@ export default function Footer({
   termsOfService: terms_of_service_url,
 }: FooterProps) {
   return (
-    <footer className="bg-surface-container-low">
+    <footer className="bg-surface-container-low py-5">
       <div className="max-w-screen-desktop mx-auto flex flex-row items-start justify-between py-5">
         <section className="flex flex-col gap-[0.625rem]">
           <Link href={"/"}>

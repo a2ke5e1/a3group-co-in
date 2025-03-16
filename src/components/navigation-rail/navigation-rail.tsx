@@ -20,7 +20,7 @@ const navLinkVariants = cva(
         false: "text-on-surface-variant",
       },
     },
-  }
+  },
 );
 
 const navTextVariants = cva("text-[0.75rem] leading-4", {
@@ -35,7 +35,7 @@ const navTextVariants = cva("text-[0.75rem] leading-4", {
 export interface NavLinkProps
   extends React.HTMLAttributes<HTMLDivElement>,
     VariantProps<typeof navLinkVariants> {
-  title: string;
+  name: string;
   href: string;
   icon: string;
   selectedIcon: string;
@@ -46,7 +46,7 @@ export interface NavLinkProps
 const NavLink = React.forwardRef<HTMLDivElement, NavLinkProps>(
   (
     {
-      title,
+      name: title,
       href,
       icon,
       selectedIcon,
@@ -55,7 +55,7 @@ const NavLink = React.forwardRef<HTMLDivElement, NavLinkProps>(
       asChild = false,
       ...props
     },
-    ref
+    ref,
   ) => {
     const Component = asChild ? Slot : "div";
     return (
@@ -82,7 +82,7 @@ const NavLink = React.forwardRef<HTMLDivElement, NavLinkProps>(
         <p className={cn(navTextVariants({ active }))}>{title}</p>
       </Link>
     );
-  }
+  },
 );
 NavLink.displayName = "NavLink";
 
@@ -98,12 +98,12 @@ export const NavigationRail = () => {
   };
 
   return (
-    <div className="bg-surface text-on-surface w-[4.5rem] h-screen flex flex-col justify-between fixed top-0 left-0">
+    <div className="bg-surface text-on-surface fixed top-0 left-0 flex h-screen w-[4.5rem] flex-col justify-between">
       <div></div>
-      <div className="flex flex-col mx-auto w-fit h-fit my-2 gap-4">
+      <div className="mx-auto my-2 flex h-fit w-fit flex-col gap-4">
         <NavLink
           href="/"
-          title="Home"
+          name="Home"
           icon="home"
           selectedIcon="home"
           isSelected={isSelected}
@@ -111,7 +111,7 @@ export const NavigationRail = () => {
         />
         <NavLink
           href="/projects"
-          title="Projects"
+          name="Projects"
           icon="explore"
           selectedIcon="explore"
           isSelected={isSelected}
@@ -119,7 +119,7 @@ export const NavigationRail = () => {
         />
         <NavLink
           href="/renders"
-          title="Renders"
+          name="Renders"
           icon="deployed_code"
           selectedIcon="deployed_code"
           isSelected={isSelected}
@@ -127,14 +127,14 @@ export const NavigationRail = () => {
         />
         <NavLink
           href="/about"
-          title="About Me"
+          name="About Me"
           icon="account_circle"
           selectedIcon="account_circle"
           isSelected={isSelected}
           active={isSelected("/about")}
         />
       </div>
-      <div className="flex flex-col mx-auto w-fit h-fit my-2 gap-4">
+      <div className="mx-auto my-2 flex h-fit w-fit flex-col gap-4">
         <ThemeToggleButton />
       </div>
     </div>
@@ -152,11 +152,11 @@ export const BottomNavigation = () => {
   };
 
   return (
-    <div className="bg-surface text-on-surface flex flex-row justify-center fixed bottom-0 w-screen">
-      <div className="flex flex-row mx-auto w-fit h-fit my-2 gap-4">
+    <div className="bg-surface text-on-surface fixed bottom-0 flex w-screen flex-row justify-center">
+      <div className="mx-auto my-2 flex h-fit w-fit flex-row gap-4">
         <NavLink
           href="/"
-          title="Home"
+          name="Home"
           icon="home"
           selectedIcon="home"
           isSelected={isSelected}
@@ -164,7 +164,7 @@ export const BottomNavigation = () => {
         />
         <NavLink
           href="/projects"
-          title="Projects"
+          name="Projects"
           icon="explore"
           selectedIcon="explore"
           isSelected={isSelected}
@@ -172,7 +172,7 @@ export const BottomNavigation = () => {
         />
         <NavLink
           href="/renders"
-          title="Renders"
+          name="Renders"
           icon="deployed_code"
           selectedIcon="deployed_code"
           isSelected={isSelected}
@@ -180,7 +180,7 @@ export const BottomNavigation = () => {
         />
         <NavLink
           href="/about"
-          title="About Me"
+          name="About Me"
           icon="account_circle"
           selectedIcon="account_circle"
           isSelected={isSelected}

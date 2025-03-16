@@ -1,0 +1,12 @@
+{
+  "name": "Eye Care",
+  "desc": "Eye Care is an app which is beautifully designed to help you to take care of your eyes. It provides you a way to keep records of their prescription in the cloud and access them from anywhere.",
+  "images": {
+    "icon": "/eye-care/favicon/android-chrome-512x512.png",
+    "cover": "/eye-care/images/cover.png"
+  },
+  "links": {
+    "download": "https://play.google.com/store/apps/details?id=com.a3.eyecare",
+    "learnMore": "/eye-care"
+  }
+}

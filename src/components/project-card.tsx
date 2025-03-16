@@ -11,7 +11,7 @@ import { cn } from "@/lib/utils";
 export interface ProjectCardProps
   extends React.HTMLAttributes<HTMLDivElement>,
     VariantProps<typeof ProjectCardVariants> {
-  title: string;
+  name: string;
   description: string;
   coverImage: string;
   links: {
@@ -37,7 +37,10 @@ const ProjectCardVariants = cva("flex md:flex-row flex-col gap-8", {
 });
 
 const ProjectCard = React.forwardRef<HTMLDivElement, ProjectCardProps>(
-  ({ title, description, coverImage, links, reverseImage, ...props }, ref) => {
+  (
+    { name: title, description, coverImage, links, reverseImage, ...props },
+    ref,
+  ) => {
     return (
       <div
         ref={ref}
@@ -49,13 +52,13 @@ const ProjectCard = React.forwardRef<HTMLDivElement, ProjectCardProps>(
           alt={`${title} Cover`}
           width={400}
           height={225}
-          className="rounded-2xl md:w-[400px] w-full aspect-video h-fit"
+          className="aspect-video h-fit w-full rounded-2xl md:w-[400px]"
         />
         <div className="flex flex-col gap-2">
           <div className="flex flex-col gap-1">
-            <h1 className="font-semibold text-headline-large">{title}</h1>
+            <h1 className="text-headline-large font-semibold">{title}</h1>
             <p className="text-on-surface-variant text-body-large text-justify">
-              <span className=" line-clamp-3">{description}</span>{" "}
+              <span className="line-clamp-3">{description}</span>{" "}
               {links.learnMore && (
                 <Link
                   href={links.learnMore}
@@ -66,7 +69,7 @@ const ProjectCard = React.forwardRef<HTMLDivElement, ProjectCardProps>(
               )}
             </p>
           </div>
-          <div className="my-4 gap-4 flex flex-row flex-wrap mx-1">
+          <div className="mx-1 my-4 flex flex-row flex-wrap gap-4">
             {links.playStore && (
               <FilledTonalButton href={links.playStore}>
                 <Icon slot="icon">shop</Icon>
@@ -95,7 +98,7 @@ const ProjectCard = React.forwardRef<HTMLDivElement, ProjectCardProps>(
         </div>
       </div>
     );
-  }
+  },
 );
 
 ProjectCard.displayName = "ProjectCard";
