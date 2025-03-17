@@ -25,11 +25,11 @@ const Testimonials = React.forwardRef<HTMLDivElement, TestimonialsProps>(
       >
         <h1 className="text-title-large text-on-surface">Testimonials</h1>
 
-        <div className="flex flex-1 flex-row items-stretch justify-between gap-4">
+        <div className="flex flex-1 flex-wrap items-stretch justify-between gap-4">
           {testimonials.map((review, index) => (
             <div
               key={index}
-              className="bg-surface-container flex flex-1 flex-col gap-4 rounded-xl p-4"
+              className="bg-surface-container flex min-w-[30ch] flex-1 flex-col gap-4 rounded-xl p-4"
             >
               <div className="flex flex-col">
                 <div className="text-on-surface text-label-medium">

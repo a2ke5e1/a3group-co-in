@@ -7,7 +7,7 @@ export default function RootLayout({
 }) {
   return (
     <>
-      <div className="max-w-screen-desktop bg-surface mx-auto my-12 flex flex-col gap-8">
+      <div className="max-w-screen-desktop bg-surface desktop:px-0 mx-auto my-12 flex flex-col gap-[4.5rem] px-2">
         {children}
       </div>
       <Footer

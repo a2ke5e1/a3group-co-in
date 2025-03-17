@@ -37,7 +37,7 @@ const AppHeader = React.forwardRef<HTMLDivElement, AppHeaderProps>(
       <div
         ref={ref}
         className={cn(
-          "flex flex-row items-center justify-between",
+          "flex flex-wrap-reverse items-center justify-between gap-2 md:flex-wrap",
           props.className,
         )}
         {...props}

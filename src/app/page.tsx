@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
-      <main className="max-w-screen-desktop bg-surface mx-auto my-12 flex flex-col gap-[4.5rem]">
+      <main className="max-w-screen-desktop bg-surface desktop:px-0 mx-auto my-12 flex flex-col gap-[4.5rem] px-2">
         <section className="flex flex-col gap-4">
           <FeaturedVideo videoId="aFEbt4asETc" />
           <AppHeader

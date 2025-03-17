@@ -1,22 +1,20 @@
 import YearlyProgressWidget from "@/components/YearlyProgressWidget";
-import info from "../../../../info/yearly-progress.json";
 import { Metadata } from "next";
 import YearlyProgressDaylightWidget from "@/components/YearlyProgressDaylightWidget";
 import YearlyProgressNightWidget from "@/components/YearlyProgressNightWidget";
-import Link from "next/link";
-import { ArrowBack } from "@mui/icons-material";
 import { BackButton } from "@/components/BackButton";
+import YearlyProgressInfo from "@/docs/yearly-progress/info.json";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://a3group.co.in"),
-  title: info.name,
-  description: info.desc.about,
-  icons: "/yearly-progress/favicon/android-chrome-192x192.png",
+  title: YearlyProgressInfo.name,
+  description: YearlyProgressInfo.desc,
+  icons: YearlyProgressInfo.images.icon,
 };
 
 export default async function YearlyProgressWebApp() {
   return (
-    <div className="2xl:mx-0 mx-2 my-8 min-h-[80vh]">
+    <div className="mx-2 my-8 min-h-[80vh] 2xl:mx-0">
       <BackButton />
       <div className="my-4">
         <h1 className="text-display-small font-bold">
@@ -27,7 +25,7 @@ export default async function YearlyProgressWebApp() {
           Yearly Progress but in the web.
         </p>
       </div>
-      <div className="grid md:grid-cols-2 gap-4 grid-cols-1">
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
         <YearlyProgressWidget type="year" />
         <YearlyProgressWidget type="month" />
         <YearlyProgressWidget type="week" />
@@ -35,7 +33,7 @@ export default async function YearlyProgressWebApp() {
         <YearlyProgressDaylightWidget />
         <YearlyProgressNightWidget />
       </div>
-      <p className="text-on-surface text-label-medium font-normal mt-4">
+      <p className="text-on-surface text-label-medium mt-4 font-normal">
         Daylight and Night Widget needs your location to get sunset and surise
         time.
         <br />

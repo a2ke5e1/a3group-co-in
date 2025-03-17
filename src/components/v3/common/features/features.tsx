@@ -22,11 +22,11 @@ const Features = React.forwardRef<HTMLDivElement, FeaturesProps>(
         className={cn("flex flex-col gap-4", props.className)}
         {...props}
       >
-        <div className="flex flex-1 flex-row items-stretch justify-between gap-4">
+        <div className="flex flex-1 flex-wrap items-stretch justify-between gap-4">
           {features.map((feature, index) => (
             <div
               key={index}
-              className="bg-tertiary-container flex flex-1 flex-row items-center gap-3 rounded-xl p-4"
+              className="bg-tertiary-container flex min-w-[30ch] flex-1 flex-row items-center gap-3 rounded-xl p-4"
             >
               <Icon className="w-9">{feature.icon}</Icon>
               <div className="flex flex-col gap-3 self-baseline">

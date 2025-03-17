@@ -26,17 +26,20 @@ export interface AppCardProps
   reverseImage?: boolean;
 }
 
-const AppCardVariants = cva("flex flex-row gap-6", {
-  variants: {
-    reverseImage: {
-      true: "flex-row-reverse",
-      false: "",
+const AppCardVariants = cva(
+  "@container/app-card flex flex-row flex-wrap gap-6",
+  {
+    variants: {
+      reverseImage: {
+        true: "flex-row-reverse",
+        false: "",
+      },
+    },
+    defaultVariants: {
+      reverseImage: false,
     },
   },
-  defaultVariants: {
-    reverseImage: false,
-  },
-});
+);
 
 const AppCard = React.forwardRef<HTMLDivElement, AppCardProps>(
   (
@@ -54,9 +57,9 @@ const AppCard = React.forwardRef<HTMLDivElement, AppCardProps>(
           alt={`${title} Cover`}
           width={456.89}
           height={257}
-          className="aspect-video h-full rounded-2xl"
+          className="aspect-video w-full rounded-2xl @[845px]/app-card:w-[456.89px]"
         />
-        <div className="flex flex-col">
+        <div className="flex min-w-[40ch] flex-1 flex-col">
           <div className="flex flex-col gap-[10px]">
             <h1 className="text-headline-large">{title}</h1>
             <p className="text-on-surface-variant text-body-large text-justify">

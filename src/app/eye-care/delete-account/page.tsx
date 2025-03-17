@@ -1,10 +1,7 @@
 import type { Metadata, NextPage } from "next";
-import Head from "next/head";
-import info from "../../../../info/eye-care.json";
-import Footer from "@/components/Footer";
+import info from "@/docs/eye-care/info.json";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowBack } from "@mui/icons-material";
 import { BackButton } from "@/components/BackButton";
 
 export async function generateMetadata() {
@@ -15,20 +12,16 @@ export async function generateMetadata() {
     metadataBase: new URL("https://a3group.co.in"),
     title: title,
     description: description,
-    icons: "/eye-care/favicon/favicon.ico",
-    twitter: {
-      images:
-        "https://www.a3group.co.in/eye-care/images/ss/Screenshot_1691238815.png",
-    },
+    icons: info.images.icon,
   };
 }
 
 const DeletePage: NextPage = () => {
   return (
     <>
-      <main className={"2xl:mx-0 mx-2 my-8 min-h-[80vh]"}>
+      <main className={"mx-2 my-8 min-h-[80vh] 2xl:mx-0"}>
         <BackButton />
-        <div className={`flex flex-wrap gap-4 items-center my-2`}>
+        <div className={`my-2 flex flex-wrap items-center gap-4`}>
           <Image
             src={"/eye-care/favicon/icon-512-maskable.png"}
             height={60}
