@@ -19,7 +19,7 @@ const Screenshots = React.forwardRef<HTMLDivElement, ScreenshotGalleryProps>(
     // console.log(screenshots);
     return (
       <div {...props} ref={ref}>
-        <h1 className="text-title-large text-on-surface">Screenshot</h1>
+        <h1 className="text-title-large text-on-surface">Screenshots</h1>
         <div className={cn(screenshotsVariants())}>
           {screenshots.map((screenshot, index) => (
             <Image

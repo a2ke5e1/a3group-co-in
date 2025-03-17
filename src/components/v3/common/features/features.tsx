@@ -26,18 +26,16 @@ const Features = React.forwardRef<HTMLDivElement, FeaturesProps>(
           {features.map((feature, index) => (
             <div
               key={index}
-              className="bg-tertiary-container flex flex-1 flex-col rounded-xl p-4"
+              className="bg-tertiary-container flex flex-1 flex-row items-center gap-3 rounded-xl p-4"
             >
-              <div className="flex flex-row items-center gap-3">
-                <Icon className="w-9">{feature.icon}</Icon>
-                <div className="flex flex-col gap-3">
-                  <div className="text-on-tertiary-container text-label-medium">
-                    {feature.headline}
-                  </div>
-                  <p className="text-on-tertiary-container text-body-small">
-                    {feature.description}
-                  </p>
+              <Icon className="w-9">{feature.icon}</Icon>
+              <div className="flex flex-col gap-3 self-baseline">
+                <div className="text-on-tertiary-container text-label-medium">
+                  {feature.headline}
                 </div>
+                <p className="text-on-tertiary-container text-body-small">
+                  {feature.description}
+                </p>
               </div>
             </div>
           ))}

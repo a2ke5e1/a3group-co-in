@@ -64,11 +64,11 @@ export default function Home() {
             <div className="text-on-secondary-container text-display-large justify-center text-center">
               Join us on telegram
             </div>
-            <div className="text-Schemes-On-Secondary-Container text-headline-small justify-center text-center">
-              Have suggestion or need help? just telegram us
+            <div className="text-Schemes-On-Secondary-Container text-body-large justify-center text-center">
+              Have suggestion or need help? just telegram us.
             </div>
           </div>
-          <ElevatedButton>
+          <ElevatedButton href="https://t.me/phycalc">
             <Icon slot="icon">
               <svg
                 width="18"

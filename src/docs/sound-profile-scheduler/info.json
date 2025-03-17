@@ -1,15 +1,61 @@
 {
   "name": "Sound Profiles",
-  "desc": "It is an audio profile scheduler, designed to give you full control over your device's sound settings with precision. Whether you need your phone to be quiet during meetings, loud for alarms, or at a moderate volume for media, this app lets you automate these changes just like setting an alarm clock.",
+  "desc": "An audio profile scheduler app, designed to give you full control over your device's sound settings with precision.",
   "images": {
     "icon": "/sound-profile-scheduler/favicon/android-chrome-512x512.png",
-    "cover": "/sound-profile-scheduler/images/cover.png"
+    "cover": "/sound-profile-scheduler/images/cover.png",
+    "banner": "/sound-profile-scheduler/images/cover-banner-sps.png",
+    "screenshots": [
+      {
+        "src": "/sound-profile-scheduler/images/ss/0.png",
+        "alt": "Screenshot 1"
+      },
+      {
+        "src": "/sound-profile-scheduler/images/ss/2.png",
+        "alt": "Screenshot 3"
+      },
+      {
+        "src": "/sound-profile-scheduler/images/ss/3.png",
+        "alt": "Screenshot 4"
+      },
+      {
+        "src": "/sound-profile-scheduler/images/ss/4.png",
+        "alt": "Screenshot 5"
+      },
+      {
+        "src": "/sound-profile-scheduler/images/ss/5.png",
+        "alt": "Screenshot 6"
+      }
+    ]
   },
   "links": {
     "download": "https://play.google.com/store/apps/details?id=com.a3.soundprofiles",
     "sourceCode": "https://github.com/a2ke5e1/Sound-Profiles-Manager",
     "learnMore": "/sound-profile-scheduler"
   },
+  "stats": {
+    "downloads": "50+",
+    "rating": "3.80",
+    "reviews": "5+"
+  },
+  "features": [
+    {
+      "headline": "Customizable",
+      "description": "Customizable schedules for ringtone, alarm, and media volumes.",
+      "icon": "widgets"
+    },
+    {
+      "headline": "Time-based triggers",
+      "description": "Set profiles by weeks, days, hours, or minutes.",
+      "icon": "acute"
+    },
+    {
+      "headline": "Automatic switching ",
+      "description": " Switch audio profiles based on your predefined rules. Ideal for busy professionals, students, and anyone needing seamless sound management.",
+      "icon": "sync"
+    }
+  ],
+  "features_extra": "You can schedule your audio profiles by day, week, hour, or even minute, tailoring the volume levels for ringtones, alarms, and media to fit your lifestyle. Create multiple schedules for different days or events, and let the app automatically adjust your sound settings, ensuring your device's volume is always just right. Perfect for those who need a flexible solution to manage sound in various environments without manual adjustments.",
   "reviews": [
     {
       "reviewer": "Cosme Jose",
@@ -25,6 +71,16 @@
       "reviewer": "Peter Mbugua",
       "review": "This app is exactly what I've been looking for! It's fantastic to see the year's progress visualized as a percentage, with widgets that keep it constantly in view. It's a real eye-opener to how quickly time passes. This is a brilliant concept, well-executed by the developer. Thank you for creating such a helpful tool!",
       "rating": 5
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How to request more features?",
+      "answer": "You can contact us at our email or join our telegram to request any features. "
+    },
+    {
+      "question": "Why does app require exact alarm permission?",
+      "answer": "You can import events from the calendars by import them from going to events > tap on three dots in the top > tap on backup & restore > tap import from calendar."
     }
   ]
 }

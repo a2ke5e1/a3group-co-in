@@ -3,7 +3,8 @@
   "desc": "An time tracker app which provides beautiful widgets, which shows the progress of day, week, month and year.",
   "images": {
     "icon": "/yearly-progress/favicon/android-chrome-512x512.png",
-    "cover": "/yearly-progress/images/cover-banner.webp",
+    "cover": "/yearly-progress/images/cover.webp",
+    "banner": "/yearly-progress/images/cover-banner.webp",
     "screenshots": [
       { "src": "/yearly-progress/images/ss/0.png", "alt": "Screenshot 1" },
       { "src": "/yearly-progress/images/ss/1.png", "alt": "Screenshot 2" },
@@ -59,6 +60,20 @@
       "reviewer": "Peter Mbugua",
       "review": "This app is exactly what I've been looking for! It's fantastic to see the year's progress visualized as a percentage, with widgets that keep it constantly in view. It's a real eye-opener to how quickly time passes. This is a brilliant concept, well-executed by the developer. Thank you for creating such a helpful tool!",
       "rating": 5
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How to fix widgets are not updating?",
+      "answer": "Try ecluding Yearly Progress from battery optimization."
+    },
+    {
+      "question": "How to import events from calendar?",
+      "answer": "You can import events from the calendars by import them from going to events > tap on three dots in the top > tap on backup & restore > tap import from calendar."
+    },
+    {
+      "question": "How to sync events from calendar?",
+      "answer": "There are two ways to sync events into yearly progress. first manualy import events from calendar or use calendar widget."
     }
   ]
 }

@@ -6,6 +6,7 @@ import { Testimonials } from "@/components/v3/common/testimonials/testimonials";
 import YearProgressInfo from "@/docs/yearly-progress/info.json";
 import { Screenshots } from "@/components/v3/common/screenshots-container/screenshots-holder";
 import { Features } from "@/components/v3/common/features/features";
+import { Accordion } from "@/components/v3/common/accordion/accordion";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://a3group.co.in"),
@@ -20,10 +21,9 @@ const Home: React.FC = async () => {
     <>
       <section className="flex flex-col gap-4">
         <Cover
-          src="/yearly-progress/images/cover-banner.webp"
+          src={YearProgressInfo.images.banner}
           alt={YearProgressInfo.name}
           className="bg-[#e8f4f0]"
-          dynamic={false}
         />
         <AppHeader
           name={YearProgressInfo.name}
@@ -43,6 +43,19 @@ const Home: React.FC = async () => {
       <Screenshots screenshots={YearProgressInfo.images.screenshots} />
 
       <Testimonials testimonials={YearProgressInfo.reviews} />
+
+      <section className="flex flex-col gap-4">
+        <h1 className="text-title-large text-on-surface">FAQs</h1>
+        <div className="flex flex-col gap-2">
+          {YearProgressInfo.faqs.map((faq, index) => (
+            <Accordion
+              key={index}
+              question={faq.question}
+              answer={faq.answer}
+            />
+          ))}
+        </div>
+      </section>
     </>
   );
 };

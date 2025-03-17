@@ -1,5 +1,4 @@
-import Footer from "@/components/Footer";
-import styles from "@styles/yearly-progress/index.module.scss";
+import Footer from "@/components/v3/common/footer/footer";
 
 export default function RootLayout({
   children,
@@ -8,10 +7,12 @@ export default function RootLayout({
 }) {
   return (
     <>
-      <div className="xl:mx-auto max-w-screen-xl mx-4 my-8">{children}</div>
+      <div className="max-w-screen-desktop bg-surface mx-auto my-12 flex flex-col gap-8">
+        {children}
+      </div>
       <Footer
-        policy_url="/eye-care/privacy-policy"
-        delete_data_url="/eye-care/delete-account"
+        termsOfService="/eye-care/terms-of-service"
+        privacyPolicy="/eye-care/privacy-policy"
       />
     </>
   );
