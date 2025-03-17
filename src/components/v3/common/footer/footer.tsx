@@ -23,7 +23,7 @@ export default function Footer({
             />
           </Link>
           <p className="text-on-surface-variant text-label-medium">
-            © 2018 - 2024 A3 Group, All right reserved.
+            © 2018 - 2025 A3 Group, All right reserved.
           </p>
         </section>
 

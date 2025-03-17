@@ -118,22 +118,25 @@ interface ScreenshotGalleryProps
 const ScreenshotGallery = React.forwardRef<
   HTMLDivElement,
   ScreenshotGalleryProps
->(({ screenshots, ...props }, ref) => (
-  <div {...props} ref={ref}>
-    <strong>Screenshot</strong>
-    <div className={cn(screenshotGalleryVariants())}>
-      {screenshots.map((screenshot, index) => (
-        <Image
-          key={index}
-          src={screenshot.src}
-          width={120}
-          quality={100}
-          height={260}
-          alt={screenshot.alt}
-        />
-      ))}
+>(({ screenshots, ...props }, ref) => {
+  // console.log(screenshots);
+  return (
+    <div {...props} ref={ref}>
+      <strong>Screenshot</strong>
+      <div className={cn(screenshotGalleryVariants())}>
+        {screenshots.map((screenshot, index) => (
+          <Image
+            key={index}
+            src={screenshot.src}
+            width={120}
+            quality={100}
+            height={260}
+            alt={screenshot.alt}
+          />
+        ))}
+      </div>
     </div>
-  </div>
-));
+  );
+});
 
 export { Cover, AppInfo, ScreenshotGallery };

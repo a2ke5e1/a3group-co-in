@@ -3,7 +3,17 @@
   "desc": "An time tracker app which provides beautiful widgets, which shows the progress of day, week, month and year.",
   "images": {
     "icon": "/yearly-progress/favicon/android-chrome-512x512.png",
-    "cover": "/yearly-progress/images/cover-banner.webp"
+    "cover": "/yearly-progress/images/cover-banner.webp",
+    "screenshots": [
+      { "src": "/yearly-progress/images/ss/0.png", "alt": "Screenshot 1" },
+      { "src": "/yearly-progress/images/ss/1.png", "alt": "Screenshot 2" },
+      { "src": "/yearly-progress/images/ss/2.png", "alt": "Screenshot 3" },
+      { "src": "/yearly-progress/images/ss/3.png", "alt": "Screenshot 4" },
+      { "src": "/yearly-progress/images/ss/4.png", "alt": "Screenshot 5" },
+      { "src": "/yearly-progress/images/ss/5.png", "alt": "Screenshot 6" },
+      { "src": "/yearly-progress/images/ss/6.png", "alt": "Screenshot 7" },
+      { "src": "/yearly-progress/images/ss/7.png", "alt": "Screenshot 8" }
+    ]
   },
   "links": {
     "download": "https://play.google.com/store/apps/details?id=com.a3.yearlyprogess",
@@ -12,6 +22,28 @@
     "terminalApp": "https://github.com/a2ke5e1/yearly-progress-cli-py/",
     "learnMore": "/yearly-progress"
   },
+  "stats": {
+    "downloads": "10,000+",
+    "rating": "4.50",
+    "reviews": "250+"
+  },
+  "features": [
+    {
+      "headline": "Beautifuly design widgets",
+      "description": "Enjoy beautifully crafted widgets that adapt to your device’s theme, creating a cohesive and modern look for your home screen.",
+      "icon": "widgets"
+    },
+    {
+      "headline": "Track time and progress",
+      "description": "You can monitor the progress of your day, week, month, and year directly from your home screen.",
+      "icon": "acute"
+    },
+    {
+      "headline": "Sync your events",
+      "description": "Never miss your events with widgets that sync events with your calendar.",
+      "icon": "sync"
+    }
+  ],
   "reviews": [
     {
       "reviewer": "Cosme Jose",
