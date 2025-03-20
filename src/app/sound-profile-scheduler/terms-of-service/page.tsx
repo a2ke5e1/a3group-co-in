@@ -2,50 +2,42 @@ import { NextPage } from "next";
 import Image from "next/image";
 import TermsOfService from "@/docs/sound-profile-scheduler/tos.mdx";
 import { LegalDocument } from "@/components/LegalDocument";
-import { BackButton } from "@/components/BackButton";
+import { DocsAppHeader } from "@/components/v3/common/app-header/docs-app-header";
+import SoundProfilesInfo from "@/docs/sound-profile-scheduler/info.json";
+import { Cover } from "@/components/app-pages/app-header";
 
 export async function generateMetadata() {
   const title: String = "Sound Profile Scheduler - Terms of Service";
-  const description: String =
-    "";
 
   return {
     metadataBase: new URL("https://a3group.co.in"),
     title: title,
-    description: description,
-    icons: "/sound-profile-scheduler/favicon/favicon.ico",
-    // twitter: {
-    //   images:
-    //     "https://www.a3group.co.in/yearly-progress/images/ss/Screenshot_1691238815.png",
-    // },
+    description: SoundProfilesInfo.desc,
+    icons: SoundProfilesInfo.images.icon,
   };
 }
 
 const TOS: NextPage = () => {
   return (
-    <div>
-      <main className={"2xl:mx-0 mx-2 my-8"}>
-        <BackButton />
-        <div className="my-2 w-fit mx-auto justify-center flex flex-col items-center">
-          <Image
-            src={
-              "/sound-profile-scheduler/favicon/android-chrome-512x512.png"
-            }
-            width={50}
-            height={50}
-            alt="Sound Profile Scheduler Logo"
-            className={" rounded-md"}
-          />
-          <h1 className="text-lg font-bold text-center mt-2">
-            Sound Profile Scheduler
-          </h1>
-        </div>
+    <>
+      <section className="flex flex-col gap-4">
+        <Cover
+          src={SoundProfilesInfo.images.banner}
+          alt={SoundProfilesInfo.name}
+          className="bg-[#fadbba]"
+        />
+        <DocsAppHeader
+          title="Terms and Conditions"
+          appname={SoundProfilesInfo.name}
+          icon={SoundProfilesInfo.images.icon}
+          lastUpdate={new Date(2024, 7, 19)}
+        />
+      </section>
 
-        <LegalDocument title="Terms of Service">
-          <TermsOfService />
-        </LegalDocument>
-      </main>
-    </div>
+      <LegalDocument>
+        <TermsOfService />
+      </LegalDocument>
+    </>
   );
 };
 

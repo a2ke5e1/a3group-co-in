@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function Header() {
   return (
     <header className="bg-surface">
-      <div className="max-w-screen-desktop bg-surface mx-auto flex flex-row items-start justify-between py-5">
+      <div className="max-w-screen-desktop bg-surface desktop:px-0 mx-auto flex flex-row items-start justify-between px-2 py-5">
         <Link href={"/"}>
           <Image
             src="/images/a3_logo.png"

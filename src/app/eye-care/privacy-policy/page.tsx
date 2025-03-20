@@ -1,9 +1,10 @@
 import { NextPage } from "next";
 import PrivacyPolicy from "@/docs/eye-care/privacy-policy.mdx";
-import Image from "next/image";
-import Link from "next/link";
 import { LegalDocument } from "@/components/LegalDocument";
-import { BackButton } from "@/components/BackButton";
+
+import EyeCareInfo from "@/docs/eye-care/info.json";
+import { DocsAppHeader } from "@/components/v3/common/app-header/docs-app-header";
+import { Cover } from "@/components/app-pages/app-header";
 
 export async function generateMetadata() {
   const title: String = "Eye Care - Privacy Policy";
@@ -23,25 +24,25 @@ export async function generateMetadata() {
 
 const EyeCarePrivacyPolicy: NextPage = () => {
   return (
-    <div>
-      <main className={"2xl:mx-0 mx-2 my-8"}>
-        <BackButton />
-        <div className="my-2 w-fit mx-auto justify-center flex flex-col items-center">
-          <Image
-            src={"/eye-care/favicon/icon-512-maskable.png"}
-            width={50}
-            height={50}
-            alt="Eye Care Logo"
-            className={" rounded-md"}
-          />
-          <h1 className="text-lg font-bold text-center mt-2">Eye Care</h1>
-        </div>
-
-        <LegalDocument title="Privacy Policy">
-          <PrivacyPolicy />
-        </LegalDocument>
-      </main>
-    </div>
+    <>
+      <section className="flex flex-col gap-4">
+        <Cover
+          src={EyeCareInfo.images.cover}
+          alt={EyeCareInfo.name}
+          className="bg-[#b5c9ff]"
+          dynamic={true}
+        />
+        <DocsAppHeader
+          title="Privacy Policy"
+          appname={EyeCareInfo.name}
+          icon={EyeCareInfo.images.icon}
+          lastUpdate={new Date(2024, 0, 1)}
+        />
+      </section>
+      <LegalDocument>
+        <PrivacyPolicy />
+      </LegalDocument>
+    </>
   );
 };
 
