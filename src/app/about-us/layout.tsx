@@ -1,3 +1,4 @@
+import Footer from "@/components/v3/common/footer/footer";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -13,6 +14,10 @@ export default function RootLayout({
   return (
     <>
       <div className="mx-4 my-8 max-w-screen-xl xl:mx-auto">{children}</div>
+      <Footer
+        termsOfService="/terms-of-service"
+        privacyPolicy="/privacy-poilicy"
+      />
     </>
   );
 }
