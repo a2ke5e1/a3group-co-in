@@ -52,7 +52,7 @@ const DocsAppHeader = React.forwardRef<HTMLDivElement, DocsAppHeaderProps>(
         </div>
         <Image
           src={icon}
-          alt={`${name}`}
+          alt={`${appname}`}
           width={128}
           height={128}
           className="h-fit w-fit"

@@ -1,5 +1,4 @@
 import { NextPage } from "next";
-import Image from "next/image";
 import TermsOfService from "@/docs/sound-profile-scheduler/tos.mdx";
 import { LegalDocument } from "@/components/LegalDocument";
 import { DocsAppHeader } from "@/components/v3/common/app-header/docs-app-header";

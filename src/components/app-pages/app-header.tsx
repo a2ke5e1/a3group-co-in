@@ -38,6 +38,8 @@ const Cover = React.forwardRef<HTMLImageElement, CoverProps>(
       width={1546}
       height={423}
       quality={100}
+      priority
+      fetchPriority="high"
       {...props}
     />
   ),
