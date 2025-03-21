@@ -89,7 +89,7 @@ export default function Home() {
       </main>
       <Footer
         termsOfService="/terms-of-service"
-        privacyPolicy="/privacy-poilicy"
+        privacyPolicy="/privacy-policy"
       />
     </>
   );

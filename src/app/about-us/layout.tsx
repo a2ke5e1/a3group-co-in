@@ -16,7 +16,7 @@ export default function RootLayout({
       <div className="mx-4 my-8 max-w-screen-xl xl:mx-auto">{children}</div>
       <Footer
         termsOfService="/terms-of-service"
-        privacyPolicy="/privacy-poilicy"
+        privacyPolicy="/privacy-policy"
       />
     </>
   );
