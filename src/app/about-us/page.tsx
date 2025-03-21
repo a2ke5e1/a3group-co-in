@@ -79,7 +79,14 @@ const MemeberCards = ({
 const AboutUs: NextPage = () => {
   return (
     <main className="flex min-h-[80vh] flex-col gap-4">
-      <h1 className="text-on-surface text-display-small">Our Team</h1>
+      <div className="flex flex-col items-start justify-start gap-2 self-stretch">
+        <div className="text-on-surface text-display-large">About Us</div>
+        <div className="text-on-surface-variant text-body-large">
+          {
+            "We are just group of friends trying to learn and develop something usefull."
+          }
+        </div>
+      </div>
       <div className="grid grid-flow-row grid-cols-1 gap-4 md:grid-cols-2">
         <MemeberCards
           name="a2ke5e1"

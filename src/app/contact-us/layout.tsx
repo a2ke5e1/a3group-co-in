@@ -2,7 +2,7 @@ import Footer from "@/components/v3/common/footer/footer";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About Us | A3 Group",
+  title: "Contact Us | A3 Group",
   icons: "/favicon.ico",
 };
 

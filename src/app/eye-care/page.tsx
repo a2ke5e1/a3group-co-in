@@ -6,6 +6,7 @@ import { Screenshots } from "@/components/v3/common/screenshots-container/screen
 import { Features } from "@/components/v3/common/features/features";
 import { Accordion } from "@/components/v3/common/accordion/accordion";
 import { AppHeader } from "@/components/v3/common/app-header/app-header";
+import Link from "next/link";
 
 export async function generateMetadata() {
   return {
@@ -50,6 +51,18 @@ const EyeCareHome: NextPage = async () => {
               answer={faq.answer}
             />
           ))}
+          <Accordion
+            question={"How I can delete my data?"}
+            answer={
+              <>
+                You can request to delete your eye care data by sending us
+                request at our email.{" "}
+                <Link href="/eye-care/delete-account" className="underline">
+                  Learn More
+                </Link>
+              </>
+            }
+          />
         </div>
       </section>
     </>
