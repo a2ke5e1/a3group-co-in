@@ -78,10 +78,8 @@ const MemeberCards = ({
 
 const AboutUs: NextPage = () => {
   return (
-    <main className="mx-2 my-8 min-h-[80vh] 2xl:mx-0">
-      <h2 className="text-title-large text-primary my-4 text-center">
-        Our Team
-      </h2>
+    <main className="flex min-h-[80vh] flex-col gap-4">
+      <h1 className="text-on-surface text-display-small">Our Team</h1>
       <div className="grid grid-flow-row grid-cols-1 gap-4 md:grid-cols-2">
         <MemeberCards
           name="a2ke5e1"

@@ -26,7 +26,7 @@ const TOS: NextPage = () => {
           className="bg-[#fadbba]"
         />
         <DocsAppHeader
-          title="Terms and Conditions"
+          title="Terms of Service"
           appname={SoundProfilesInfo.name}
           icon={SoundProfilesInfo.images.icon}
           lastUpdate={new Date(2024, 7, 19)}

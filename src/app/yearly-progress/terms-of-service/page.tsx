@@ -9,7 +9,7 @@ import YearProgressInfo from "@/docs/yearly-progress/info.json";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://a3group.co.in"),
-  title: `${YearProgressInfo.name} - Terms and Conditions`,
+  title: `${YearProgressInfo.name} - Terms of Service`,
   description: YearProgressInfo.desc,
   icons: YearProgressInfo.images.icon,
 };
@@ -24,7 +24,7 @@ const TOS: NextPage = () => {
           className="bg-[#e8f4f0]"
         />
         <DocsAppHeader
-          title="Terms and Conditions"
+          title="Terms of Service"
           appname={YearProgressInfo.name}
           icon={YearProgressInfo.images.icon}
           lastUpdate={new Date(2025, 3, 1)}

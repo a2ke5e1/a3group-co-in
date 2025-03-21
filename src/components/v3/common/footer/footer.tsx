@@ -12,7 +12,7 @@ export default function Footer({
 }: FooterProps) {
   return (
     <footer className="bg-surface-container-low py-5">
-      <div className="max-w-screen-desktop desktop:px-0 mx-auto flex flex-row items-start justify-between px-2 py-5">
+      <div className="max-w-screen-desktop desktop:px-0 mx-auto flex flex-col items-start justify-between gap-8 px-2 py-5 md:flex-row md:gap-0">
         <section className="flex flex-col gap-[0.625rem]">
           <Link href={"/"}>
             <Image
