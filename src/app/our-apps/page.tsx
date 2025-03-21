@@ -12,8 +12,7 @@ import { ElevatedButton, FilledButton } from "@/components/button/button";
 import { Icon } from "@/components/icon/icon";
 
 export const metadata: Metadata = {
-  title: "A3 Group",
-  description: "A3 Group is a group of friends trying to make some apps.",
+  title: "Our Apps | A3 Group",
   icons: "/favicon.ico",
 };
 
@@ -55,8 +54,8 @@ export default function Home() {
             learnMore: SoundProfileInfo.links.learnMore,
           }}
         />
-        <div className="bg-secondary-container inline-flex h-[363px] flex-col items-center justify-center gap-6 overflow-hidden rounded-2xl">
-          <div className="flex flex-col items-center justify-start">
+        <div className="bg-secondary-container inline-flex h-[363px] flex-col items-center justify-center gap-6 overflow-hidden rounded-2xl px-8">
+          <div className="flex flex-col items-center justify-start gap-1">
             <div className="text-on-secondary-container text-display-large justify-center text-center">
               Have suggestions?
             </div>

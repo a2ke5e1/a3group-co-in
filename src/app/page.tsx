@@ -59,8 +59,8 @@ export default function Home() {
           }}
           reverseImage={true}
         />
-        <div className="bg-secondary-container inline-flex h-[363px] flex-col items-center justify-center gap-6 overflow-hidden rounded-2xl">
-          <div className="flex flex-col items-center justify-start">
+        <div className="bg-secondary-container inline-flex h-[363px] flex-col items-center justify-center gap-6 overflow-hidden rounded-2xl px-8">
+          <div className="flex flex-col items-center justify-start gap-1">
             <div className="text-on-secondary-container text-display-large justify-center text-center">
               Join us on telegram
             </div>
