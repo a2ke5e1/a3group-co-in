@@ -1,12 +1,16 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Roboto } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/v3/common/header/header";
 
-const inter = Inter({ subsets: ["latin"] });
+const roboto = Roboto({
+  weight: ["400", "500", "700"],
+  display: "swap",
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: "A3 Group",
-  description: "This is a blog page",
 };
 
 export default function RootLayout({
@@ -16,14 +20,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
-        <script
-          async={true}
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5701438671181854"
-          crossOrigin={"anonymous"}
-        ></script>
-      </head>
-      <body className={`${inter.className} dark:bg-black dark:text-white`}>
+      <body>
+        <Header />
         <main>{children}</main>
       </body>
     </html>

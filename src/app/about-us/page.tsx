@@ -1,10 +1,10 @@
 import type { NextPage } from "next";
-import Head from "next/head";
-import Footer from "@/components/Footer";
 import Image from "next/image";
 import Link from "next/link";
-import { GitHub, X, LinkedIn, Web } from "@mui/icons-material";
+import { GitHub, LinkedIn, Web, X } from "@mui/icons-material";
 import { BackButton } from "@/components/BackButton";
+import { IconButton } from "@/components/button/button";
+import { Icon } from "@/components/icon/icon";
 
 type MemeberCardsProps = {
   name: string;
@@ -26,40 +26,50 @@ const MemeberCards = ({
   imgSrc,
   links,
 }: MemeberCardsProps) => (
-  <div className="bg-blue-50 dark:bg-gray-950 rounded-2xl p-2 flex flex-row items-center gap-2">
+  <div className="bg-surface-container-low flex flex-row items-center gap-4 rounded-2xl p-2">
     <Image
       src={imgSrc}
       alt={name}
-      className="rounded-full h-24 w-24"
+      className="h-24 w-24 rounded-full"
       width={80}
       height={80}
     />
     <div className="max-w-md">
-      <h2 className="font-bold text-lg">{name}</h2>
-      <p className="text-base text-gray-800 dark:text-gray-400">
-        {description}
-      </p>
+      <div className="mt-4">
+        <h2 className="text-body-large text-primary font-bold">{name}</h2>
+        <p className="text-body-medium text-on-surface-variant">
+          {description}
+        </p>
+      </div>
 
-      <div className="flex flex-row gap-2 my-2">
+      <div className="my-2 -ml-2 flex flex-row gap-2">
         {links?.github && (
-          <Link href={links.github}>
-            <GitHub />
-          </Link>
+          <IconButton href={links.github}>
+            <Icon>
+              <GitHub />
+            </Icon>
+          </IconButton>
         )}
         {links?.linkedin && (
-          <Link href={links.linkedin}>
-            <LinkedIn />
-          </Link>
+          <IconButton href={links.linkedin}>
+            <Icon>
+              <LinkedIn />
+            </Icon>
+          </IconButton>
         )}
         {links?.x && (
-          <Link href={links.x}>
-            <X />
-          </Link>
+          <IconButton href={links.x}>
+            <Icon>
+              <X />
+            </Icon>
+          </IconButton>
         )}
         {links?.website && (
-          <Link href={links.website}>
-            <Web />
-          </Link>
+          <IconButton href={links.website}>
+            <Icon>
+              <Web />
+            </Icon>
+          </IconButton>
         )}
       </div>
     </div>
@@ -68,28 +78,16 @@ const MemeberCards = ({
 
 const AboutUs: NextPage = () => {
   return (
-    <main className="2xl:mx-0 mx-2 my-8 min-h-[80vh]">
-      <BackButton />
-      <div className="my-2 w-fit mx-auto justify-center flex flex-col items-center">
-        <Link href="/" aria-label="Home">
-          <Image
-            src="/images/a3_logo.png"
-            alt="A3 Group"
-            width={60}
-            height={50}
-            className="my-2"
-          />
-        </Link>
-        <h1 className="font-bold text-3xl ">About Us</h1>
-        <p className="text-sm text-center">
-          A3 Group is a group of friends trying to make some apps. <br /> <br />
-        </p>
+    <main className="flex min-h-[80vh] flex-col gap-4">
+      <div className="flex flex-col items-start justify-start gap-2 self-stretch">
+        <div className="text-on-surface text-display-large">About Us</div>
+        <div className="text-on-surface-variant text-body-large">
+          {
+            "We are just group of friends trying to learn and develop something usefull."
+          }
+        </div>
       </div>
-
-      <h2 className="font-bold text-lg my-2 text-center font-mono uppercase">
-        Our Team
-      </h2>
-      <div className="grid md:grid-flow-col gap-2">
+      <div className="grid grid-flow-row grid-cols-1 gap-4 md:grid-cols-2">
         <MemeberCards
           name="a2ke5e1"
           description="Web and App Developer + Designer"
@@ -98,7 +96,7 @@ const AboutUs: NextPage = () => {
             github: "https://www.github.com/a2ke5e1",
             linkedin: "https://www.linkedin.com/in/a2ke5e1",
             x: "https://www.twitter.com/a2ke5e1",
-            website: "https://a2krocks-com.vercel.app",
+            website: "https://a2ke5e1.com",
           }}
         />
         <MemeberCards

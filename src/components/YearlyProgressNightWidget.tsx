@@ -72,8 +72,8 @@ const YearlyProgressNightWidget = () => {
 
 
 
-        console.log("Start Date:", startDate);
-        console.log("End Date:", endDate);
+        // console.log("Start Date:", startDate);
+       //  console.log("End Date:", endDate);
         
         
 
@@ -86,8 +86,8 @@ const YearlyProgressNightWidget = () => {
         const currentTime = new Date();
         const currentUnixTime = currentTime.getTime();
 
-        console.log("Current Time:", currentUnixTime);
-        console.log("Unix Time:", convertDateTimeToUnix(results[1].date, results[1].sunset)); 
+        // console.log("Current Time:", currentUnixTime);
+        // console.log("Unix Time:", convertDateTimeToUnix(results[1].date, results[1].sunset)); 
         
         if (currentUnixTime < convertDateTimeToUnix(results[1].date, results[1].sunset)) {
           setNightData({
@@ -102,7 +102,7 @@ const YearlyProgressNightWidget = () => {
         }
 
       
-        console.log("Results:", results);
+        // console.log("Results:", results);
 
        
       } catch (error) {

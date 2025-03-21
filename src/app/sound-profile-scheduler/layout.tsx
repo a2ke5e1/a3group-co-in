@@ -1,5 +1,4 @@
-import Footer from "@/components/Footer";
-
+import Footer from "@/components/v3/common/footer/footer";
 export default function RootLayout({
   children,
 }: {
@@ -7,10 +6,12 @@ export default function RootLayout({
 }) {
   return (
     <>
-      <div className="2xl:mx-auto max-w-screen-2xl m-2">{children}</div>
+      <div className="max-w-screen-desktop bg-surface desktop:px-0 mx-auto my-12 flex flex-col gap-[4.5rem] px-2">
+        {children}
+      </div>
       <Footer
-        terms_of_service_url="/sound-profile-scheduler/terms-of-service"
-        policy_url="/sound-profile-scheduler/privacy-policy"
+        termsOfService="/sound-profile-scheduler/terms-of-service"
+        privacyPolicy="/sound-profile-scheduler/privacy-policy"
       />
     </>
   );

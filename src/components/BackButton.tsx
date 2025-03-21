@@ -6,6 +6,8 @@ import { ArrowBack } from "@mui/icons-material";
 
 import { useRouter } from "next/navigation";
 import { usePathname } from "next/navigation";
+import { IconButton } from "./button/button";
+import { Icon } from "./icon/icon";
 
 export const BackButton = () => {
   const router = useRouter();
@@ -24,13 +26,8 @@ export const BackButton = () => {
   };
 
   return (
-    <Link
-      href="/"
-      onClick={handleBackBehavior}
-      aria-description="Go Back"
-      className="hover:bg-blue-50 hover:rounded-full p-2 hover:text-blue-900 dark:text-white"
-    >
-      <ArrowBack className="-mt-1 " /> {/** -mt-1 is for vertical centering */}
-    </Link>
+    <IconButton onClick={handleBackBehavior}>
+      <Icon>arrow_back</Icon>
+    </IconButton>
   );
 };

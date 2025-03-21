@@ -92,35 +92,43 @@ const YearlyProgressWidget: React.FC<YearlyProgressWidgetProps> = ({
   };
 
   return isClient ? (
-    <div className="relative bg-blue-50 py-2 px-4 rounded-2xl overflow-hidden text-blue-800">
+    <div className="relative  bg-surface-container py-2 px-4 rounded-2xl overflow-hidden text-on-secondary-container flex flex-col justify-between">
       <div
-        className="absolute top-0 left-0 h-full bg-blue-200 transition-all duration-150 ease-out"
+        className="absolute top-0 left-0 h-full bg-secondary-container transition-all duration-150 ease-out"
         style={{ width: `${progress}%` }}
       ></div>
-      {!custom && (
-        <>
-          <h2 className="relative text-sm font-light uppercase p-0 m-0">
-            {type}
+      <div className="relative">
+        {!custom && (
+          <>
+            <h2 className="text-label-medium uppercase p-0 m-0">
+              {type}
+            </h2>
+            <p className="text-title-large p-0  text-tertiary">{getTypeValue(type)}</p>
+          </>
+        )}
+        {custom?.title && (
+          <h2 className="text-label-medium uppercase p-0 m-0">
+            {custom.title}
           </h2>
-          <p className="relative text-lg p-0 ">{getTypeValue(type)}</p>
-        </>
-      )}
-      {custom?.title && (
-        <h2 className="relative text-sm font-light uppercase p-0 m-0">{custom.title}</h2>
-      )}
-      {custom?.description && (
-        <p className="relative text-sm p-0 ">{custom.description}</p>
-      )}
-      <p className="relative pt-4">{styledProgress()}</p>
-      <p className="relative text-sm">
-        of{" "}
-        {(
-          (getEndOfTimeMillis(type, custom?.endTimestamp) -
-            getStartOfTimeMillis(type, custom?.startTimestamp)) /
-          1000
-        ).toFixed(0)}
-        s
-      </p>
+        )}
+        {custom?.description && (
+          <p className="relative text-body-medium p-0 ">
+            {custom.description}
+          </p>
+        )}
+      </div>
+      <div className="relative  text-body-large">
+        <p className="pt-4">{styledProgress()}</p>
+        <p className="text-on-surface-variant">
+          of{" "}
+          {(
+            (getEndOfTimeMillis(type, custom?.endTimestamp) -
+              getStartOfTimeMillis(type, custom?.startTimestamp)) /
+            1000
+          ).toFixed(0)}
+          s
+        </p>
+      </div>
     </div>
   ) : (
     <div></div>

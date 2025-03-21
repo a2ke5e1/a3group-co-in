@@ -1,0 +1,59 @@
+{
+  "name": "Eye Care",
+  "desc": "Eye Care is an app which is beautifully designed to help you to take care of your eyes. It provides you a way to keep records of their prescription in the cloud and access them from anywhere.",
+  "images": {
+    "icon": "/eye-care/favicon/android-chrome-512x512.png",
+    "cover": "/eye-care/images/cover.png",
+    "banner": "/eye-care/images/based.png",
+    "screenshots": [
+      {
+        "src": "/eye-care/images/ss/Screenshot_1691238815.png",
+        "alt": "Eye Care home screen screenshot"
+      },
+      {
+        "src": "/eye-care/images/ss/Screenshot_1691238836.png",
+        "alt": "Eye Care recent screen screenshot"
+      },
+      {
+        "src": "https://play-lh.googleusercontent.com/scjasM7xzNrzFEQSCDKywfESwBgOagc5Xotz35SF1YXPU00gkz6nvpQ2JSxWhHCniJE=w526-h296-rw",
+        "alt": "Eye Care home screen screenshot in dark mode"
+      },
+      {
+        "src": "https://play-lh.googleusercontent.com/1wovtsQNjdTYFwqkKPNWyrQ4VWmOBaRgTfvK5iJnJD7v6cOU_S5yGv1-Cl9I1EqZGQ=w526-h296-rw",
+        "alt": "Eye Care add reports screen screenshot in dark mode"
+      }
+    ]
+  },
+  "features": [
+    {
+      "headline": "Personalized eye report tables",
+      "description": "Create and manage personalized eye report tables with ease. Keep track of prescribed eyeglass prescriptions. ",
+      "icon": "lab_profile"
+    },
+    {
+      "headline": "Share your  eye reports",
+      "description": "Enhance communication with your eye care specialist by generating shareable eye reports as screenshots.",
+      "icon": "share"
+    },
+    {
+      "headline": "Sync your reports",
+      "description": "Your eye health data is stored securely in the cloud. Access your eye reports anytime, anywhere, from multiple device.",
+      "icon": "sync"
+    }
+  ],
+  "stats": {
+    "downloads": "5,000+",
+    "rating": "3.80",
+    "reviews": "10+"
+  },
+  "links": {
+    "download": "https://play.google.com/store/apps/details?id=com.a3.eyecare",
+    "learnMore": "/eye-care"
+  },
+  "faqs": [
+    {
+      "question": "How to share reports?",
+      "answer": "You can share your reports using share button."
+    }
+  ]
+}

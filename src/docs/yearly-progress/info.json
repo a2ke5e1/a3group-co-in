@@ -1,0 +1,79 @@
+{
+  "name": "Yearly Progress",
+  "desc": "An time tracker app which provides beautiful widgets, which shows the progress of day, week, month and year.",
+  "images": {
+    "icon": "/yearly-progress/favicon/android-chrome-512x512.png",
+    "cover": "/yearly-progress/images/cover.webp",
+    "banner": "/yearly-progress/images/cover-banner.webp",
+    "screenshots": [
+      { "src": "/yearly-progress/images/ss/0.png", "alt": "Screenshot 1" },
+      { "src": "/yearly-progress/images/ss/1.png", "alt": "Screenshot 2" },
+      { "src": "/yearly-progress/images/ss/2.png", "alt": "Screenshot 3" },
+      { "src": "/yearly-progress/images/ss/3.png", "alt": "Screenshot 4" },
+      { "src": "/yearly-progress/images/ss/4.png", "alt": "Screenshot 5" },
+      { "src": "/yearly-progress/images/ss/5.png", "alt": "Screenshot 6" },
+      { "src": "/yearly-progress/images/ss/6.png", "alt": "Screenshot 7" },
+      { "src": "/yearly-progress/images/ss/7.png", "alt": "Screenshot 8" }
+    ]
+  },
+  "links": {
+    "download": "https://play.google.com/store/apps/details?id=com.a3.yearlyprogess",
+    "sourceCode": "https://github.com/a2ke5e1/yearly-progress/",
+    "webApp": "/yearly-progress/web-app",
+    "terminalApp": "https://github.com/a2ke5e1/yearly-progress-cli-py/",
+    "learnMore": "/yearly-progress"
+  },
+  "stats": {
+    "downloads": "10,000+",
+    "rating": "4.50",
+    "reviews": "250+"
+  },
+  "features": [
+    {
+      "headline": "Beautifuly design widgets",
+      "description": "Enjoy beautifully crafted widgets that adapt to your device’s theme, creating a cohesive and modern look for your home screen.",
+      "icon": "widgets"
+    },
+    {
+      "headline": "Track time and progress",
+      "description": "You can monitor the progress of your day, week, month, and year directly from your home screen.",
+      "icon": "acute"
+    },
+    {
+      "headline": "Sync your events",
+      "description": "Never miss your events with widgets that sync events with your calendar.",
+      "icon": "sync"
+    }
+  ],
+  "reviews": [
+    {
+      "reviewer": "Cosme Jose",
+      "review": "I want to deeply thank the developer of this application, it is helping me to be productive like I have never been in my entire life and to make the most of every moment of my day. The event widget is incredible for tracking the day's progress, the interface is intuitive, has few ads and is easy to use, I recommend it to everyone! You can download without fear of being happy!",
+      "rating": 5
+    },
+    {
+      "reviewer": "Jon-Cameron Bates",
+      "review": "Really useful and unique 'year progress' countdown timers, along with custom events. I particularly like the all-in-one circular widget which looks great on my home screen. The only change I would like is a larger text option",
+      "rating": 5
+    },
+    {
+      "reviewer": "Peter Mbugua",
+      "review": "This app is exactly what I've been looking for! It's fantastic to see the year's progress visualized as a percentage, with widgets that keep it constantly in view. It's a real eye-opener to how quickly time passes. This is a brilliant concept, well-executed by the developer. Thank you for creating such a helpful tool!",
+      "rating": 5
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How to fix widgets are not updating?",
+      "answer": "Try ecluding Yearly Progress from battery optimization."
+    },
+    {
+      "question": "How to import events from calendar?",
+      "answer": "You can import events from the calendars by import them from going to events > tap on three dots in the top > tap on backup & restore > tap import from calendar."
+    },
+    {
+      "question": "How to sync events from calendar?",
+      "answer": "There are two ways to sync events into yearly progress. first manualy import events from calendar or use calendar widget."
+    }
+  ]
+}
