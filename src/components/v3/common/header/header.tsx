@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { TextButton } from "@/components/button/button";
 
 export default function Header() {
   return (
@@ -13,10 +14,10 @@ export default function Header() {
             alt="A3 Group Logo"
           />
         </Link>
-        <section className="*:text-label-large *:text-on-surface-variant flex h-fit flex-row gap-8 *:hover:underline">
-          <Link href="/our-apps">Our Apps</Link>
-          <Link href="/contact-us">Contact Us</Link>
-          <Link href="/about-us">About Us</Link>
+        <section className="flex h-fit flex-row">
+          <TextButton href="/our-apps">Our Apps</TextButton>
+          <TextButton href="/contact-us">Contact Us</TextButton>
+          <TextButton href="/about-us">About Us</TextButton>
         </section>
       </div>
     </header>
