@@ -32,7 +32,6 @@ export default function Home() {
               learnMore: YearProgressInfo.links.learnMore,
             }}
           />
-          <Testimonials testimonials={YearProgressInfo.reviews} />
         </section>
         <div className="flex flex-col items-start justify-start gap-2 self-stretch">
           <div className="text-on-surface text-display-large">More from Us</div>
