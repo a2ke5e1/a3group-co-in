@@ -65,7 +65,7 @@
   "faqs": [
     {
       "question": "How to fix widgets are not updating?",
-      "answer": "Try ecluding Yearly Progress from battery optimization."
+      "answer": "Try excluding Yearly Progress from battery optimization."
     },
     {
       "question": "How to import events from calendar?",

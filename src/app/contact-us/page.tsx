@@ -29,7 +29,7 @@ const AboutUs: NextPage = () => {
             We will do your best to reply as soon as possible.
           </div>
         </div>
-        <FilledButton href="mail:support@a3group.co.in">
+        <FilledButton href="mailto:support@a3group.co.in">
           <Icon slot="icon">email</Icon>
           Email
         </FilledButton>
