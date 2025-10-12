@@ -37,7 +37,7 @@ const AppHeader = React.forwardRef<HTMLDivElement, AppHeaderProps>(
       <div
         ref={ref}
         className={cn(
-          "flex flex-wrap-reverse items-center justify-between gap-2 md:flex-wrap",
+          "flex flex-wrap-reverse items-start justify-between gap-2 md:flex-wrap",
           props.className,
         )}
         {...props}
@@ -45,7 +45,7 @@ const AppHeader = React.forwardRef<HTMLDivElement, AppHeaderProps>(
         <div className="flex flex-col gap-2">
           <div className="flex flex-col gap-1">
             <h1 className="text-headline-large text-on-surface">{name}</h1>
-            <p className="text-on-surface-variant text-body-large max-w-[26.25rem]">
+            <p className="text-on-surface-variant text-body-large max-w-[26.25rem] leading-5">
               {description}
             </p>
           </div>
@@ -71,7 +71,7 @@ const AppHeader = React.forwardRef<HTMLDivElement, AppHeaderProps>(
               )}
             </div>
           )}
-          <div className="my-8 flex flex-row flex-wrap gap-4">
+          <div className="my-4 flex flex-row flex-wrap gap-4">
             {links.download && (
               <FilledButton href={links.download}>
                 <Icon slot="icon">download</Icon>
@@ -128,7 +128,7 @@ const AppHeader = React.forwardRef<HTMLDivElement, AppHeaderProps>(
           alt={`${name}`}
           width={128}
           height={128}
-          className="h-fit w-fit"
+          className="sm:h-fit sm:w-fit w-12 h-12"
         />
       </div>
     );

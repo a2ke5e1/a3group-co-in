@@ -7,10 +7,10 @@ import { FilledTonalButton } from "../button/button";
 import { Icon } from "../icon/icon";
 
 // Cover component
-const coverVariants = cva("object-contain sm:rounded-2xl rounded-lg", {
+const coverVariants = cva("sm:rounded-2xl rounded-lg w-full h-full object-cover", {
   variants: {
     dynamic: {
-      true: "lg:aspect-[4.5/1] md:aspect-[2.5/1] aspect-[2/1] w-full",
+      true: "lg:aspect-[4.5/1] md:aspect-[2.5/1] aspect-[2/1]",
       false: "",
     },
   },
@@ -30,20 +30,23 @@ interface CoverProps
 
 const Cover = React.forwardRef<HTMLImageElement, CoverProps>(
   ({ src, alt, dynamic, className, ...props }, ref) => (
-    <Image
-      ref={ref}
-      src={src}
-      alt={alt}
-      className={cn(coverVariants({ dynamic, className }))}
-      width={1546}
-      height={423}
-      quality={100}
-      priority
-      fetchPriority="high"
-      {...props}
-    />
+    <div className="w-full h-full overflow-hidden"> {/* parent div controls height */}
+      <Image
+        ref={ref}
+        src={src}
+        alt={alt}
+        className={cn(coverVariants({ dynamic, className }))}
+        width={1546}
+        height={423}
+        quality={100}
+        priority
+        fetchPriority="high"
+        {...props}
+      />
+    </div>
   ),
 );
+
 
 // AppInfo component
 const appInfoVariants = cva(

@@ -59,14 +59,14 @@ const AppCard = React.forwardRef<HTMLDivElement, AppCardProps>(
           height={257}
           className="aspect-video w-full rounded-2xl @[845px]/app-card:w-[456.89px]"
         />
-        <div className="flex min-w-[40ch] flex-1 flex-col">
+        <div className="flex flex-1 flex-col">
           <div className="flex flex-col gap-[10px]">
             <h1 className="text-headline-large">{title}</h1>
-            <p className="text-on-surface-variant text-body-large text-justify">
+            <p className="text-on-surface-variant text-body-large text-justify leading-5">
               {description}
             </p>
           </div>
-          <div className="my-8 flex flex-row flex-wrap gap-4">
+          <div className="my-4 flex flex-row flex-wrap gap-4">
             {links.download && (
               <FilledButton href={links.download}>
                 <Icon slot="icon">download</Icon>
