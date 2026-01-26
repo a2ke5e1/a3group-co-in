@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { GitHub, LinkedIn, Web, X } from "@mui/icons-material";
-import { BackButton } from "@/components/BackButton";
+import LanguageIcon from '@mui/icons-material/Language';
 import { IconButton } from "@/components/button/button";
 import { Icon } from "@/components/icon/icon";
 
@@ -67,7 +67,7 @@ const MemeberCards = ({
         {links?.website && (
           <IconButton href={links.website}>
             <Icon>
-              <Web />
+              <LanguageIcon />
             </Icon>
           </IconButton>
         )}
