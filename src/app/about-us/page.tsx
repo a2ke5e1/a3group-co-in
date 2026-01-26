@@ -90,7 +90,7 @@ const AboutUs: NextPage = () => {
       <div className="grid grid-flow-row grid-cols-1 gap-4 md:grid-cols-2">
         <MemeberCards
           name="a2ke5e1"
-          description="Web and App Developer + Designer"
+          description="Full Stack Developer and App developer"
           imgSrc="/images/a2k.webp"
           links={{
             github: "https://www.github.com/a2ke5e1",
@@ -101,7 +101,7 @@ const AboutUs: NextPage = () => {
         />
         <MemeberCards
           name="ADK"
-          description="Web Developer + Angular"
+          description="iOS Development, UIkit, SwiftUI Developer"
           imgSrc="/images/adk.webp"
           links={{
             github: "https://www.github.com/ADKANK",
@@ -110,7 +110,7 @@ const AboutUs: NextPage = () => {
         />
         <MemeberCards
           name="FCatilizer"
-          description="Full Stack Developer"
+          description="Django, Backend Developer and Flutter Developer"
           imgSrc="/images/asg.webp"
           links={{
             github: "https://www.github.com/Fcatilizer",
