@@ -1,14 +1,9 @@
-import type { NextPage } from "next";
-import Image from "next/image";
-import Link from "next/link";
-import { GitHub, LinkedIn, Web, X } from "@mui/icons-material";
-import { BackButton } from "@/components/BackButton";
 import {
   ElevatedButton,
-  FilledButton,
-  IconButton,
+  FilledButton
 } from "@/components/button/button";
 import { Icon } from "@/components/icon/icon";
+import type { NextPage } from "next";
 
 const AboutUs: NextPage = () => {
   return (
