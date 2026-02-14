@@ -4,7 +4,7 @@ import { Cover } from "@/components/app-pages/app-header";
 import SoundProfilesInfo from "@/docs/sound-profile-scheduler/info.json";
 import { Screenshots } from "@/components/v3/common/screenshots-container/screenshots-holder";
 import { Features } from "@/components/v3/common/features/features";
-import { Accordion } from "@/components/v3/common/accordion/accordion";
+import { FAQList } from "@/components/v3/common/faq-list/faq-list";
 import { AppHeader } from "@/components/v3/common/app-header/app-header";
 
 export async function generateMetadata() {
@@ -42,15 +42,7 @@ const Home: NextPage = async () => {
 
       <section className="flex flex-col gap-4">
         <h1 className="text-title-large text-on-surface">FAQs</h1>
-        <div className="flex flex-col gap-2">
-          {SoundProfilesInfo.faqs.map((faq, index) => (
-            <Accordion
-              key={index}
-              question={faq.question}
-              answer={faq.answer}
-            />
-          ))}
-        </div>
+        <FAQList items={SoundProfilesInfo.faqs} />
       </section>
     </>
   );
