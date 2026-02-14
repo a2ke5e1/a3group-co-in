@@ -165,4 +165,29 @@
   ::marker {
     @apply text-primary;
   }
+
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  button,
+  [role="button"],
+  a {
+    -webkit-appearance: none;
+    appearance: none;
+    outline: none;
+    box-shadow: none;
+    background-clip: padding-box;
+  }
+
+  button:focus,
+  button:focus-visible,
+  button:active,
+  [role="button"]:focus,
+  [role="button"]:focus-visible,
+  a:focus,
+  a:focus-visible {
+    outline: none !important;
+    box-shadow: none !important;
+  }
 }

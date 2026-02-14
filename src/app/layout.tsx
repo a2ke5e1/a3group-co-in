@@ -20,7 +20,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="p-2">
+      <body>
         <Header />
         <main>{children}</main>
       </body>

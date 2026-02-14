@@ -153,7 +153,7 @@ const Content = styled.span<ContentProps>`
   height: 100%;
   width: 100%;
   gap: 8px;
-  margin-top: 1px; /* optical alignment */
+  margin-top: 2px; /* optical alignment */
 
   align-items: ${({ $vertical }) => {
     switch ($vertical) {

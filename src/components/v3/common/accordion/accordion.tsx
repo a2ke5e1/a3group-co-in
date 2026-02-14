@@ -11,15 +11,12 @@ export interface AccordionProps
 }
 
 const Accordion = React.forwardRef<HTMLButtonElement, AccordionProps>(
-  ({ question, answer, ...props }, ref) => {
+  ({ question, answer, className, ...props }, ref) => {
     const [accordionOpen, setAccordionOpen] = useState<boolean>(false);
     return (
       <button
         ref={ref}
-        className={cn(
-          "bg-secondary-container rounded-2xl p-4",
-          props.className,
-        )}
+        className={cn(className, "bg-secondary-container rounded-2xl p-4")}
         {...props}
         onClick={(e) => {
           e.preventDefault();
