@@ -1,6 +1,6 @@
-import Link from "next/link";
+import TextButton from "@/components/common/button/TextButton";
 import Image from "next/image";
-import { TextButton } from "@/components/button/button";
+import Link from "next/link";
 
 export default function Header() {
   return (
@@ -15,9 +15,15 @@ export default function Header() {
           />
         </Link>
         <section className="flex h-fit flex-row">
-          <TextButton href="/our-apps">Our Apps</TextButton>
-          <TextButton href="/contact-us">Contact Us</TextButton>
-          <TextButton href="/about-us">About Us</TextButton>
+          <Link href="/our-apps">
+            <TextButton>Our Apps</TextButton>
+          </Link>
+          <Link href="/contact-us">
+            <TextButton>Contact Us</TextButton>
+          </Link>
+          <Link href="/about-us">
+            <TextButton>About Us</TextButton>
+          </Link>
         </section>
       </div>
     </header>

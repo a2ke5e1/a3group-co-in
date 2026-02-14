@@ -8,8 +8,9 @@ import { AppCard } from "@/components/v3/common/app-card/app-card";
 import YearProgressInfo from "@/docs/yearly-progress/info.json";
 import EyeCareInfo from "@/docs/eye-care/info.json";
 import SoundProfileInfo from "@/docs/sound-profile-scheduler/info.json";
-import { ElevatedButton, FilledButton } from "@/components/button/button";
 import { Icon } from "@/components/icon/icon";
+import Link from "next/link";
+import ElevatedButton from "@/components/common/button/ElevatedButton";
 
 export const metadata: Metadata = {
   title: "Our Apps | A3 Group",
@@ -63,10 +64,12 @@ export default function Home() {
               If you have an idea for an app and want to make a reality.
             </div>
           </div>
-          <ElevatedButton href="/contact-us">
-            <Icon slot="icon">quick_phrases</Icon>
-            Contact Us
-          </ElevatedButton>
+          <Link href="/contact-us">
+            <ElevatedButton>
+              <Icon slot="icon">quick_phrases</Icon>
+              Contact Us
+            </ElevatedButton>
+          </Link>
         </div>
       </main>
       <Footer

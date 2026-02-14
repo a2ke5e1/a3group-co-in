@@ -1,0 +1,314 @@
+.circular-loader {
+  display: inline-flex;
+  position: relative;
+  width: 40px;
+  height: 40px;
+}
+
+.circular-loader-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+  animation: container-rotate 6s ease infinite;
+}
+
+.circular-loader-svg {
+  width: 100%;
+  height: 100%;
+  fill: transparent;
+}
+
+.circular-loader-progress {
+  stroke: var(--md-sys-color-primary, #6200ee);
+  stroke-width: 4px;
+  stroke-linecap: round;
+  stroke-dasharray: calc(
+    (
+        var(--gm3-circular-progress-size, 40px) -
+          var(--gm3-circular-progress-active-indicator-thickness, 4px)
+      ) *
+      6.2831852 / 2
+  );
+  animation: gm3-cpi-active-grow 6s ease infinite;
+}
+
+.circular-loader-track {
+  stroke: var(--md-sys-color-secondary-container, #e8def8);
+  stroke-width: 4px;
+  stroke-linecap: round;
+  stroke-dasharray: 113;
+  stroke-dashoffset: 113;
+  animation: gm3-cpi-track-grow 6s ease infinite;
+}
+
+/* Rotation Animation */
+@keyframes container-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  8.33% {
+    transform: rotate(90deg);
+  }
+  25% {
+    transform: rotate(90deg);
+  }
+  33.33% {
+    transform: rotate(180deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  58.33% {
+    transform: rotate(270deg);
+  }
+  75% {
+    transform: rotate(270deg);
+  }
+  83.33% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes gm3-cpi-track-grow {
+  from {
+    stroke-dasharray:
+      calc(
+        (
+            6.2831852 *
+              (
+                var(--gm3-circular-progress-size, 40px) -
+                  var(--gm3-circular-progress-active-indicator-thickness, 4px)
+              ) /
+              2 - var(--gm3-circular-progress-active-indicator-track-space, 4px)
+          ) *
+          0.84 -
+          var(--gm3-circular-progress-active-indicator-track-space, 4px) -
+          var(--gm3-circular-progress-active-indicator-thickness, 4px)
+      ),
+      calc(
+        (
+            var(--gm3-circular-progress-size, 40px) -
+              var(--gm3-circular-progress-active-indicator-thickness, 4px)
+          ) *
+          6.2831852 / 2 -
+          (
+            6.2831852 *
+              (
+                var(--gm3-circular-progress-size, 40px) -
+                  var(--gm3-circular-progress-active-indicator-thickness, 4px)
+              ) /
+              2 - var(--gm3-circular-progress-active-indicator-track-space, 4px)
+          ) *
+          0.84 +
+          var(--gm3-circular-progress-active-indicator-track-space, 4px) +
+          var(--gm3-circular-progress-active-indicator-thickness, 4px)
+      );
+    stroke-dashoffset: calc(
+      (
+          6.2831852 *
+            (
+              var(--gm3-circular-progress-size, 40px) -
+                var(--gm3-circular-progress-active-indicator-thickness, 4px)
+            ) /
+            2 - var(--gm3-circular-progress-active-indicator-track-space, 4px)
+        ) *
+        0.84 - var(--gm3-circular-progress-active-indicator-track-space, 4px) -
+        var(--gm3-circular-progress-active-indicator-thickness, 4px) +
+        var(--gm3-circular-progress-active-indicator-track-space, 4px) +
+        var(--gm3-circular-progress-active-indicator-thickness, 4px)
+    );
+  }
+  50% {
+    stroke-dasharray:
+      calc(
+        (
+            6.2831852 *
+              (
+                var(--gm3-circular-progress-size, 40px) -
+                  var(--gm3-circular-progress-active-indicator-thickness, 4px)
+              ) /
+              2 - var(--gm3-circular-progress-active-indicator-track-space, 4px)
+          ) *
+          0.13 -
+          var(--gm3-circular-progress-active-indicator-track-space, 4px) -
+          var(--gm3-circular-progress-active-indicator-thickness, 4px)
+      ),
+      calc(
+        (
+            var(--gm3-circular-progress-size, 40px) -
+              var(--gm3-circular-progress-active-indicator-thickness, 4px)
+          ) *
+          6.2831852 / 2 -
+          (
+            6.2831852 *
+              (
+                var(--gm3-circular-progress-size, 40px) -
+                  var(--gm3-circular-progress-active-indicator-thickness, 4px)
+              ) /
+              2 - var(--gm3-circular-progress-active-indicator-track-space, 4px)
+          ) *
+          0.13 +
+          var(--gm3-circular-progress-active-indicator-track-space, 4px) +
+          var(--gm3-circular-progress-active-indicator-thickness, 4px)
+      );
+    stroke-dashoffset: calc(
+      (
+          6.2831852 *
+            (
+              var(--gm3-circular-progress-size, 40px) -
+                var(--gm3-circular-progress-active-indicator-thickness, 4px)
+            ) /
+            2 - var(--gm3-circular-progress-active-indicator-track-space, 4px)
+        ) *
+        0.13 - var(--gm3-circular-progress-active-indicator-track-space, 4px) -
+        var(--gm3-circular-progress-active-indicator-thickness, 4px) +
+        var(--gm3-circular-progress-active-indicator-track-space, 4px) +
+        var(--gm3-circular-progress-active-indicator-thickness, 4px)
+    );
+  }
+  to {
+    stroke-dasharray:
+      calc(
+        (
+            6.2831852 *
+              (
+                var(--gm3-circular-progress-size, 40px) -
+                  var(--gm3-circular-progress-active-indicator-thickness, 4px)
+              ) /
+              2 - var(--gm3-circular-progress-active-indicator-track-space, 4px)
+          ) *
+          0.84 -
+          var(--gm3-circular-progress-active-indicator-track-space, 4px) -
+          var(--gm3-circular-progress-active-indicator-thickness, 4px)
+      ),
+      calc(
+        (
+            var(--gm3-circular-progress-size, 40px) -
+              var(--gm3-circular-progress-active-indicator-thickness, 4px)
+          ) *
+          6.2831852 / 2 -
+          (
+            6.2831852 *
+              (
+                var(--gm3-circular-progress-size, 40px) -
+                  var(--gm3-circular-progress-active-indicator-thickness, 4px)
+              ) /
+              2 - var(--gm3-circular-progress-active-indicator-track-space, 4px)
+          ) *
+          0.84 +
+          var(--gm3-circular-progress-active-indicator-track-space, 4px) +
+          var(--gm3-circular-progress-active-indicator-thickness, 4px)
+      );
+    stroke-dashoffset: calc(
+      (
+          6.2831852 *
+            (
+              var(--gm3-circular-progress-size, 40px) -
+                var(--gm3-circular-progress-active-indicator-thickness, 4px)
+            ) /
+            2 - var(--gm3-circular-progress-active-indicator-track-space, 4px)
+        ) *
+        0.84 - var(--gm3-circular-progress-active-indicator-track-space, 4px) -
+        var(--gm3-circular-progress-active-indicator-thickness, 4px) +
+        var(--gm3-circular-progress-active-indicator-track-space, 4px) +
+        var(--gm3-circular-progress-active-indicator-thickness, 4px)
+    );
+  }
+}
+
+@keyframes gm3-cpi-active-grow {
+  from {
+    stroke-dasharray:
+      calc(
+        (
+            6.2831852 *
+              (
+                var(--gm3-circular-progress-size, 40px) -
+                  var(--gm3-circular-progress-active-indicator-thickness, 4px)
+              ) /
+              2 - var(--gm3-circular-progress-active-indicator-track-space, 4px)
+          ) *
+          0.16 - var(--gm3-circular-progress-active-indicator-thickness, 4px)
+      ),
+      calc(
+        (
+            var(--gm3-circular-progress-size, 40px) -
+              var(--gm3-circular-progress-active-indicator-thickness, 4px)
+          ) *
+          6.2831852 / 2 -
+          (
+            6.2831852 *
+              (
+                var(--gm3-circular-progress-size, 40px) -
+                  var(--gm3-circular-progress-active-indicator-thickness, 4px)
+              ) /
+              2 - var(--gm3-circular-progress-active-indicator-track-space, 4px)
+          ) *
+          0.16 + var(--gm3-circular-progress-active-indicator-thickness, 4px)
+      );
+  }
+  50% {
+    stroke-dasharray:
+      calc(
+        (
+            6.2831852 *
+              (
+                var(--gm3-circular-progress-size, 40px) -
+                  var(--gm3-circular-progress-active-indicator-thickness, 4px)
+              ) /
+              2 - var(--gm3-circular-progress-active-indicator-track-space, 4px)
+          ) *
+          0.87 - var(--gm3-circular-progress-active-indicator-thickness, 4px)
+      ),
+      calc(
+        (
+            var(--gm3-circular-progress-size, 40px) -
+              var(--gm3-circular-progress-active-indicator-thickness, 4px)
+          ) *
+          6.2831852 / 2 -
+          (
+            6.2831852 *
+              (
+                var(--gm3-circular-progress-size, 40px) -
+                  var(--gm3-circular-progress-active-indicator-thickness, 4px)
+              ) /
+              2 - var(--gm3-circular-progress-active-indicator-track-space, 4px)
+          ) *
+          0.87 + var(--gm3-circular-progress-active-indicator-thickness, 4px)
+      );
+  }
+  to {
+    stroke-dasharray:
+      calc(
+        (
+            6.2831852 *
+              (
+                var(--gm3-circular-progress-size, 40px) -
+                  var(--gm3-circular-progress-active-indicator-thickness, 4px)
+              ) /
+              2 - var(--gm3-circular-progress-active-indicator-track-space, 4px)
+          ) *
+          0.16 - var(--gm3-circular-progress-active-indicator-thickness, 4px)
+      ),
+      calc(
+        (
+            var(--gm3-circular-progress-size, 40px) -
+              var(--gm3-circular-progress-active-indicator-thickness, 4px)
+          ) *
+          6.2831852 / 2 -
+          (
+            6.2831852 *
+              (
+                var(--gm3-circular-progress-size, 40px) -
+                  var(--gm3-circular-progress-active-indicator-thickness, 4px)
+              ) /
+              2 - var(--gm3-circular-progress-active-indicator-track-space, 4px)
+          ) *
+          0.16 + var(--gm3-circular-progress-active-indicator-thickness, 4px)
+      );
+  }
+}

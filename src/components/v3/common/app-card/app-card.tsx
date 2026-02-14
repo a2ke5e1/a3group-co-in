@@ -1,17 +1,12 @@
-"use client";
-
 import Image from "next/image";
-import Link from "next/link";
-import {
-  FilledButton,
-  FilledTonalButton,
-  OutlinedButton,
-  TextButton,
-} from "@/components/button/button";
+
+import Button from "@/components/common/button/Button";
+import OutlinedButton from "@/components/common/button/OutlinedButton";
 import { Icon } from "@/components/icon/icon";
-import { cva, type VariantProps } from "class-variance-authority";
-import React, { Component } from "react";
 import { cn } from "@/lib/utils";
+import { cva, type VariantProps } from "class-variance-authority";
+import React from "react";
+import Link from "next/link";
 
 export interface AppCardProps
   extends React.HTMLAttributes<HTMLDivElement>,
@@ -68,14 +63,18 @@ const AppCard = React.forwardRef<HTMLDivElement, AppCardProps>(
           </div>
           <div className="my-4 flex flex-row flex-wrap gap-4">
             {links.download && (
-              <FilledButton href={links.download}>
-                <Icon slot="icon">download</Icon>
-                Download
-              </FilledButton>
+              <Link href={links.download}>
+                <Button>
+                  <Icon slot="icon">download</Icon>
+                  Download
+                </Button>
+              </Link>
             )}
 
             {links.learnMore && (
-              <OutlinedButton href={links.learnMore}>Learn More</OutlinedButton>
+              <Link href={links.learnMore}>
+                <OutlinedButton>Learn More</OutlinedButton>
+              </Link>
             )}
           </div>
         </div>

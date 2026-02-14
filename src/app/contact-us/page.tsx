@@ -1,9 +1,8 @@
-import {
-  ElevatedButton,
-  FilledButton
-} from "@/components/button/button";
+import Button from "@/components/common/button/Button";
+import ElevatedButton from "@/components/common/button/ElevatedButton";
 import { Icon } from "@/components/icon/icon";
 import type { NextPage } from "next";
+import Link from "next/link";
 
 const AboutUs: NextPage = () => {
   return (
@@ -24,10 +23,12 @@ const AboutUs: NextPage = () => {
             We will do your best to reply as soon as possible.
           </div>
         </div>
-        <FilledButton href="mailto:support@a3group.co.in">
-          <Icon slot="icon">email</Icon>
-          Email
-        </FilledButton>
+        <Link href={"mailto:support@a3group.co.in"}>
+          <Button>
+            <Icon slot="icon">email</Icon>
+            Email
+          </Button>
+        </Link>
       </div>
 
       <div className="bg-secondary-container inline-flex min-h-[363px] flex-col items-center justify-center gap-6 overflow-hidden rounded-2xl px-8">
@@ -39,23 +40,25 @@ const AboutUs: NextPage = () => {
             Have suggestion or need help? just telegram us.
           </div>
         </div>
-        <ElevatedButton href="https://t.me/phycalc">
-          <Icon slot="icon">
-            <svg
-              width="18"
-              height="19"
-              viewBox="0 0 18 19"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M8.99997 1.21997C13.5731 1.21997 17.28 4.92689 17.28 9.49997C17.28 14.0731 13.5731 17.78 8.99997 17.78C4.42689 17.78 0.719971 14.0731 0.719971 9.49997C0.719971 4.92689 4.42689 1.21997 8.99997 1.21997ZM11.8562 12.875C12.0085 12.4077 12.722 7.75073 12.8102 6.83309C12.8369 6.55517 12.749 6.37049 12.5769 6.28805C12.3689 6.18797 12.0607 6.23801 11.7032 6.36689C11.2129 6.54365 4.94457 9.20513 4.58241 9.35921C4.23897 9.50501 3.91425 9.66413 3.91425 9.89453C3.91425 10.0565 4.01037 10.1476 4.27533 10.2423C4.55109 10.3406 5.24553 10.5512 5.65557 10.6642C6.05049 10.7733 6.50013 10.6786 6.75213 10.522C7.01925 10.3561 10.1019 8.29325 10.3233 8.11253C10.5444 7.93181 10.7208 8.16329 10.5401 8.34437C10.3593 8.52509 8.24325 10.5789 7.96425 10.8633C7.62549 11.2085 7.86597 11.5664 8.09313 11.7097C8.35269 11.8731 10.2193 13.1252 10.5005 13.326C10.7816 13.5269 11.0667 13.618 11.3277 13.618C11.5887 13.618 11.7262 13.2742 11.8562 12.875Z"
-                fill="#00696D"
-              />
-            </svg>
-          </Icon>
-          Join
-        </ElevatedButton>
+        <Link href={"https://t.me/phycalc"}>
+          <ElevatedButton>
+            <Icon slot="icon">
+              <svg
+                width="18"
+                height="19"
+                viewBox="0 0 18 19"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M8.99997 1.21997C13.5731 1.21997 17.28 4.92689 17.28 9.49997C17.28 14.0731 13.5731 17.78 8.99997 17.78C4.42689 17.78 0.719971 14.0731 0.719971 9.49997C0.719971 4.92689 4.42689 1.21997 8.99997 1.21997ZM11.8562 12.875C12.0085 12.4077 12.722 7.75073 12.8102 6.83309C12.8369 6.55517 12.749 6.37049 12.5769 6.28805C12.3689 6.18797 12.0607 6.23801 11.7032 6.36689C11.2129 6.54365 4.94457 9.20513 4.58241 9.35921C4.23897 9.50501 3.91425 9.66413 3.91425 9.89453C3.91425 10.0565 4.01037 10.1476 4.27533 10.2423C4.55109 10.3406 5.24553 10.5512 5.65557 10.6642C6.05049 10.7733 6.50013 10.6786 6.75213 10.522C7.01925 10.3561 10.1019 8.29325 10.3233 8.11253C10.5444 7.93181 10.7208 8.16329 10.5401 8.34437C10.3593 8.52509 8.24325 10.5789 7.96425 10.8633C7.62549 11.2085 7.86597 11.5664 8.09313 11.7097C8.35269 11.8731 10.2193 13.1252 10.5005 13.326C10.7816 13.5269 11.0667 13.618 11.3277 13.618C11.5887 13.618 11.7262 13.2742 11.8562 12.875Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </Icon>
+            Join
+          </ElevatedButton>
+        </Link>
       </div>
     </main>
   );
