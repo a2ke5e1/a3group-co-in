@@ -119,10 +119,6 @@ export default function WhileHerePage() {
             </Link>
           </p>
         </section>
-
-        <footer className="text-on-surface-variant text-label-medium">
-          © 2026 Anand Kumar
-        </footer>
       </div>
       <Footer
         termsOfService="/whilehere-terms-of-service"
