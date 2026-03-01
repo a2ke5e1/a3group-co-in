@@ -40,7 +40,7 @@ const Accordion = React.forwardRef<HTMLButtonElement, AccordionProps>(
           className={`grid overflow-hidden text-sm text-slate-600 transition-all duration-300 ease-in-out ${accordionOpen ? "mt-4 grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"}`}
         >
           <div className="overflow-hidden">
-            <p className="text-body-large text-start">{answer}</p>
+            <div className="text-body-large text-start">{answer}</div>
           </div>
         </div>
       </button>
