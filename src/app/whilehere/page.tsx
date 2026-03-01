@@ -73,7 +73,7 @@ export default function WhileHerePage() {
           <p className="text-primary text-label-large">
             WhileHere for iPhone &amp; iPad
           </p>
-          <h1 className="text-on-surface mt-1 text-display-large">
+          <h1 className="text-on-surface text-display-large mt-1">
             WhileHere Support
           </h1>
           <p className="text-on-surface-variant text-body-large mt-2">
@@ -82,7 +82,10 @@ export default function WhileHerePage() {
           </p>
           <p className="text-on-surface-variant text-body-large mt-4">
             Need help? Email us at{" "}
-            <a className="text-primary underline" href={`mailto:${SUPPORT_EMAIL}`}>
+            <a
+              className="text-primary underline"
+              href={`mailto:${SUPPORT_EMAIL}`}
+            >
               {SUPPORT_EMAIL}
             </a>
           </p>
@@ -102,7 +105,10 @@ export default function WhileHerePage() {
             exact steps to reproduce.
           </p>
           <p className="mt-3">
-            <a className="text-primary underline" href={`mailto:${SUPPORT_EMAIL}`}>
+            <a
+              className="text-primary underline"
+              href={`mailto:${SUPPORT_EMAIL}`}
+            >
               {SUPPORT_EMAIL}
             </a>
           </p>
@@ -113,7 +119,7 @@ export default function WhileHerePage() {
           <p className="mt-2">
             <Link
               className="text-primary underline"
-              href="/whilehere-privacy-policy"
+              href="/whilehere/privacy-policy"
             >
               Privacy Policy
             </Link>
@@ -121,8 +127,8 @@ export default function WhileHerePage() {
         </section>
       </div>
       <Footer
-        termsOfService="/whilehere-terms-of-service"
-        privacyPolicy="/whilehere-privacy-policy"
+        termsOfService="/whilehere/terms-of-service"
+        privacyPolicy="/whilehere/privacy-policy"
       />
     </>
   );

@@ -1,7 +1,10 @@
 "use client";
 
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { usePathname } from "next/navigation";
 
 type FooterProps = {
@@ -16,8 +19,7 @@ export default function Footer({
   const pathname = usePathname();
   const whileHereRoutes = new Set([
     "/whilehere",
-    "/whilehere-privacy-policy",
-    "/whilehere-terms-of-service",
+    "/whilehere/terms-of-service",
     "/whilehere/privacy-policy",
   ]);
   const isWhileHereRoute = whileHereRoutes.has(pathname);
@@ -36,16 +38,27 @@ export default function Footer({
               />
             </Link>
           )}
+          {!isWhileHereRoute && (
+            <Link href={"/"}>
+              <Image
+                src="/images/a3_logo.png"
+                width={92}
+                height={32}
+                alt="A3 Group Logo"
+              />
+            </Link>
+          )}
           <p className="text-on-surface-variant text-label-medium">
             {isWhileHereRoute
-              ? "© 2026 Anand Kumar. All rights reserved."
-              : "© 2018 - 2025 A3 Group, All right reserved."}
+              ? `© ${new Date().getFullYear()} Anand Kumar. All rights reserved.`
+              : `© 2018 - ${new Date().getFullYear()} A3 Group, All right reserved.`}
           </p>
         </section>
 
         <section className="*:text-label-large *:text-on-surface-variant flex flex-col *:hover:underline">
           <Link href={terms_of_service_url}>Terms of Service</Link>
           <Link href={policy_url}>Privacy Policy</Link>
+          {!isWhileHereRoute && <Link href="/contact-us">Contact Us</Link>}
           {!isWhileHereRoute && <Link href="/contact-us">Contact Us</Link>}
         </section>
       </div>
