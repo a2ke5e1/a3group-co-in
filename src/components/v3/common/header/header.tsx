@@ -9,9 +9,8 @@ export default function Header() {
   const pathname = usePathname();
   const whileHereRoutes = new Set([
     "/whilehere",
-    "/whilehere-privacy-policy",
-    "/whilehere-terms-of-service",
     "/whilehere/privacy-policy",
+    "/whilehere/terms-of-service",
   ]);
   const isWhileHereRoute = whileHereRoutes.has(pathname);
 

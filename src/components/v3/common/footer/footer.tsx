@@ -16,8 +16,7 @@ export default function Footer({
   const pathname = usePathname();
   const whileHereRoutes = new Set([
     "/whilehere",
-    "/whilehere-privacy-policy",
-    "/whilehere-terms-of-service",
+    "/whilehere/terms-of-service",
     "/whilehere/privacy-policy",
   ]);
   const isWhileHereRoute = whileHereRoutes.has(pathname);
@@ -38,8 +37,8 @@ export default function Footer({
           )}
           <p className="text-on-surface-variant text-label-medium">
             {isWhileHereRoute
-              ? "© 2026 Anand Kumar. All rights reserved."
-              : "© 2018 - 2025 A3 Group, All right reserved."}
+              ? `© ${new Date().getFullYear()} Anand Kumar. All rights reserved.`
+              : `© 2018 - ${new Date().getFullYear()} A3 Group, All right reserved.`}
           </p>
         </section>
 

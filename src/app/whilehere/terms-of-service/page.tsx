@@ -33,8 +33,8 @@ const WhileHereTermsOfServicePage: NextPage = () => {
         </LegalDocument>
       </div>
       <Footer
-        termsOfService="/whilehere-terms-of-service"
-        privacyPolicy="/whilehere-privacy-policy"
+        termsOfService="/whilehere/terms-of-service"
+        privacyPolicy="/whilehere/privacy-policy"
       />
     </>
   );
