@@ -1,7 +1,10 @@
 "use client";
 
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { usePathname } from "next/navigation";
 
 type FooterProps = {
@@ -35,6 +38,16 @@ export default function Footer({
               />
             </Link>
           )}
+          {!isWhileHereRoute && (
+            <Link href={"/"}>
+              <Image
+                src="/images/a3_logo.png"
+                width={92}
+                height={32}
+                alt="A3 Group Logo"
+              />
+            </Link>
+          )}
           <p className="text-on-surface-variant text-label-medium">
             {isWhileHereRoute
               ? `© ${new Date().getFullYear()} Anand Kumar. All rights reserved.`
@@ -45,6 +58,7 @@ export default function Footer({
         <section className="*:text-label-large *:text-on-surface-variant flex flex-col *:hover:underline">
           <Link href={terms_of_service_url}>Terms of Service</Link>
           <Link href={policy_url}>Privacy Policy</Link>
+          {!isWhileHereRoute && <Link href="/contact-us">Contact Us</Link>}
           {!isWhileHereRoute && <Link href="/contact-us">Contact Us</Link>}
         </section>
       </div>
