@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   title: "Privacy Policy",
   description:
     "Privacy policy for WhileHere, explaining what data is used and how location-based reminder features work.",
+  icons: "/while-here/while-here-icon.png",
 };
 
 export default function WhileHerePrivacyPage() {

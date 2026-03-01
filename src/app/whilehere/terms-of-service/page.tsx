@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://a3group.co.in"),
   title: "WhileHere Terms of Service",
   description: "Terms of Service for WhileHere.",
+  icons: "/while-here/while-here-icon.png",
 };
 
 const WhileHereTermsOfServicePage: NextPage = () => {

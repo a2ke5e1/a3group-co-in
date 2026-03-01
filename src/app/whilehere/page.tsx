@@ -45,6 +45,7 @@ export const metadata: Metadata = {
   title: "WhileHere Support",
   description:
     "Support center for WhileHere with troubleshooting tips, app guidance, and direct contact information.",
+  icons: "/while-here/while-here-icon.png",
 };
 
 export default function WhileHerePage() {
