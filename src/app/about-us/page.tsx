@@ -152,7 +152,7 @@ const AboutUs: NextPage = () => {
         />
         <MemeberCards
           name="ADK"
-          description="iOS Development, UIkit, SwiftUI Developer"
+          description="Software Engineer | iOS Developer"
           imgSrc="/images/adk.webp"
           links={{
             github: "https://www.github.com/ADKANK",

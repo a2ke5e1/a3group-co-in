@@ -18,7 +18,7 @@ export interface DocsAppHeaderProps
   title: string;
   appname: string;
   lastUpdate: Date;
-  icon: string;
+  icon?: string;
 }
 
 const DocsAppHeader = React.forwardRef<HTMLDivElement, DocsAppHeaderProps>(
@@ -50,13 +50,15 @@ const DocsAppHeader = React.forwardRef<HTMLDivElement, DocsAppHeaderProps>(
             </div>
           </div>
         </div>
-        <Image
-          src={icon}
-          alt={`${appname}`}
-          width={128}
-          height={128}
-          className="h-fit w-fit"
-        />
+        {icon && (
+          <Image
+            src={icon}
+            alt={`${appname}`}
+            width={128}
+            height={128}
+            className="h-fit w-fit"
+          />
+        )}
       </div>
     );
   },
