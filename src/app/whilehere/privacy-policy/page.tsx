@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Footer from "@/components/v3/common/footer/footer";
 
-const PRIVACY_EMAIL = "kumarana998@gmail.com";
+const PRIVACY_EMAIL = "whilehere.help@gmail.com";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
