@@ -3,7 +3,7 @@ import Link from "next/link";
 import { FAQList } from "@/components/v3/common/faq-list";
 import Footer from "@/components/v3/common/footer/footer";
 
-const SUPPORT_EMAIL = "kumarana998@gmail.com";
+const SUPPORT_EMAIL = "whilehere.help@gmail.com";
 
 const faqItems = [
   {
