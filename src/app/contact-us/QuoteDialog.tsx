@@ -1,13 +1,13 @@
 "use client";
 
-import Button from "@/components/common/button/Button";
-import { Icon } from "@/components/icon/icon";
-import { Dialog } from "@/components/dialog/dialog";
-import { useState } from "react";
-import { OutlinedTextField } from "@/components/text-field/text-field";
-import { OutlinedSelect, SelectOption } from "@/components/select/select";
+import { submitQuote } from "@/actions/quote";
 import { Checkbox } from "@/components/checkbox/checkbox";
-import { IconButton } from "@/components/button/button";
+import Button from "@/components/common/button/Button";
+import { Dialog } from "@/components/dialog/dialog";
+import { Icon } from "@/components/icon/icon";
+import { OutlinedSelect, SelectOption } from "@/components/select/select";
+import { OutlinedTextField } from "@/components/text-field/text-field";
+import { useState } from "react";
 
 export interface QuoteDialogProps {
   isOpen: boolean;
@@ -24,29 +24,7 @@ export default function QuoteDialog({ isOpen, onClose }: QuoteDialogProps) {
 
     try {
       const formData = new FormData(event.currentTarget);
-      const data = Object.fromEntries(formData.entries());
-
-      // Material Web components may need manual extraction if FormData doesn't pick them up
-      // but usually they work if they have a name attribute.
-      // Let's ensure we have everything.
-      const payload = {
-        fullName: data.fullName,
-        email: data.email,
-        projectType: data.projectType,
-        budget: data.budget,
-        details: data.details,
-        consent: data.consent === "on" || data.consent === "true" || !!data.consent,
-      };
-
-      const response = await fetch("/api/v1/quote", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(payload),
-      });
-
-      const result = await response.json();
+      const result = await submitQuote(formData);
 
       if (result.success) {
         setIsSubmitted(true);
