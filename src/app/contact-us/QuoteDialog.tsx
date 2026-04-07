@@ -16,10 +16,49 @@ export interface QuoteDialogProps {
 
 export default function QuoteDialog({ isOpen, onClose }: QuoteDialogProps) {
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
-  const handleSubmit = (event: React.FormEvent) => {
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    setIsSubmitted(true);
+    setIsLoading(true);
+
+    try {
+      const formData = new FormData(event.currentTarget);
+      const data = Object.fromEntries(formData.entries());
+
+      // Material Web components may need manual extraction if FormData doesn't pick them up
+      // but usually they work if they have a name attribute.
+      // Let's ensure we have everything.
+      const payload = {
+        fullName: data.fullName,
+        email: data.email,
+        projectType: data.projectType,
+        budget: data.budget,
+        details: data.details,
+        consent: data.consent === "on" || data.consent === "true" || !!data.consent,
+      };
+
+      const response = await fetch("/api/v1/quote", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setIsSubmitted(true);
+      } else {
+        alert(result.message || "Failed to submit quote request");
+      }
+    } catch (error) {
+      console.error("Submission error:", error);
+      alert("An error occurred. Please try again later.");
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const handleClose = () => {
@@ -157,13 +196,14 @@ export default function QuoteDialog({ isOpen, onClose }: QuoteDialogProps) {
               Cancel
             </button>
             <Button
+              loading={isLoading}
               onClick={() => {
                 const form = document.getElementById("quote-form") as HTMLFormElement;
                 if (form) form.requestSubmit();
               }}
             >
               <Icon slot="icon">send</Icon>
-              Submit Request
+              {isLoading ? "Submitting..." : "Submit Request"}
             </Button>
           </div>
         ) : (
