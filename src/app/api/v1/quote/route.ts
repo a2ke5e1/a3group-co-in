@@ -40,7 +40,7 @@ export async function POST(request: NextRequest) {
     console.error("Error submitting quote:", error);
     return NextResponse.json(
       {
-        message: error.message || "Failed to submit quote request",
+        message: "Failed to submit quote request",
         success: false,
       },
       { status: 500 },
