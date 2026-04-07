@@ -1,10 +1,24 @@
+"use client";
+
 import Button from "@/components/common/button/Button";
 import ElevatedButton from "@/components/common/button/ElevatedButton";
 import { Icon } from "@/components/icon/icon";
 import type { NextPage } from "next";
 import Link from "next/link";
+import { useState } from "react";
+import QuoteDialog from "./QuoteDialog";
 
-const AboutUs: NextPage = () => {
+const ContactUs: NextPage = () => {
+  const [isQuoteOpen, setIsQuoteOpen] = useState(false);
+
+  const openQuoteModal = () => {
+    setIsQuoteOpen(true);
+  };
+
+  const closeQuoteModal = () => {
+    setIsQuoteOpen(false);
+  };
+
   return (
     <main className="flex min-h-[80vh] flex-col gap-12">
       <div className="flex flex-col items-start justify-start gap-2 self-stretch">
@@ -60,8 +74,25 @@ const AboutUs: NextPage = () => {
           </ElevatedButton>
         </Link>
       </div>
+
+      <div className="bg-tertiary-container inline-flex min-h-[363px] flex-col items-center justify-center gap-6 overflow-hidden rounded-2xl px-8">
+        <div className="flex flex-col items-center justify-start gap-1">
+          <div className="text-on-tertiary-container text-display-large justify-center text-center">
+            Get a quote
+          </div>
+          <div className="text-on-tertiary-container text-body-large justify-center text-center">
+            Share your project requirements and get a custom estimate.
+          </div>
+        </div>
+        <Button onClick={openQuoteModal}>
+          <Icon slot="icon">request_quote</Icon>
+          Get Quote
+        </Button>
+      </div>
+
+      <QuoteDialog isOpen={isQuoteOpen} onClose={closeQuoteModal} />
     </main>
   );
 };
 
-export default AboutUs;
+export default ContactUs;

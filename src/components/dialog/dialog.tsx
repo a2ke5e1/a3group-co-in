@@ -10,10 +10,10 @@ export const Dialog = createComponent({
   elementClass: MdDialog,
   react: React,
   events: {
-    open: "open",
-    opened: "opened",
-    close: "close",
-    closed: "closed",
-    cancel: "cancel",
+    onOpen: "open",
+    onOpened: "opened",
+    onClose: "close",
+    onClosed: "closed",
+    onCancel: "cancel",
   },
 });
