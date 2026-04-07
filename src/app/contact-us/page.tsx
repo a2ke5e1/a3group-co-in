@@ -6,23 +6,17 @@ import { Icon } from "@/components/icon/icon";
 import type { NextPage } from "next";
 import Link from "next/link";
 import { useState } from "react";
+import QuoteDialog from "./QuoteDialog";
 
 const ContactUs: NextPage = () => {
   const [isQuoteOpen, setIsQuoteOpen] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const openQuoteModal = () => {
     setIsQuoteOpen(true);
-    setIsSubmitted(false);
   };
 
   const closeQuoteModal = () => {
     setIsQuoteOpen(false);
-  };
-
-  const handleSubmit = (event: { preventDefault: () => void }) => {
-    event.preventDefault();
-    setIsSubmitted(true);
   };
 
   return (
@@ -96,143 +90,7 @@ const ContactUs: NextPage = () => {
         </Button>
       </div>
 
-      {isQuoteOpen && (
-        <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/45 p-4"
-          onClick={closeQuoteModal}
-        >
-          <div
-            className="bg-surface border-outline-variant w-full max-w-2xl rounded-2xl border p-5 shadow-xl md:p-6"
-            onClick={(event) => event.stopPropagation()}
-          >
-            <div className="mb-5 flex items-start justify-between gap-4">
-              <div>
-                <h2 className="text-on-surface text-headline-small">Get A Quote</h2>
-                <p className="text-on-surface-variant text-body-medium mt-1">
-                  Fill out the form and we will contact you with a custom quote.
-                </p>
-              </div>
-              <button
-                type="button"
-                aria-label="Close quote form"
-                className="text-on-surface-variant hover:bg-surface-container rounded-full p-2"
-                onClick={closeQuoteModal}
-              >
-                <Icon>close</Icon>
-              </button>
-            </div>
-
-            {isSubmitted ? (
-              <div className="bg-primary-container text-on-primary-container rounded-xl p-4">
-                <p className="text-title-medium">Request submitted successfully</p>
-                <p className="text-body-medium mt-1">
-                  Thanks. Our team will reach out to you soon.
-                </p>
-              </div>
-            ) : (
-              <form className="grid gap-4" onSubmit={handleSubmit}>
-                <div className="grid gap-4 sm:grid-cols-2">
-                  <label className="flex flex-col gap-2">
-                    <span className="text-on-surface text-label-large">Full name *</span>
-                    <input
-                      required
-                      name="fullName"
-                      className="border-outline-variant bg-surface text-on-surface rounded-xl border px-4 py-3 outline-none focus:border-primary"
-                      placeholder="Your name"
-                    />
-                  </label>
-
-                  <label className="flex flex-col gap-2">
-                    <span className="text-on-surface text-label-large">Email address *</span>
-                    <input
-                      required
-                      type="email"
-                      name="email"
-                      className="border-outline-variant bg-surface text-on-surface rounded-xl border px-4 py-3 outline-none focus:border-primary"
-                      placeholder="you@company.com"
-                    />
-                  </label>
-                </div>
-
-                <div className="grid gap-4 sm:grid-cols-2">
-                  <label className="flex flex-col gap-2">
-                    <span className="text-on-surface text-label-large">Project type *</span>
-                    <select
-                      required
-                      name="projectType"
-                      defaultValue=""
-                      className="border-outline-variant bg-surface text-on-surface rounded-xl border px-4 py-3 outline-none focus:border-primary"
-                    >
-                      <option value="" disabled>
-                        Select type
-                      </option>
-                      <option value="android-app">Android app</option>
-                      <option value="ios-app">iOS app</option>
-                      <option value="web-app">Web app</option>
-                      <option value="dashboard">Admin dashboard</option>
-                      <option value="other">Other</option>
-                    </select>
-                  </label>
-
-                  <label className="flex flex-col gap-2">
-                    <span className="text-on-surface text-label-large">Estimated budget</span>
-                    <select
-                      name="budget"
-                      defaultValue=""
-                      className="border-outline-variant bg-surface text-on-surface rounded-xl border px-4 py-3 outline-none focus:border-primary"
-                    >
-                      <option value="" disabled>
-                        Select budget
-                      </option>
-                      <option value="under-50k">Under INR 50,000</option>
-                      <option value="50k-2l">INR 50,000 - 2,00,000</option>
-                      <option value="2l-10l">INR 2,00,000 - 10,00,000</option>
-                      <option value="above-10l">Above INR 10,00,000</option>
-                    </select>
-                  </label>
-                </div>
-
-                <label className="flex flex-col gap-2">
-                  <span className="text-on-surface text-label-large">Project details *</span>
-                  <textarea
-                    required
-                    name="details"
-                    rows={5}
-                    className="border-outline-variant bg-surface text-on-surface rounded-xl border px-4 py-3 outline-none focus:border-primary"
-                    placeholder="Describe your idea, required features, and timeline."
-                  />
-                </label>
-
-                <label className="flex items-start gap-3">
-                  <input
-                    required
-                    type="checkbox"
-                    name="consent"
-                    className="mt-1 h-4 w-4"
-                  />
-                  <span className="text-on-surface-variant text-body-medium">
-                    I agree to be contacted regarding this quote request.
-                  </span>
-                </label>
-
-                <div className="mt-1 flex flex-wrap items-center gap-3">
-                  <Button>
-                    <Icon slot="icon">send</Icon>
-                    Submit Request
-                  </Button>
-                  <button
-                    type="button"
-                    onClick={closeQuoteModal}
-                    className="text-on-surface-variant text-label-large"
-                  >
-                    Cancel
-                  </button>
-                </div>
-              </form>
-            )}
-          </div>
-        </div>
-      )}
+      <QuoteDialog isOpen={isQuoteOpen} onClose={closeQuoteModal} />
     </main>
   );
 };
