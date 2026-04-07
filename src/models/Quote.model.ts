@@ -30,6 +30,6 @@ class Quote {
 }
 
 export const QuoteModel =
-  (mongoose.models.Quote as ReturnType<typeof getModelForClass<typeof Quote>>) ||
+  (mongoose.models?.Quote as ReturnType<typeof getModelForClass<typeof Quote>>) ||
   getModelForClass(Quote);
 
