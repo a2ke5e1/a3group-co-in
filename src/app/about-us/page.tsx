@@ -167,7 +167,7 @@ const AboutUs: NextPage = () => {
             github: "https://www.github.com/Fcatilizer",
             linkedin: "https://www.linkedin.com/in/ashish-gaurav03",
             x: "https://www.twitter.com/FeatherCatlizer",
-            website: "https://ashish-portfolio-main.vercel.app/",
+            website: "https://www.ashish-gaurav.com/",
           }}
         />
       </div>
